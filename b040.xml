@@ -1,0 +1,1502 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+b040
+</name>
+</assembly>
+<members>
+<member name="T:b040.AdresDS">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.AdresDS.AdresDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.AdresDS.AdresRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.AdresDS.AdresRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.AdresDSTableAdapters.KLantAdresCRUD">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.AdresDSTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.AdresDSTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.AdresDS,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.AdresDSTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.AdresDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.AdresDSTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.AdresDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.AdresDSTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.AdresDSTableAdapters.TableAdapterManager.UpdateAll(b040.AdresDS)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.AdresDSTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.AdresDSTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:b040.batchAfdrukkenParticulierenOverzicht">
+ <summary>
+ This is an per artikel
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:b040.frmAfdrukkenVervoerEnAfrekiningen.processParticulieren(b040.clsExcel,System.DateTime)">
+ <summary>
+ Prints the bestellingen for particulieren
+ </summary>
+ <param name="oxl"></param>
+ <param name="d"></param>
+ <remarks>forces afdrykkeb per tour
+ and directs printing to the defaultprinter (not the uitzonderlijke printer aka epson
+ </remarks>
+</member>
+<member name="T:b040.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources._1306699260_42">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.CANCEL">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.CLOSE">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.DELETE">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.down">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.filter">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.kleinblatt">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.logo01">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.magnifier_16xLG">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.mail">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.PRINT">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.REPORT">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.REPORTS">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.rough">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.save">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.toggle">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.up">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:b040.My.Resources.Resources.WZPRINT">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:b040.b040_beDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.b040_beDataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.b040_beDataSet1.BedieningDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.b040_beDataSet1.BedieningRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.b040_beDataSet1.BedieningRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.b040_beDataSet1TableAdapters.BedieningTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.b040_beDataSet1TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.b040_beDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.b040_beDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.b040_beDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(b040.b040_beDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.b040_beDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(b040.b040_beDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.b040_beDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.b040_beDataSet1TableAdapters.TableAdapterManager.UpdateAll(b040.b040_beDataSet1)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.b040_beDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.b040_beDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="F:b040.PCPrint._font">
+ <summary>
+ Property variable for the Font the user wishes to use
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:b040.PCPrint._text">
+ <summary>
+ Property variable for the text to be printed
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:b040.PCPrint.TextToPrint">
+ <summary>
+ Property to hold the text that is to be printed
+ </summary>
+ <value></value>
+ <returns>A string</returns>
+ <remarks></remarks>
+</member>
+<member name="P:b040.PCPrint.PrinterFont">
+ <summary>
+ Property to hold the font the users wishes to use
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:b040.PCPrint.#ctor">
+ <summary>
+ Empty constructor
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:b040.PCPrint.#ctor(System.String)">
+ <summary>
+ Constructor to initialize our printing object
+ and the text it's supposed to be printing
+ </summary>
+ <param name="str">Text that will be printed</param>
+ <remarks></remarks>
+</member>
+<member name="M:b040.PCPrint.OnBeginPrint(System.Drawing.Printing.PrintEventArgs)">
+ <summary>
+ Override the default OnBeginPrint method of the PrintDocument Object
+ </summary>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:b040.PCPrint.OnPrintPage(System.Drawing.Printing.PrintPageEventArgs)">
+ <summary>
+ Override the default OnPrintPage method of the PrintDocument
+ </summary>
+ <param name="e"></param>
+ <remarks>This provides the print logic for our document</remarks>
+</member>
+<member name="M:b040.PCPrint.RemoveZeros(System.Int32)">
+ <summary>
+ Function to replace any zeros in the size to a 1
+ Zero's will mess up the printing area
+ </summary>
+ <param name="value">Value to check</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:b040.BedieningDS">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.BedieningDS.BedieningDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.BedieningDS.BedieningRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.BedieningDS.BedieningRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.BedieningDSTableAdapters.BedieningTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.BedieningDSTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.BedieningDSTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.BedieningDS,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.BedieningDSTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.BedieningDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.BedieningDSTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.BedieningDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.BedieningDSTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.BedieningDSTableAdapters.TableAdapterManager.UpdateAll(b040.BedieningDS)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.BedieningDSTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.BedieningDSTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="M:b040.bzBestel.lUitzonderlijk(System.String)">
+ <summary>
+ true if there is one or more bestd_voorafdrukken
+ </summary>
+</member>
+<member name="T:b040.BestelDS">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.BestelDS.BestHDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.BestelDS.AdresDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.BestelDS.BestDDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.BestelDS.BestHRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.BestelDS.AdresRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.BestelDS.BestDRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.BestelDS.BestHRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.BestelDS.AdresRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.BestelDS.BestDRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.BestelDSTableAdapters.BestHCRUD">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.BestelDSTableAdapters.BestelAdresTA">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.BestelDSTableAdapters.BestDCRUD">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.BestelDSTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.BestelDSTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.BestelDS,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.BestelDSTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.BestelDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.BestelDSTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.BestelDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.BestelDSTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.BestelDSTableAdapters.TableAdapterManager.UpdateAll(b040.BestelDS)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.BestelDSTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.BestelDSTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="F:b040.Bestelfrm.altKPressed">
+ <summary>
+ set in Form.Keydown if AltK was pressed
+ </summary>
+</member>
+<member name="T:b040.dsOpschriften">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.dsOpschriften.OpschriftenDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.dsOpschriften.OpschriftenRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.dsOpschriften.OpschriftenRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.dsOpschriftenTableAdapters.OpschriftenTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.dsOpschriftenTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.dsOpschriftenTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.dsOpschriften,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.dsOpschriftenTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.dsOpschriften,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.dsOpschriftenTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.dsOpschriften,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.dsOpschriftenTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.dsOpschriftenTableAdapters.TableAdapterManager.UpdateAll(b040.dsOpschriften)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.dsOpschriftenTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.dsOpschriftenTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="F:b040.KlantenFrm.operateAsChildform">
+ <summary>
+ If set (by say Bestel), closes on save and returns Klanten 
+ </summary>
+</member>
+<member name="T:b040.EenhedenDS">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.EenhedenDS.EenhedenDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.EenhedenDS.EenhedenRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.EenhedenDS.EenhedenRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.TypeFactDS">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.TypeFactDS.TypeFactDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.TypeFactDS.TypeFactRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.TypeFactDS.TypeFactRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.TypeFactDSTableAdapters.TypeFactTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.TypeFactDSTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.TypeFactDSTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.TypeFactDS,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.TypeFactDSTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.TypeFactDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.TypeFactDSTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.TypeFactDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.TypeFactDSTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.TypeFactDSTableAdapters.TableAdapterManager.UpdateAll(b040.TypeFactDS)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.TypeFactDSTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.TypeFactDSTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:b040.dsArtikel">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.dsArtikel.ArtikelDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.dsArtikel.ArtikelRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.dsArtikel.ArtikelRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.dsArtikelTableAdapters.ArtikelTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.dsArtikelTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.dsArtikelTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.dsArtikel,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.dsArtikelTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.dsArtikel,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.dsArtikelTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.dsArtikel,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.dsArtikelTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.dsArtikelTableAdapters.TableAdapterManager.UpdateAll(b040.dsArtikel)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.dsArtikelTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.dsArtikelTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:b040.dsError">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.dsError.ErrorDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.dsError.ErrorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.dsError.ErrorRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.dsErrorTableAdapters.ErrorTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.dsErrorTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.dsErrorTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.dsError,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.dsErrorTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.dsError,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.dsErrorTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.dsError,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.dsErrorTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.dsErrorTableAdapters.TableAdapterManager.UpdateAll(b040.dsError)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.dsErrorTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.dsErrorTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:b040.dsLock">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.dsLock.LockDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.dsLock.LockRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.dsLock.LockRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.dsLockTableAdapters.LockTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.dsLockTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.dsLockTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.dsLock,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.dsLockTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.dsLock,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.dsLockTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.dsLock,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.dsLockTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.dsLockTableAdapters.TableAdapterManager.UpdateAll(b040.dsLock)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.dsLockTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.dsLockTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:b040.dsLog">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.dsLog.logDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.dsLog.logRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.dsLog.logRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.dsLogTableAdapters.logTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.dsLogTableAdapters.QueriesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.dsLogTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.dsLogTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.dsLog,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.dsLogTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.dsLog,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.dsLogTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.dsLog,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.dsLogTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.dsLogTableAdapters.TableAdapterManager.UpdateAll(b040.dsLog)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.dsLogTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.dsLogTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:b040.EenhedenDSTableAdapters.EenhedenTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.EenhedenDSTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.EenhedenDSTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.EenhedenDS,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.EenhedenDSTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.EenhedenDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.EenhedenDSTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.EenhedenDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.EenhedenDSTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.EenhedenDSTableAdapters.TableAdapterManager.UpdateAll(b040.EenhedenDS)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.EenhedenDSTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.EenhedenDSTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:b040.FeestdagenDataset">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.FeestdagenDataset.FeestdagenDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.FeestdagenDataset.FeestdagenRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.FeestdagenDataset.FeestdagenRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.FeestdagenDatasetTableAdapters.FeestdagenTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.FeestdagenDatasetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.FeestdagenDatasetTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.FeestdagenDataset,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.FeestdagenDatasetTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.FeestdagenDataset,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.FeestdagenDatasetTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.FeestdagenDataset,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.FeestdagenDatasetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.FeestdagenDatasetTableAdapters.TableAdapterManager.UpdateAll(b040.FeestdagenDataset)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.FeestdagenDatasetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.FeestdagenDatasetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="F:b040.frmMain.preventExecution">
+ <summary>
+ Not used - Set by Bestel on Alt K to prevent frmKlant to show.
+ </summary>
+</member>
+<member name="T:b040.KategorieDS">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.KategorieDS.KategorieDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.KategorieDS.KategorieRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.KategorieDS.KategorieRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.KategorieDSTableAdapters.KategorieTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.KategorieDSTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.KategorieDSTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.KategorieDS,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.KategorieDSTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.KategorieDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.KategorieDSTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.KategorieDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.KategorieDSTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.KategorieDSTableAdapters.TableAdapterManager.UpdateAll(b040.KategorieDS)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.KategorieDSTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.KategorieDSTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:b040.KlantenDS">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.KlantenDS.KlantenDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.KlantenDS.AdresDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.KlantenDS.KlantenKortingDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.KlantenDS.KlantenRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.KlantenDS.AdresRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.KlantenDS.KlantenKortingRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.KlantenDS.KlantenRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.KlantenDS.AdresRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.KlantenDS.KlantenKortingRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.KlantenDSTableAdapters.KlantenCRUD">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.KlantenDSTableAdapters.KlantAdresCRUD">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.KlantenDSTableAdapters.KLantenKlantenKortingCRUD">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.KlantenDSTableAdapters.KlantenTA">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.KlantenDSTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.KlantenDSTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.KlantenDS,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.KlantenDSTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.KlantenDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.KlantenDSTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.KlantenDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.KlantenDSTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.KlantenDSTableAdapters.TableAdapterManager.UpdateAll(b040.KlantenDS)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.KlantenDSTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.KlantenDSTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:b040.NummersDS">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.NummersDS.NummersDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.NummersDS.NummersRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.NummersDS.NummersRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.NummersDSTableAdapters.NummersTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.NummersDSTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.NummersDSTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.NummersDS,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.NummersDSTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.NummersDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.NummersDSTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.NummersDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.NummersDSTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.NummersDSTableAdapters.TableAdapterManager.UpdateAll(b040.NummersDS)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.NummersDSTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.NummersDSTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:b040.StandaardenDS">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.ArtikelDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.KlantenDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.STandaardDDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.StandaardHDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.TypeStBEstDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.ArtikelRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.KlantenRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.STandaardDRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.StandaardHRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.TypeStBEstRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.ArtikelRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.KlantenRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.STandaardDRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.StandaardHRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.StandaardenDS.TypeStBEstRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.StandaardenDSTableAdapters.ArtikelTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.StandaardenDSTableAdapters.KlantenTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.StandaardenDSTableAdapters.STandaardDTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.StandaardenDSTableAdapters.StandaardHTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.StandaardenDSTableAdapters.TypeStBEstTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.StandaardenDSTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.StandaardenDSTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.StandaardenDS,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.StandaardenDSTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.StandaardenDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.StandaardenDSTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.StandaardenDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.StandaardenDSTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.StandaardenDSTableAdapters.TableAdapterManager.UpdateAll(b040.StandaardenDS)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.StandaardenDSTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.StandaardenDSTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:b040.TypeStBestDS">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:b040.TypeStBestDS.TypeStBEstDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:b040.TypeStBestDS.TypeStBEstRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:b040.TypeStBestDS.TypeStBEstRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:b040.TypeStBestDSTableAdapters.TypeStBEstTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:b040.TypeStBestDSTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:b040.TypeStBestDSTableAdapters.TableAdapterManager.UpdateUpdatedRows(b040.TypeStBestDS,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.TypeStBestDSTableAdapters.TableAdapterManager.UpdateInsertedRows(b040.TypeStBestDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:b040.TypeStBestDSTableAdapters.TableAdapterManager.UpdateDeletedRows(b040.TypeStBestDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:b040.TypeStBestDSTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:b040.TypeStBestDSTableAdapters.TableAdapterManager.UpdateAll(b040.TypeStBestDS)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:b040.TypeStBestDSTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:b040.TypeStBestDSTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

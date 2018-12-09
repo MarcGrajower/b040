@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1EF1F5B-9F5A-484E-86D8-5E82DEBEBFB1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>b040.My.MyApplication</StartupObject>
+    <RootNamespace>b040</RootNamespace>
+    <AssemblyName>b040</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>Off</OptionInfer>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>kleinblatt.ico</ApplicationIcon>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>b040.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>b040.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>b040.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>b040.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adres\AdresDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdresDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Afdrukken Vervoer en Afrekeningen\frmAfdrukkenVervoerEnAfrekeningen.Designer.vb">
+      <DependentUpon>frmAfdrukkenVervoerEnAfrekeningen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Afdrukken Vervoer en Afrekeningen\frmAfdrukkenVervoerEnAfrekeningen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Artikel\ArtikelModule.vb" />
+    <Compile Include="AutomatischBestellen\frmAutomatischBestellen.Designer.vb">
+      <DependentUpon>frmAutomatischBestellen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AutomatischBestellen\frmAutomatischBestellen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BestellingenAnnulerenPerDag\frmBestellingenAnnulerenPerDag.Designer.vb">
+      <DependentUpon>frmBestellingenAnnulerenPerDag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BestellingenAnnulerenPerDag\frmBestellingenAnnulerenPerDag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BestelTotalen\frmBestelTotalen.Designer.vb">
+      <DependentUpon>frmBestelTotalen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BestelTotalen\frmBestelTotalen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bestel\frmBestelAndereDag.Designer.vb">
+      <DependentUpon>frmBestelAndereDag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bestel\frmBestelAndereDag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bestel\frmBestelKalender.Designer.vb">
+      <DependentUpon>frmBestelKalender.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bestel\frmBestelKalender.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bz\bzArtikel.vb" />
+    <Compile Include="bz\bzBediening.vb" />
+    <Compile Include="Bediening\BedieningDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BedieningDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bediening\BedieningDS.vb">
+      <DependentUpon>BedieningDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bz\bzBestel.vb" />
+    <Compile Include="Bestel\BestelDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BestelDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bestel\BestelDS.vb">
+      <DependentUpon>BestelDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bestel\Bestelfrm.Designer.vb">
+      <DependentUpon>Bestelfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bestel\Bestelfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bestel\BestelHardcopyRequestFrm.Designer.vb">
+      <DependentUpon>BestelHardcopyRequestFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bestel\BestelHardcopyRequestFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bz\bzBoodschappen.vb" />
+    <Compile Include="bz\bzBTW.vb" />
+    <Compile Include="bz\bzAfrekeningDocument.vb" />
+    <Compile Include="bz\bzFActuur.vb" />
+    <Compile Include="dsOpschriften.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOpschriften.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRAMEWORK\baseClasses\btnBase.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FRAMEWORK\baseClasses\lblbase.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FRAMEWORK\baseClasses\pnlBase.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FRAMEWORK\baseClasses\tpgBase.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FRAMEWORK\clsSimpleComparer.vb" />
+    <Compile Include="FRAMEWORK\clsExcel.vb" />
+    <Compile Include="FRAMEWORK\clsRawPrinter.vb" />
+    <Compile Include="FRAMEWORK\Enums.vb" />
+    <Compile Include="FRAMEWORK\frmPaswoord.Designer.vb">
+      <DependentUpon>frmPaswoord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRAMEWORK\frmPaswoord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRAMEWORK\gen.vb" />
+    <Compile Include="FRAMEWORK\Interfaces.vb" />
+    <Compile Include="FRAMEWORK\printers.vb" />
+    <Compile Include="bz\bzOpschriften.vb" />
+    <Compile Include="bz\bzFeestdagen.vb" />
+    <Compile Include="FRAMEWORK\sqlClass.vb" />
+    <Compile Include="FRAMEWORK\modDutch.vb" />
+    <Compile Include="FRAMEWORK\PopupFrm.Designer.vb">
+      <DependentUpon>PopupFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRAMEWORK\PopupFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRAMEWORK\YesNoForm.Designer.vb">
+      <DependentUpon>YesNoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRAMEWORK\YesNoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bz\bzKlanten.vb" />
+    <Compile Include="batchFacturatie\frmBatchFacturatie.Designer.vb">
+      <DependentUpon>frmBatchFacturatie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="batchFacturatie\frmBatchFacturatie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseComprimeren\frmDatabaseComprimeren.Designer.vb">
+      <DependentUpon>frmDatabaseComprimeren.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseComprimeren\frmDatabaseComprimeren.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KlantFacturen\frmKlantFacturen.Designer.vb">
+      <DependentUpon>frmKlantFacturen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KlantFacturen\frmKlantFacturen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KlantOperaties\frmKlantOperaties.Designer.vb">
+      <DependentUpon>frmKlantOperaties.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KlantOperaties\frmKlantOperaties.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Index\frmIndex.Designer.vb">
+      <DependentUpon>frmIndex.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Index\frmIndex.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Index\frmIndexCN.Designer.vb">
+      <DependentUpon>frmIndexCN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Index\frmIndexCN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Index\frmIndexArtikels.Designer.vb">
+      <DependentUpon>frmIndexArtikels.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Index\frmIndexArtikels.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klanten\KlantenFrm.Designer.vb">
+      <DependentUpon>KlantenFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Klanten\KlantenFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bestel\Bestel.vb" />
+    <Compile Include="bz\bzEenheden.vb" />
+    <Compile Include="Eenheden\EenhedenDS.vb">
+      <DependentUpon>EenhedenDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bz\bzPrice.vb" />
+    <Compile Include="ProductiePlanOverzicht\frmProductiePlanOverzicht.Designer.vb">
+      <DependentUpon>frmProductiePlanOverzicht.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProductiePlanOverzicht\frmProductiePlanOverzicht.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductiePlan\frmProductiePlan.Designer.vb">
+      <DependentUpon>frmProductiePlan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProductiePlan\frmProductiePlan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bz\bzStandaarden.vb" />
+    <Compile Include="Standaarden\StandaardenModule.vb" />
+    <Compile Include="Test\test.vb" />
+    <Compile Include="Test\test1.vb" />
+    <Compile Include="bz\bzTypeFact.vb" />
+    <Compile Include="TypeFact\TypeFactDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypeFactDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TypeStBest\TypeSTBestModule.vb" />
+    <Compile Include="FRAMEWORK\baseClasses\cboBase.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FRAMEWORK\error\clsTerminalError.vb" />
+    <Compile Include="Artikel\dsArtikel.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsArtikel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Artikel\dsArtikel.vb">
+      <DependentUpon>dsArtikel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRAMEWORK\error\dsError.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsError.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRAMEWORK\Lock\dsLock.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLock.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRAMEWORK\Lock\dsLock.vb">
+      <DependentUpon>dsLock.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRAMEWORK\log\dsLog.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLog.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRAMEWORK\log\dsLog.vb">
+      <DependentUpon>dsLog.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Eenheden\EenhedenDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EenhedenDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Eenheden\EenhedenMod.vb" />
+    <Compile Include="Feestdagen\FeestdagenDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeestdagenDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Feestdagen\FeestdagenDataset.vb">
+      <DependentUpon>FeestdagenDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Artikel\frmArtikel.Designer.vb">
+      <DependentUpon>frmArtikel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Artikel\frmArtikel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRAMEWORK\frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRAMEWORK\frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRAMEWORK\frmB040.Designer.vb">
+      <DependentUpon>frmB040.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRAMEWORK\frmB040.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feestdagen\frmFeestdagen.Designer.vb">
+      <DependentUpon>frmFeestdagen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Feestdagen\frmFeestdagen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRAMEWORK\baseClasses\grdBase.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Kategorie\KategorieDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KategorieDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Kategorie\KategorieMod.vb" />
+    <Compile Include="FRAMEWORK\modB040Config.vb" />
+    <Compile Include="FRAMEWORK\modEMail.vb" />
+    <Compile Include="FRAMEWORK\Lock\ModLock.vb" />
+    <Compile Include="FRAMEWORK\log\modLog.vb" />
+    <Compile Include="Klanten\KlantenDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KlantenDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Klanten\KlantenDS.vb">
+      <DependentUpon>KlantenDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Klanten\KlantenModule.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Nummers\NummersDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NummersDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Nummers\NummersDS.vb">
+      <DependentUpon>NummersDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Nummers\NummersModule.vb" />
+    <Compile Include="Standaarden\StandaardenDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StandaardenDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Standaarden\StandaardenDS.vb">
+      <DependentUpon>StandaardenDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Standaarden\StandaardenFrm.Designer.vb">
+      <DependentUpon>StandaardenFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Standaarden\StandaardenFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\TestForm.Designer.vb">
+      <DependentUpon>TestForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TestForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRAMEWORK\baseClasses\txtBase.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TypeStBest\TypeStBestDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypeStBestDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bz\bzUitzonderlijkDocument.vb" />
+    <Compile Include="bz\bzVervoerDocument.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Afdrukken Vervoer en Afrekeningen\frmAfdrukkenVervoerEnAfrekeningen.resx">
+      <DependentUpon>frmAfdrukkenVervoerEnAfrekeningen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutomatischBestellen\frmAutomatischBestellen.resx">
+      <DependentUpon>frmAutomatischBestellen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="batchFacturatie\frmBatchFacturatie.resx">
+      <DependentUpon>frmBatchFacturatie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BestellingenAnnulerenPerDag\frmBestellingenAnnulerenPerDag.resx">
+      <DependentUpon>frmBestellingenAnnulerenPerDag.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BestelTotalen\frmBestelTotalen.resx">
+      <DependentUpon>frmBestelTotalen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bestel\Bestelfrm.resx">
+      <DependentUpon>Bestelfrm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bestel\BestelHardcopyRequestFrm.resx">
+      <DependentUpon>BestelHardcopyRequestFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bestel\frmBestelAndereDag.resx">
+      <DependentUpon>frmBestelAndereDag.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bestel\frmBestelKalender.resx">
+      <DependentUpon>frmBestelKalender.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRAMEWORK\frmPaswoord.resx">
+      <DependentUpon>frmPaswoord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRAMEWORK\PopupFrm.resx">
+      <DependentUpon>PopupFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRAMEWORK\YesNoForm.resx">
+      <DependentUpon>YesNoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseComprimeren\frmDatabaseComprimeren.resx">
+      <DependentUpon>frmDatabaseComprimeren.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KlantFacturen\frmKlantFacturen.resx">
+      <DependentUpon>frmKlantFacturen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KlantOperaties\frmKlantOperaties.resx">
+      <DependentUpon>frmKlantOperaties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Index\frmIndex.resx">
+      <DependentUpon>frmIndex.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Index\frmIndexCN.resx">
+      <DependentUpon>frmIndexCN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Index\frmIndexArtikels.resx">
+      <DependentUpon>frmIndexArtikels.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klanten\KlantenFrm.resx">
+      <DependentUpon>KlantenFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Artikel\frmArtikel.resx">
+      <DependentUpon>frmArtikel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRAMEWORK\frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRAMEWORK\frmB040.resx">
+      <DependentUpon>frmB040.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feestdagen\frmFeestdagen.resx">
+      <DependentUpon>frmFeestdagen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductiePlanOverzicht\frmProductiePlanOverzicht.resx">
+      <DependentUpon>frmProductiePlanOverzicht.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductiePlan\frmProductiePlan.resx">
+      <DependentUpon>frmProductiePlan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standaarden\StandaardenFrm.resx">
+      <DependentUpon>StandaardenFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\TestForm.resx">
+      <DependentUpon>TestForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Feestdagen\FeestdagenDataset.xsc">
+      <DependentUpon>FeestdagenDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Feestdagen\FeestdagenDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FeestdagenDataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Feestdagen\FeestdagenDataset.xss">
+      <DependentUpon>FeestdagenDataset.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Adres\AdresDS.xsc">
+      <DependentUpon>AdresDS.xsd</DependentUpon>
+    </None>
+    <None Include="Adres\AdresDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdresDS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Adres\AdresDS.xss">
+      <DependentUpon>AdresDS.xsd</DependentUpon>
+    </None>
+    <None Include="Artikel\dsArtikel.xsc">
+      <DependentUpon>dsArtikel.xsd</DependentUpon>
+    </None>
+    <None Include="Artikel\dsArtikel.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsArtikel.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Artikel\dsArtikel.xss">
+      <DependentUpon>dsArtikel.xsd</DependentUpon>
+    </None>
+    <None Include="Bediening\BedieningDS.xsc">
+      <DependentUpon>BedieningDS.xsd</DependentUpon>
+    </None>
+    <None Include="Bediening\BedieningDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BedieningDS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Bediening\BedieningDS.xss">
+      <DependentUpon>BedieningDS.xsd</DependentUpon>
+    </None>
+    <None Include="Bestel\BestelDS.xsc">
+      <DependentUpon>BestelDS.xsd</DependentUpon>
+    </None>
+    <None Include="Bestel\BestelDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BestelDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bestel\BestelDS.xss">
+      <DependentUpon>BestelDS.xsd</DependentUpon>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="FRAMEWORK\error\dsError.xsc">
+      <DependentUpon>dsError.xsd</DependentUpon>
+    </None>
+    <None Include="FRAMEWORK\error\dsError.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsError.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FRAMEWORK\error\dsError.xss">
+      <DependentUpon>dsError.xsd</DependentUpon>
+    </None>
+    <None Include="FRAMEWORK\Lock\dsLock.xsc">
+      <DependentUpon>dsLock.xsd</DependentUpon>
+    </None>
+    <None Include="FRAMEWORK\Lock\dsLock.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLock.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FRAMEWORK\Lock\dsLock.xss">
+      <DependentUpon>dsLock.xsd</DependentUpon>
+    </None>
+    <None Include="bmp\WZPRINT.BMP" />
+    <None Include="bmp\up.bmp" />
+    <None Include="bmp\save.bmp" />
+    <None Include="bmp\rough.bmp" />
+    <None Include="bmp\REPORTS.BMP" />
+    <None Include="bmp\REPORT.BMP" />
+    <None Include="bmp\PRINT.BMP" />
+    <None Include="bmp\plucz logo1.bmp" />
+    <None Include="bmp\mail.bmp" />
+    <None Include="bmp\logo01.bmp" />
+    <None Include="bmp\logo.bmp" />
+    <None Include="bmp\filter.bmp" />
+    <None Include="bmp\down.bmp" />
+    <None Include="bmp\DELETE.BMP" />
+    <None Include="bmp\CLOSE.BMP" />
+    <None Include="bmp\CANCEL.BMP" />
+    <None Include="FRAMEWORK\log\dsLog.xsc">
+      <DependentUpon>dsLog.xsd</DependentUpon>
+    </None>
+    <None Include="FRAMEWORK\log\dsLog.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLog.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FRAMEWORK\log\dsLog.xss">
+      <DependentUpon>dsLog.xsd</DependentUpon>
+    </None>
+    <None Include="Eenheden\EenhedenDS.xsc">
+      <DependentUpon>EenhedenDS.xsd</DependentUpon>
+    </None>
+    <None Include="Eenheden\EenhedenDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EenhedenDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Eenheden\EenhedenDS.xss">
+      <DependentUpon>EenhedenDS.xsd</DependentUpon>
+    </None>
+    <None Include="Kategorie\KategorieDS.xsc">
+      <DependentUpon>KategorieDS.xsd</DependentUpon>
+    </None>
+    <None Include="Kategorie\KategorieDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KategorieDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Kategorie\KategorieDS.xss">
+      <DependentUpon>KategorieDS.xsd</DependentUpon>
+    </None>
+    <None Include="Klanten\KlantenDS.xsc">
+      <DependentUpon>KlantenDS.xsd</DependentUpon>
+    </None>
+    <None Include="Klanten\KlantenDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KlantenDS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Klanten\KlantenDS.xss">
+      <DependentUpon>KlantenDS.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="Nummers\NummersDS.xsc">
+      <DependentUpon>NummersDS.xsd</DependentUpon>
+    </None>
+    <None Include="Nummers\NummersDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NummersDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Nummers\NummersDS.xss">
+      <DependentUpon>NummersDS.xsd</DependentUpon>
+    </None>
+    <None Include="Standaarden\StandaardenDS.xsc">
+      <DependentUpon>StandaardenDS.xsd</DependentUpon>
+    </None>
+    <None Include="Standaarden\StandaardenDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StandaardenDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Standaarden\StandaardenDS.xss">
+      <DependentUpon>StandaardenDS.xsd</DependentUpon>
+    </None>
+    <None Include="TypeFact\TypeFactDS.xsc">
+      <DependentUpon>TypeFactDS.xsd</DependentUpon>
+    </None>
+    <None Include="TypeFact\TypeFactDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TypeFactDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TypeFact\TypeFactDS.xss">
+      <DependentUpon>TypeFactDS.xsd</DependentUpon>
+    </None>
+    <None Include="TypeStBest\TypeStBestDS.xsc">
+      <DependentUpon>TypeStBestDS.xsd</DependentUpon>
+    </None>
+    <None Include="TypeStBest\TypeStBestDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TypeStBestDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TypeStBest\TypeStBestDS.xss">
+      <DependentUpon>TypeStBestDS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bmp\toggle.png" />
+    <None Include="bmp\kleinblatt.jpg" />
+    <Content Include="kleinblatt.ico" />
+    <None Include="dsOpschriften.xsc">
+      <DependentUpon>dsOpschriften.xsd</DependentUpon>
+    </None>
+    <None Include="dsOpschriften.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOpschriften.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsOpschriften.xss">
+      <DependentUpon>dsOpschriften.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\1306699260_42.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.None" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
