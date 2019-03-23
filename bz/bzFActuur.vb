@@ -60,16 +60,24 @@
                 c &= nPKFactH & ","
                 c &= row("BestD_Artikel") & ","
                 c &= row("Bestd_Snijden") & ","
-                n = row("Hoev") : c &= n.ToString(Globalization.CultureInfo.InvariantCulture) & ","
-                n = gen.nRound(bzFactuur.nAveragePrice(row("BEstd_Artikel"), row("Hoev"), row("Waarde")), 2) : c &= n.ToString(Globalization.CultureInfo.InvariantCulture) & ","
-                n = row("Waarde") : c &= n.ToString(Globalization.CultureInfo.InvariantCulture) & ","
+                oP.artikel = row("Art_nr")
+                oP.klant = bzKlanten.cNummer(nBestH_Klant)
+                Dim artikelPrijs = oP.oArt.Record.Art_Prijs
+                Dim exponent = 10 ^ bzArtikel.nArt_PrijsExponent(oP.oArt.Record.ARt_Id)
+                Dim hoev As Decimal = row("Hoev")
+                Dim waarde = artikelPrijs * hoev * exponent
+                ' Dim gemiddeldePrijs = gen.nRound(bzFactuur.nAveragePrice(row("BEstd_Artikel"), hoev, waarde), 2)
+
+                c &= hoev.ToString(Globalization.CultureInfo.InvariantCulture) & ","
+                c &= artikelPrijs.ToString(Globalization.CultureInfo.InvariantCulture) & ","
+                c &= waarde.ToString(Globalization.CultureInfo.InvariantCulture) & ","
                 oP.artikel = row("Art_nr")
                 oP.klant = bzKlanten.cNummer(nBestH_Klant)
                 oP.compute()
-                nKorting = gen.nRound(row("Waarde") * oP.nKortingPct, 2)
+                nKorting = gen.nRound(waarde * oP.nKortingPct, 2)
                 c &= nKorting.ToString(Globalization.CultureInfo.InvariantCulture) & ")"
                 oFactD.ExecuteNonQuery(c, oT)
-                nTotKorting += nKorting : nTotWaarde += row("Waarde")
+                nTotKorting += nKorting : nTotWaarde += waarde
             End If
         Next
         n = nTotWaarde - nTotKorting

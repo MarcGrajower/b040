@@ -1,8 +1,8 @@
 ﻿Imports System.Math
 Public Class bzPrice
     ' MG 21/feb/11
-    Dim oArt As New bzArtikel
-    Dim oKl As New bzKlanten
+    Public oArt As New bzArtikel
+    Public oKl As New bzKlanten
     Public WriteOnly Property artikel() As String
         Set(ByVal value As String)
             oArt.Art_Nr = value
