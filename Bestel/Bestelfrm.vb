@@ -608,6 +608,7 @@ Public Class Bestelfrm
         Me.Adr_Telefoon.Text = CType(Me.obzKlanten.Adr_Telefoon(), String)
         Me.BestH_KomtHalen.cast(Me.obzKlanten.record.KL_KomtHalen)
         Me.bedieningO.bed_id = Me.obzKlanten.record.KL_Bediening
+        Dim klantenEFacturatieType = (Me.obzKlanten.GetKlantenEType())
         Me.Bediening.Text = Me.bedieningO.record.BEd_naam
         SetBetaling(KL_Nummer.Text)
         Dim lines As Integer = Me.BestelAdresTA.Fill(Me.BestelDS.Adres, Me.obzKlanten.record.KL_ID)
@@ -629,6 +630,8 @@ Public Class Bestelfrm
         Me.bestelTabpage.SelectTab(0)
         Me.grdBestelD.Focus()
         ResetKl_Nummer()
+        frmMain.typeKlant = klantenEFacturatieType
+
     End Sub
     Private Sub KL_Nummer_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles KL_Nummer.Validating
         Dim input As String = Trim(Me.KL_Nummer.Text)
@@ -2084,7 +2087,6 @@ Public Class Bestelfrm
         '<PATCH> 
         BestH_Standaard.Text = "1"
     End Sub
-
 End Class
 
 

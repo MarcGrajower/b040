@@ -347,7 +347,6 @@
         Me.txtExPost.Width = Me.GrdKlant.Columns("Expost").Width
         Me.txtExPost.Visible = True
     End Sub
-
     Private Sub GrdKlant_CellEndEdit(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles GrdKlant.CellEndEdit
         Dim cCol As String = UCase(Me.GrdKlant.Columns(Me.GrdKlant.CurrentCell.ColumnIndex).Name)
         Dim nRow As Integer = Me.GrdKlant.SelectedRows(0).Index
@@ -717,5 +716,5 @@
         Me.refreshDetail(e.RowIndex)
     End Sub
 
-    
+
 End Class

@@ -307,7 +307,6 @@
         Dim lInvalidEntry As Boolean = False
         Dim nTotaal As Double = Me.grdArtikelDetails(Me.grdArtikelDetails.Columns("colTotaal").Index, nRow).Value
         Dim nBedragExAnte As Double = Me.grdArtikelDetails(Me.grdArtikelDetails.Columns("colBedragEp").Index, nRow).Value
-
         Select Case cCol
             Case "COLHOEVEP"
                 If Me.nCurrentPrice() = 0 Then
@@ -352,7 +351,7 @@
     Sub implementChangeindex(nRowLijn As Integer)
         Dim nBestD_id As Long = Me.grdArtikelDetails(Me.grdArtikelDetails.Columns("colBestd_id").Index, nRowLijn).Value
         Dim nHoevEp As Long = Me.grdArtikelDetails(Me.grdArtikelDetails.Columns("colHoevEp").Index, nRowLijn).Value
-        Dim nBedragEp As Long = Me.grdArtikelDetails(Me.grdArtikelDetails.Columns("colBedragEp").Index, nRowLijn).Value
+        Dim nBedragEp As Double = Me.grdArtikelDetails(Me.grdArtikelDetails.Columns("colBedragEp").Index, nRowLijn).Value
         Me.grdArtikelDetails(Me.grdArtikelDetails.Columns("colBedragEp").Index, nRowLijn).Value = nBedragEp
         Dim oSql As New sqlClass
         Dim temp As String = "select bestd_besth from " & Me.IndexForm.cGlobalFilename

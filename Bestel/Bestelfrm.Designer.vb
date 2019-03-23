@@ -965,7 +965,7 @@ Partial Class Bestelfrm
         DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle8.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
         DataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Orange
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(223, Byte), Integer), CType(CType(198, Byte), Integer))
         DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkBlue
         DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.grdBestelD.DefaultCellStyle = DataGridViewCellStyle8

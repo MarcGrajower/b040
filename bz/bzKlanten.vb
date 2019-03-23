@@ -193,4 +193,12 @@
         Dim context As New sqlClass
         Return context.ExecuteScalar("select kl_Nummer from Klanten where kl_id = " & klid)
     End Function
+
+    Friend Function GetKlantenEType() As eTypeKlant
+        Dim rv = eTypeKlant.Groothandel
+        If (bzKlanten.isParticulier(bzKlanten.kl_id(Me.kl_nummer)) = True) Then
+            rv = eTypeKlant.Particulier
+        End If
+        Return rv
+    End Function
 End Class

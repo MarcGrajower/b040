@@ -669,7 +669,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="b040_beDataSet.xsc">
       <DependentUpon>b040_beDataSet.xsd</DependentUpon>
     </None>
@@ -936,9 +938,6 @@
     <None Include="Resources\magnifier_16xLG.png" />
     <None Include="bmp\toggle.png" />
     <None Include="bmp\kleinblatt.jpg" />
-    <Content Include="b040_be.accdb">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Content>
     <Content Include="kleinblatt.ico" />
     <None Include="dsOpschriften.xsc">
       <DependentUpon>dsOpschriften.xsd</DependentUpon>
@@ -963,7 +962,7 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_StartDate="2000/1/1" BuildVersion_UseGlobalSettings="True" />
+      <UserProperties BuildVersion_UseGlobalSettings="True" BuildVersion_StartDate="2000/1/1" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

@@ -3,6 +3,12 @@ Imports Microsoft.Office.Interop
 Imports System.Windows.Forms
 
 Public Class Tests
+    Public Shared Sub Test_Conversion()
+        Dim d As Double = "8,5"
+        Console.WriteLine(d + 1)
+        Dim d1 As Decimal = "8.5"
+        Console.WriteLine(d1 + 1)
+    End Sub
     Public Shared Sub Test_ProductielijstInitialise()
         Productielijst.Initialise()
         Console.WriteLine("There are {0} items in the list", Productielijst.list.Count)
