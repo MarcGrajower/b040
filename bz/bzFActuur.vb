@@ -33,7 +33,7 @@
         c &= " from bestd,artikel"
         c &= " where Art_id = Bestd_Artikel"
         c &= " and bestd_besth = " & nPKBestH
-        c &= " and art_btw = " & nBTW
+        c &= " and art_btw = " & sqlClass.cDoubleForjet(nBTW)
         c &= " group by Art_Nr,Bestd_Artikel,Bestd_Snijden"
         Dim oBestD As New sqlClass : oBestD.Execute(c)
         Dim oConn As New OleDb.OleDbConnection(My.Settings.b040_beConnectionString) : oConn.Open()
