@@ -4,6 +4,10 @@
 ''' </summary>
 Public Class frmProductiePlan
     Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
+        Dim f = frmMain.MdiChildren.FirstOrDefault(Function(x) x.Name = "frmAutomatischBestellen")
+        If (f Is Nothing) = False Then
+            f.Close()
+        End If
         Me.Close()
     End Sub
     Private Sub frmProductiePlan_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -19,7 +23,14 @@ Public Class frmProductiePlan
         Me.TxtKat5.Text = "1"
         Me.TxtBijzonderArtikels.Text = "0"
         Me.TxtSnijdplan.Text = "1"
+        Dim f = frmMain.MdiChildren.FirstOrDefault(Function(x) x.Name = "frmAutomatischBestellen")
+        If (f Is Nothing) = False Then
+            Dim totalWidth As Integer = f.Width + Me.Width + 2
+            Me.Left = (My.Computer.Screen.Bounds.Width - totalWidth) / 2
+            f.Left = Me.Left + Me.Width + 2
+        End If
     End Sub
+
     Private Sub btnOK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOK.Click
         Me.printProductiePlan(1, Me.TxtKat1.Text)
         Me.printProductiePlan(5, Me.TxtKat5.Text)

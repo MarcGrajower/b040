@@ -186,7 +186,10 @@ Public Class frmMain
     Private Sub DagelijksToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DagelijksToolStripMenuItem.Click
         Dim f As New frmProductiePlan
         f.MdiParent = Me
+        Dim f1 As New frmAutomatischBestellen
+        f1.MdiParent = Me
         f.Show()
+        f1.Show()
     End Sub
 
 

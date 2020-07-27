@@ -24,6 +24,12 @@ Public Class frmAutomatischBestellen
         Me.progressbar1.Visible = False
         Me.btnOK.Focus()
         Me.btnOK.Select()
+        Dim f = frmMain.MdiChildren.FirstOrDefault(Function(x) x.Name = "frmProductiePlan")
+        If (f Is Nothing) = False Then
+            Dim totalWidth As Integer = f.Width + Me.Width + 2
+            Me.Left = f.Left + f.Width + 2
+        End If
+
     End Sub
 
     Private Sub txtType_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles TxtType.Validating
