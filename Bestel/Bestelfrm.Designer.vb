@@ -985,6 +985,7 @@ Partial Class Bestelfrm
         DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.grdBestelD.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.grdBestelD.RowHeadersVisible = False
+        Me.grdBestelD.RowHeadersWidth = 62
         Me.grdBestelD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.grdBestelD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.grdBestelD.Size = New System.Drawing.Size(969, 507)
@@ -997,6 +998,7 @@ Partial Class Bestelfrm
         Me.BestDIDDataGridViewTextBoxColumn.FillWeight = 8.0!
         Me.BestDIDDataGridViewTextBoxColumn.HeaderText = "BestD_ID"
         Me.BestDIDDataGridViewTextBoxColumn.MaxInputLength = 10
+        Me.BestDIDDataGridViewTextBoxColumn.MinimumWidth = 8
         Me.BestDIDDataGridViewTextBoxColumn.Name = "BestDIDDataGridViewTextBoxColumn"
         Me.BestDIDDataGridViewTextBoxColumn.Visible = False
         Me.BestDIDDataGridViewTextBoxColumn.Width = 40
@@ -1005,15 +1007,19 @@ Partial Class Bestelfrm
         '
         Me.BestDBestHDataGridViewTextBoxColumn.DataPropertyName = "BestD_BestH"
         Me.BestDBestHDataGridViewTextBoxColumn.HeaderText = "BestD_BestH"
+        Me.BestDBestHDataGridViewTextBoxColumn.MinimumWidth = 8
         Me.BestDBestHDataGridViewTextBoxColumn.Name = "BestDBestHDataGridViewTextBoxColumn"
         Me.BestDBestHDataGridViewTextBoxColumn.Visible = False
+        Me.BestDBestHDataGridViewTextBoxColumn.Width = 150
         '
         'BestDIsStandaardDataGridViewCheckBoxColumn
         '
         Me.BestDIsStandaardDataGridViewCheckBoxColumn.DataPropertyName = "BestD_IsStandaard"
         Me.BestDIsStandaardDataGridViewCheckBoxColumn.HeaderText = "BestD_IsStandaard"
+        Me.BestDIsStandaardDataGridViewCheckBoxColumn.MinimumWidth = 8
         Me.BestDIsStandaardDataGridViewCheckBoxColumn.Name = "BestDIsStandaardDataGridViewCheckBoxColumn"
         Me.BestDIsStandaardDataGridViewCheckBoxColumn.Visible = False
+        Me.BestDIsStandaardDataGridViewCheckBoxColumn.Width = 150
         '
         'BestDArtikelDataGridViewTextBoxColumn
         '
@@ -1021,6 +1027,7 @@ Partial Class Bestelfrm
         Me.BestDArtikelDataGridViewTextBoxColumn.DataPropertyName = "BestD_Artikel"
         Me.BestDArtikelDataGridViewTextBoxColumn.FillWeight = 9.0!
         Me.BestDArtikelDataGridViewTextBoxColumn.HeaderText = "ArtikelPK"
+        Me.BestDArtikelDataGridViewTextBoxColumn.MinimumWidth = 8
         Me.BestDArtikelDataGridViewTextBoxColumn.Name = "BestDArtikelDataGridViewTextBoxColumn"
         Me.BestDArtikelDataGridViewTextBoxColumn.Visible = False
         '
@@ -1031,6 +1038,7 @@ Partial Class Bestelfrm
         Me.Art_Nr.DefaultCellStyle = DataGridViewCellStyle2
         Me.Art_Nr.FillWeight = 8.0!
         Me.Art_Nr.HeaderText = "Artikel"
+        Me.Art_Nr.MinimumWidth = 8
         Me.Art_Nr.Name = "Art_Nr"
         Me.Art_Nr.Width = 75
         '
@@ -1042,6 +1050,7 @@ Partial Class Bestelfrm
         Me.Omschrijving.DefaultCellStyle = DataGridViewCellStyle3
         Me.Omschrijving.FillWeight = 20.0!
         Me.Omschrijving.HeaderText = "Omschrijving"
+        Me.Omschrijving.MinimumWidth = 8
         Me.Omschrijving.Name = "Omschrijving"
         '
         'BestD_Snijden
@@ -1052,6 +1061,7 @@ Partial Class Bestelfrm
         Me.BestD_Snijden.FillWeight = 5.210855!
         Me.BestD_Snijden.HeaderText = "Sn."
         Me.BestD_Snijden.IndeterminateValue = "false"
+        Me.BestD_Snijden.MinimumWidth = 8
         Me.BestD_Snijden.Name = "BestD_Snijden"
         Me.BestD_Snijden.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.BestD_Snijden.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
@@ -1064,6 +1074,7 @@ Partial Class Bestelfrm
         Me.Tour.DataPropertyName = "BestD_Tour"
         Me.Tour.FillWeight = 5.210855!
         Me.Tour.HeaderText = "Tr"
+        Me.Tour.MinimumWidth = 8
         Me.Tour.Name = "Tour"
         Me.Tour.Width = 61
         '
@@ -1073,8 +1084,10 @@ Partial Class Bestelfrm
         Me.BestD_Portie.DataPropertyName = "BestD_Portie"
         Me.BestD_Portie.FillWeight = 5.210855!
         Me.BestD_Portie.HeaderText = "Portie"
+        Me.BestD_Portie.MinimumWidth = 8
         Me.BestD_Portie.Name = "BestD_Portie"
         Me.BestD_Portie.Visible = False
+        Me.BestD_Portie.Width = 150
         '
         'Standaard
         '
@@ -1082,6 +1095,7 @@ Partial Class Bestelfrm
         Me.Standaard.DataPropertyName = "BestD_Hoev"
         Me.Standaard.FillWeight = 10.42171!
         Me.Standaard.HeaderText = "Stand."
+        Me.Standaard.MinimumWidth = 8
         Me.Standaard.Name = "Standaard"
         Me.Standaard.Width = 75
         '
@@ -1091,6 +1105,7 @@ Partial Class Bestelfrm
         Me.BestD_Hoev1.DataPropertyName = "BestD_Hoev1"
         Me.BestD_Hoev1.FillWeight = 10.42171!
         Me.BestD_Hoev1.HeaderText = "Bestel"
+        Me.BestD_Hoev1.MinimumWidth = 8
         Me.BestD_Hoev1.Name = "BestD_Hoev1"
         Me.BestD_Hoev1.Width = 75
         '
@@ -1103,6 +1118,7 @@ Partial Class Bestelfrm
         Me.Eenh_HoevInvoer.FillWeight = 8.0!
         Me.Eenh_HoevInvoer.HeaderText = ""
         Me.Eenh_HoevInvoer.MaxInputLength = 10
+        Me.Eenh_HoevInvoer.MinimumWidth = 8
         Me.Eenh_HoevInvoer.Name = "Eenh_HoevInvoer"
         Me.Eenh_HoevInvoer.Width = 40
         '
@@ -1112,6 +1128,7 @@ Partial Class Bestelfrm
         Me.BestD_EenhPrijs.DataPropertyName = "BestD_EenhPrijs"
         Me.BestD_EenhPrijs.FillWeight = 10.42171!
         Me.BestD_EenhPrijs.HeaderText = "  Prijs  "
+        Me.BestD_EenhPrijs.MinimumWidth = 8
         Me.BestD_EenhPrijs.Name = "BestD_EenhPrijs"
         Me.BestD_EenhPrijs.Width = 75
         '
@@ -1124,6 +1141,7 @@ Partial Class Bestelfrm
         Me.Eenh_omschrijving.FillWeight = 8.0!
         Me.Eenh_omschrijving.HeaderText = ""
         Me.Eenh_omschrijving.MaxInputLength = 10
+        Me.Eenh_omschrijving.MinimumWidth = 8
         Me.Eenh_omschrijving.Name = "Eenh_omschrijving"
         Me.Eenh_omschrijving.Width = 40
         '
@@ -1133,13 +1151,16 @@ Partial Class Bestelfrm
         Me.BestD_Waarde.DataPropertyName = "BestD_Waarde"
         Me.BestD_Waarde.FillWeight = 15.0!
         Me.BestD_Waarde.HeaderText = "   Waarde   "
+        Me.BestD_Waarde.MinimumWidth = 8
         Me.BestD_Waarde.Name = "BestD_Waarde"
+        Me.BestD_Waarde.Width = 150
         '
         'voorafdrukken
         '
         Me.voorafdrukken.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.voorafdrukken.DataPropertyName = "bestd_voorafdrukken"
         Me.voorafdrukken.HeaderText = "Epson"
+        Me.voorafdrukken.MinimumWidth = 8
         Me.voorafdrukken.Name = "voorafdrukken"
         Me.voorafdrukken.Width = 40
         '
@@ -1149,9 +1170,11 @@ Partial Class Bestelfrm
         Me.BestD_Verwittigen.DataPropertyName = "BestD_Verwittigen"
         Me.BestD_Verwittigen.FillWeight = 5.210855!
         Me.BestD_Verwittigen.HeaderText = "Verwit."
+        Me.BestD_Verwittigen.MinimumWidth = 8
         Me.BestD_Verwittigen.Name = "BestD_Verwittigen"
         Me.BestD_Verwittigen.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.BestD_Verwittigen.Visible = False
+        Me.BestD_Verwittigen.Width = 150
         '
         'BestD_Opschrift
         '
@@ -1160,6 +1183,7 @@ Partial Class Bestelfrm
         Me.BestD_Opschrift.DefaultCellStyle = DataGridViewCellStyle6
         Me.BestD_Opschrift.FillWeight = 20.0!
         Me.BestD_Opschrift.HeaderText = "Opschrift"
+        Me.BestD_Opschrift.MinimumWidth = 8
         Me.BestD_Opschrift.Name = "BestD_Opschrift"
         Me.BestD_Opschrift.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.BestD_Opschrift.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
@@ -1173,18 +1197,21 @@ Partial Class Bestelfrm
         Me.BestD_Boodschap.DefaultCellStyle = DataGridViewCellStyle7
         Me.BestD_Boodschap.FillWeight = 20.0!
         Me.BestD_Boodschap.HeaderText = "Boodschap"
+        Me.BestD_Boodschap.MinimumWidth = 8
         Me.BestD_Boodschap.Name = "BestD_Boodschap"
         Me.BestD_Boodschap.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.BestD_Boodschap.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.BestD_Boodschap.Visible = False
-        Me.BestD_Boodschap.Width = 5
+        Me.BestD_Boodschap.Width = 8
         '
         'colArtNrBound
         '
         Me.colArtNrBound.DataPropertyName = "Art_Nr"
         Me.colArtNrBound.HeaderText = "colArtNrBound"
+        Me.colArtNrBound.MinimumWidth = 8
         Me.colArtNrBound.Name = "colArtNrBound"
         Me.colArtNrBound.Visible = False
+        Me.colArtNrBound.Width = 150
         '
         'DsOpschriftenBindingSource
         '
@@ -1402,6 +1429,7 @@ Partial Class Bestelfrm
         Me.AdresG.Name = "AdresG"
         Me.AdresG.nIO = b040.IOValues.IORecordEntryEnable
         Me.AdresG.RowHeadersVisible = False
+        Me.AdresG.RowHeadersWidth = 62
         Me.AdresG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.AdresG.Size = New System.Drawing.Size(548, 110)
         Me.AdresG.TabIndex = 24
@@ -1412,6 +1440,7 @@ Partial Class Bestelfrm
         Me.Adr_Adres.DataPropertyName = "Adr_Adres"
         Me.Adr_Adres.FillWeight = 20.0!
         Me.Adr_Adres.HeaderText = "Adres"
+        Me.Adr_Adres.MinimumWidth = 8
         Me.Adr_Adres.Name = "Adr_Adres"
         '
         'Adr_PostNummer
@@ -1420,6 +1449,7 @@ Partial Class Bestelfrm
         Me.Adr_PostNummer.DataPropertyName = "Adr_PostNummer"
         Me.Adr_PostNummer.FillWeight = 9.0!
         Me.Adr_PostNummer.HeaderText = "PostNr"
+        Me.Adr_PostNummer.MinimumWidth = 8
         Me.Adr_PostNummer.Name = "Adr_PostNummer"
         '
         'Adr_Gemeente
@@ -1428,6 +1458,7 @@ Partial Class Bestelfrm
         Me.Adr_Gemeente.DataPropertyName = "Adr_Gemeente"
         Me.Adr_Gemeente.FillWeight = 20.0!
         Me.Adr_Gemeente.HeaderText = "Gemeente"
+        Me.Adr_Gemeente.MinimumWidth = 8
         Me.Adr_Gemeente.Name = "Adr_Gemeente"
         '
         'Adr_Land
@@ -1436,27 +1467,33 @@ Partial Class Bestelfrm
         Me.Adr_Land.DataPropertyName = "Adr_Land"
         Me.Adr_Land.FillWeight = 20.0!
         Me.Adr_Land.HeaderText = "Land"
+        Me.Adr_Land.MinimumWidth = 8
         Me.Adr_Land.Name = "Adr_Land"
         '
         'AdrFacturatieDataGridViewCheckBoxColumn
         '
         Me.AdrFacturatieDataGridViewCheckBoxColumn.DataPropertyName = "Adr_Facturatie"
         Me.AdrFacturatieDataGridViewCheckBoxColumn.HeaderText = "Adr_Facturatie"
+        Me.AdrFacturatieDataGridViewCheckBoxColumn.MinimumWidth = 8
         Me.AdrFacturatieDataGridViewCheckBoxColumn.Name = "AdrFacturatieDataGridViewCheckBoxColumn"
         Me.AdrFacturatieDataGridViewCheckBoxColumn.Visible = False
+        Me.AdrFacturatieDataGridViewCheckBoxColumn.Width = 150
         '
         'Adr_id
         '
         Me.Adr_id.DataPropertyName = "Adr_id"
         Me.Adr_id.HeaderText = "AdridDataGridViewTextBoxColumn"
+        Me.Adr_id.MinimumWidth = 8
         Me.Adr_id.Name = "Adr_id"
         Me.Adr_id.Visible = False
+        Me.Adr_id.Width = 150
         '
         'Kies
         '
         Me.Kies.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Kies.FillWeight = 5.0!
         Me.Kies.HeaderText = "Kies"
+        Me.Kies.MinimumWidth = 8
         Me.Kies.Name = "Kies"
         Me.Kies.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Kies.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
@@ -1529,6 +1566,7 @@ Partial Class Bestelfrm
         Me.grdHistory.MultiSelect = False
         Me.grdHistory.Name = "grdHistory"
         Me.grdHistory.RowHeadersVisible = False
+        Me.grdHistory.RowHeadersWidth = 62
         Me.grdHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.grdHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.grdHistory.Size = New System.Drawing.Size(685, 642)
@@ -1577,6 +1615,7 @@ Partial Class Bestelfrm
         Me.particulierenOverzichtDatagridview.MultiSelect = False
         Me.particulierenOverzichtDatagridview.Name = "particulierenOverzichtDatagridview"
         Me.particulierenOverzichtDatagridview.RowHeadersVisible = False
+        Me.particulierenOverzichtDatagridview.RowHeadersWidth = 62
         Me.particulierenOverzichtDatagridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.particulierenOverzichtDatagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.particulierenOverzichtDatagridview.Size = New System.Drawing.Size(685, 642)
