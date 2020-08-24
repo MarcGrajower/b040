@@ -96,13 +96,15 @@
                 Me.BackColor = Me.backColorEnabled
                 Me.ioEnabled = True
                 Me.Enabled = True
+                t.Enabled = True
                 t.Visible = False
             Else
-                '                Me.Enabled = False
+                'Me.Enabled = False
                 Me.BackColor = Me.backColorDisabled
                 Me.TabStop = False
                 Me.t.BringToFront()
                 Me.SendToBack()
+                t.Enabled = False
                 Me.t.Visible = True
                 t.Text = Text
             End If
@@ -124,7 +126,7 @@
                 'Me.ioEnabled = True
                 Me.TabStop = True
                 Me.t.Visible = False
-                Me.t.ioEnable(mode)
+                Me.t.Enabled = False
                 Me.SelectionLength = 0
             End If
         End If
@@ -148,6 +150,7 @@
         mIO = IOValues.IOAlwaysEnable
         Me.ioEnabled = True
         t = New txtBase
+        t.nIO = nIO
     End Sub
     Public Property nIO() As IOValues
         Get
@@ -248,6 +251,7 @@ Public Class cbobaseJaNeen
         Me.Text = cEvent.Value
         Me.DisplayMember = cEvent.Value
         Me.SelectedValue = cEvent.Value
+        Me.t.Text = cEvent.Value
     End Sub
     Sub JaneenToBoolean(ByVal sender As Object, ByVal cEvent As ConvertEventArgs)
         cEvent.Value = IIf(cEvent.Value = "Ja", True, False)
@@ -257,7 +261,10 @@ Public Class cbobaseJaNeen
         Dim a() As String = New String() {"Ja", "Neen"} : Me.Items.AddRange(a)
     End Sub
     Sub cast(ByVal l As Boolean)
-        Me.Text = IIf(l,"Ja","Neen")
+        Me.Text = IIf(l, "Ja", "Neen")
+        Me.t.Text = Me.Text
+        Me.DisplayMember = Me.Text
+        Me.SelectedValue = Me.Text
     End Sub
     Function cast()
         Return (Me.Text = "Ja")

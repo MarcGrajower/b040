@@ -99,7 +99,7 @@ Partial Class frmArtikel
         Me.TxtArtSearch.Name = "TxtArtSearch"
         Me.TxtArtSearch.nIO = b040.IOValues.IOKeyEntryEnable
         Me.TxtArtSearch.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.TxtArtSearch.Size = New System.Drawing.Size(275, 21)
+        Me.TxtArtSearch.Size = New System.Drawing.Size(275, 28)
         Me.TxtArtSearch.TabIndex = 0
         '
         'LblBase1
@@ -108,7 +108,7 @@ Partial Class frmArtikel
         Me.LblBase1.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase1.Location = New System.Drawing.Point(4, 8)
         Me.LblBase1.Name = "LblBase1"
-        Me.LblBase1.Size = New System.Drawing.Size(48, 16)
+        Me.LblBase1.Size = New System.Drawing.Size(74, 23)
         Me.LblBase1.TabIndex = 1
         Me.LblBase1.Text = "Nummer"
         '
@@ -124,7 +124,7 @@ Partial Class frmArtikel
         Me.txtArt_Nr.Name = "txtArt_Nr"
         Me.txtArt_Nr.nIO = b040.IOValues.IOKeyEntryEnable
         Me.txtArt_Nr.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.txtArt_Nr.Size = New System.Drawing.Size(275, 21)
+        Me.txtArt_Nr.Size = New System.Drawing.Size(275, 28)
         Me.txtArt_Nr.TabIndex = 0
         '
         'BindingSource1
@@ -176,11 +176,11 @@ Partial Class frmArtikel
         Me.MeelTextBase.forceUppercase = False
         Me.MeelTextBase.ForeColor = System.Drawing.Color.DarkBlue
         Me.MeelTextBase.lIsSearch = False
-        Me.MeelTextBase.Location = New System.Drawing.Point(110, 215)
+        Me.MeelTextBase.Location = New System.Drawing.Point(109, 213)
         Me.MeelTextBase.Name = "MeelTextBase"
         Me.MeelTextBase.nIO = b040.IOValues.IORecordEntryEnable
         Me.MeelTextBase.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.MeelTextBase.Size = New System.Drawing.Size(275, 21)
+        Me.MeelTextBase.Size = New System.Drawing.Size(275, 28)
         Me.MeelTextBase.TabIndex = 20
         '
         'LblBase12
@@ -189,7 +189,7 @@ Partial Class frmArtikel
         Me.LblBase12.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase12.Location = New System.Drawing.Point(4, 217)
         Me.LblBase12.Name = "LblBase12"
-        Me.LblBase12.Size = New System.Drawing.Size(78, 16)
+        Me.LblBase12.Size = New System.Drawing.Size(120, 23)
         Me.LblBase12.TabIndex = 19
         Me.LblBase12.Text = "Meel (in gram)"
         '
@@ -202,20 +202,20 @@ Partial Class frmArtikel
         Me.TxtArt_Alphacode.forceUppercase = True
         Me.TxtArt_Alphacode.ForeColor = System.Drawing.Color.DarkBlue
         Me.TxtArt_Alphacode.lIsSearch = False
-        Me.TxtArt_Alphacode.Location = New System.Drawing.Point(110, 24)
+        Me.TxtArt_Alphacode.Location = New System.Drawing.Point(109, 24)
         Me.TxtArt_Alphacode.Name = "TxtArt_Alphacode"
         Me.TxtArt_Alphacode.nIO = b040.IOValues.IORecordEntryEnable
         Me.TxtArt_Alphacode.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.TxtArt_Alphacode.Size = New System.Drawing.Size(275, 21)
+        Me.TxtArt_Alphacode.Size = New System.Drawing.Size(275, 28)
         Me.TxtArt_Alphacode.TabIndex = 3
         '
         'LblBase2
         '
         Me.LblBase2.AutoSize = True
         Me.LblBase2.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
-        Me.LblBase2.Location = New System.Drawing.Point(4, 31)
+        Me.LblBase2.Location = New System.Drawing.Point(4, 28)
         Me.LblBase2.Name = "LblBase2"
-        Me.LblBase2.Size = New System.Drawing.Size(58, 16)
+        Me.LblBase2.Size = New System.Drawing.Size(88, 23)
         Me.LblBase2.TabIndex = 13
         Me.LblBase2.Text = "Alphacode"
         '
@@ -225,24 +225,24 @@ Partial Class frmArtikel
         Me.Art_VerwittigenGewichtCtl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Art_VerwittigenGewichtCtl.ForeColor = System.Drawing.Color.DarkBlue
         Me.Art_VerwittigenGewichtCtl.FormattingEnabled = True
-        Me.Art_VerwittigenGewichtCtl.Location = New System.Drawing.Point(110, 190)
+        Me.Art_VerwittigenGewichtCtl.Location = New System.Drawing.Point(109, 192)
         Me.Art_VerwittigenGewichtCtl.Name = "Art_VerwittigenGewichtCtl"
         Me.Art_VerwittigenGewichtCtl.nIO = b040.IOValues.IOAlwaysDisable
         Me.Art_VerwittigenGewichtCtl.setAutocomplete = False
-        Me.Art_VerwittigenGewichtCtl.Size = New System.Drawing.Size(275, 26)
+        Me.Art_VerwittigenGewichtCtl.Size = New System.Drawing.Size(275, 31)
         Me.Art_VerwittigenGewichtCtl.TabIndex = 11
         '
         'ARt_SnijdenCtl
         '
-        Me.ARt_SnijdenCtl.CausesValidation = False
+        ' Me.ARt_SnijdenCtl.CausesValidation = False
         Me.ARt_SnijdenCtl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BindingSource1, "Art_Snijden", True))
         Me.ARt_SnijdenCtl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.ARt_SnijdenCtl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.ARt_SnijdenCtl.Location = New System.Drawing.Point(110, 169)
+        Me.ARt_SnijdenCtl.Location = New System.Drawing.Point(109, 171)
         Me.ARt_SnijdenCtl.Name = "ARt_SnijdenCtl"
         Me.ARt_SnijdenCtl.nIO = b040.IOValues.IORecordEntryEnable
         Me.ARt_SnijdenCtl.setAutocomplete = False
-        Me.ARt_SnijdenCtl.Size = New System.Drawing.Size(275, 26)
+        Me.ARt_SnijdenCtl.Size = New System.Drawing.Size(275, 31)
         Me.ARt_SnijdenCtl.TabIndex = 10
         '
         'Art_KortingCtl
@@ -251,11 +251,11 @@ Partial Class frmArtikel
         Me.Art_KortingCtl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Art_KortingCtl.ForeColor = System.Drawing.Color.DarkBlue
         Me.Art_KortingCtl.FormattingEnabled = True
-        Me.Art_KortingCtl.Location = New System.Drawing.Point(110, 127)
+        Me.Art_KortingCtl.Location = New System.Drawing.Point(109, 129)
         Me.Art_KortingCtl.Name = "Art_KortingCtl"
         Me.Art_KortingCtl.nIO = b040.IOValues.IORecordEntryEnable
         Me.Art_KortingCtl.setAutocomplete = False
-        Me.Art_KortingCtl.Size = New System.Drawing.Size(275, 26)
+        Me.Art_KortingCtl.Size = New System.Drawing.Size(275, 31)
         Me.Art_KortingCtl.TabIndex = 8
         '
         'Art_PrijslijstCtl
@@ -266,11 +266,11 @@ Partial Class frmArtikel
         Me.Art_PrijslijstCtl.forceUppercase = True
         Me.Art_PrijslijstCtl.ForeColor = System.Drawing.Color.DarkBlue
         Me.Art_PrijslijstCtl.lIsSearch = False
-        Me.Art_PrijslijstCtl.Location = New System.Drawing.Point(110, 148)
+        Me.Art_PrijslijstCtl.Location = New System.Drawing.Point(109, 150)
         Me.Art_PrijslijstCtl.Name = "Art_PrijslijstCtl"
         Me.Art_PrijslijstCtl.nIO = b040.IOValues.IORecordEntryEnable
         Me.Art_PrijslijstCtl.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.Art_PrijslijstCtl.Size = New System.Drawing.Size(275, 21)
+        Me.Art_PrijslijstCtl.Size = New System.Drawing.Size(275, 28)
         Me.Art_PrijslijstCtl.TabIndex = 9
         '
         'Eenh_OmschrijvingCbo
@@ -279,11 +279,11 @@ Partial Class frmArtikel
         Me.Eenh_OmschrijvingCbo.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Eenh_OmschrijvingCbo.ForeColor = System.Drawing.Color.DarkBlue
         Me.Eenh_OmschrijvingCbo.FormattingEnabled = True
-        Me.Eenh_OmschrijvingCbo.Location = New System.Drawing.Point(110, 86)
+        Me.Eenh_OmschrijvingCbo.Location = New System.Drawing.Point(109, 87)
         Me.Eenh_OmschrijvingCbo.Name = "Eenh_OmschrijvingCbo"
         Me.Eenh_OmschrijvingCbo.nIO = b040.IOValues.IORecordEntryEnable
         Me.Eenh_OmschrijvingCbo.setAutocomplete = False
-        Me.Eenh_OmschrijvingCbo.Size = New System.Drawing.Size(275, 26)
+        Me.Eenh_OmschrijvingCbo.Size = New System.Drawing.Size(275, 31)
         Me.Eenh_OmschrijvingCbo.TabIndex = 6
         '
         'Kat_Naamcbo
@@ -293,11 +293,11 @@ Partial Class frmArtikel
         Me.Kat_Naamcbo.ForeColor = System.Drawing.Color.DarkBlue
         Me.Kat_Naamcbo.FormattingEnabled = True
         Me.Kat_Naamcbo.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.Kat_Naamcbo.Location = New System.Drawing.Point(110, 45)
+        Me.Kat_Naamcbo.Location = New System.Drawing.Point(109, 45)
         Me.Kat_Naamcbo.Name = "Kat_Naamcbo"
         Me.Kat_Naamcbo.nIO = b040.IOValues.IORecordEntryEnable
         Me.Kat_Naamcbo.setAutocomplete = False
-        Me.Kat_Naamcbo.Size = New System.Drawing.Size(275, 26)
+        Me.Kat_Naamcbo.Size = New System.Drawing.Size(275, 31)
         Me.Kat_Naamcbo.TabIndex = 4
         '
         'Art_BTW
@@ -308,11 +308,11 @@ Partial Class frmArtikel
         Me.Art_BTW.forceUppercase = True
         Me.Art_BTW.ForeColor = System.Drawing.Color.DarkBlue
         Me.Art_BTW.lIsSearch = False
-        Me.Art_BTW.Location = New System.Drawing.Point(110, 107)
+        Me.Art_BTW.Location = New System.Drawing.Point(109, 108)
         Me.Art_BTW.Name = "Art_BTW"
         Me.Art_BTW.nIO = b040.IOValues.IORecordEntryEnable
         Me.Art_BTW.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.Art_BTW.Size = New System.Drawing.Size(275, 21)
+        Me.Art_BTW.Size = New System.Drawing.Size(275, 28)
         Me.Art_BTW.TabIndex = 7
         '
         'PrijsTxt
@@ -324,11 +324,11 @@ Partial Class frmArtikel
         Me.PrijsTxt.forceUppercase = True
         Me.PrijsTxt.ForeColor = System.Drawing.Color.DarkBlue
         Me.PrijsTxt.lIsSearch = False
-        Me.PrijsTxt.Location = New System.Drawing.Point(110, 66)
+        Me.PrijsTxt.Location = New System.Drawing.Point(109, 66)
         Me.PrijsTxt.Name = "PrijsTxt"
         Me.PrijsTxt.nIO = b040.IOValues.IORecordEntryEnable
         Me.PrijsTxt.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.PrijsTxt.Size = New System.Drawing.Size(275, 21)
+        Me.PrijsTxt.Size = New System.Drawing.Size(275, 28)
         Me.PrijsTxt.TabIndex = 5
         '
         'LblBase11
@@ -337,7 +337,7 @@ Partial Class frmArtikel
         Me.LblBase11.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase11.Location = New System.Drawing.Point(4, 197)
         Me.LblBase11.Name = "LblBase11"
-        Me.LblBase11.Size = New System.Drawing.Size(106, 16)
+        Me.LblBase11.Size = New System.Drawing.Size(160, 23)
         Me.LblBase11.TabIndex = 11
         Me.LblBase11.Text = "Verwitigen Gewicht"
         '
@@ -347,7 +347,7 @@ Partial Class frmArtikel
         Me.LblBase10.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase10.Location = New System.Drawing.Point(5, 176)
         Me.LblBase10.Name = "LblBase10"
-        Me.LblBase10.Size = New System.Drawing.Size(44, 16)
+        Me.LblBase10.Size = New System.Drawing.Size(65, 23)
         Me.LblBase10.TabIndex = 10
         Me.LblBase10.Text = "Snijden"
         '
@@ -357,7 +357,7 @@ Partial Class frmArtikel
         Me.LblBase9.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase9.Location = New System.Drawing.Point(5, 134)
         Me.LblBase9.Name = "LblBase9"
-        Me.LblBase9.Size = New System.Drawing.Size(45, 16)
+        Me.LblBase9.Size = New System.Drawing.Size(65, 23)
         Me.LblBase9.TabIndex = 9
         Me.LblBase9.Text = "Korting"
         '
@@ -367,7 +367,7 @@ Partial Class frmArtikel
         Me.LblBase8.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase8.Location = New System.Drawing.Point(5, 155)
         Me.LblBase8.Name = "LblBase8"
-        Me.LblBase8.Size = New System.Drawing.Size(49, 16)
+        Me.LblBase8.Size = New System.Drawing.Size(75, 23)
         Me.LblBase8.TabIndex = 8
         Me.LblBase8.Text = "Prijslijst"
         '
@@ -377,7 +377,7 @@ Partial Class frmArtikel
         Me.LblBase7.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase7.Location = New System.Drawing.Point(5, 113)
         Me.LblBase7.Name = "LblBase7"
-        Me.LblBase7.Size = New System.Drawing.Size(45, 16)
+        Me.LblBase7.Size = New System.Drawing.Size(67, 23)
         Me.LblBase7.TabIndex = 7
         Me.LblBase7.Text = "Btw (%)"
         '
@@ -387,7 +387,7 @@ Partial Class frmArtikel
         Me.LblBase6.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase6.Location = New System.Drawing.Point(5, 92)
         Me.LblBase6.Name = "LblBase6"
-        Me.LblBase6.Size = New System.Drawing.Size(47, 16)
+        Me.LblBase6.Size = New System.Drawing.Size(69, 23)
         Me.LblBase6.TabIndex = 6
         Me.LblBase6.Text = "Eenheid"
         '
@@ -397,7 +397,7 @@ Partial Class frmArtikel
         Me.LblBase5.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase5.Location = New System.Drawing.Point(5, 71)
         Me.LblBase5.Name = "LblBase5"
-        Me.LblBase5.Size = New System.Drawing.Size(60, 16)
+        Me.LblBase5.Size = New System.Drawing.Size(91, 23)
         Me.LblBase5.TabIndex = 5
         Me.LblBase5.Text = "Prijs (EUR)"
         '
@@ -407,7 +407,7 @@ Partial Class frmArtikel
         Me.LblBase4.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase4.Location = New System.Drawing.Point(5, 50)
         Me.LblBase4.Name = "LblBase4"
-        Me.LblBase4.Size = New System.Drawing.Size(57, 16)
+        Me.LblBase4.Size = New System.Drawing.Size(84, 23)
         Me.LblBase4.TabIndex = 4
         Me.LblBase4.Text = "Kategorie"
         '
@@ -415,9 +415,9 @@ Partial Class frmArtikel
         '
         Me.LblBase3.AutoSize = True
         Me.LblBase3.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
-        Me.LblBase3.Location = New System.Drawing.Point(5, 7)
+        Me.LblBase3.Location = New System.Drawing.Point(4, 7)
         Me.LblBase3.Name = "LblBase3"
-        Me.LblBase3.Size = New System.Drawing.Size(74, 16)
+        Me.LblBase3.Size = New System.Drawing.Size(110, 23)
         Me.LblBase3.TabIndex = 3
         Me.LblBase3.Text = "Omschrijving"
         '
@@ -429,11 +429,11 @@ Partial Class frmArtikel
         Me.txtArt_omschrijving.forceUppercase = False
         Me.txtArt_omschrijving.ForeColor = System.Drawing.Color.DarkBlue
         Me.txtArt_omschrijving.lIsSearch = False
-        Me.txtArt_omschrijving.Location = New System.Drawing.Point(110, 3)
+        Me.txtArt_omschrijving.Location = New System.Drawing.Point(109, 3)
         Me.txtArt_omschrijving.Name = "txtArt_omschrijving"
         Me.txtArt_omschrijving.nIO = b040.IOValues.IORecordEntryEnable
         Me.txtArt_omschrijving.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.txtArt_omschrijving.Size = New System.Drawing.Size(275, 21)
+        Me.txtArt_omschrijving.Size = New System.Drawing.Size(275, 28)
         Me.txtArt_omschrijving.TabIndex = 2
         '
         'PnlBase3
@@ -461,11 +461,11 @@ Partial Class frmArtikel
         Me.art_Uitzonderlijkctl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.art_Uitzonderlijkctl.ForeColor = System.Drawing.Color.DarkBlue
         Me.art_Uitzonderlijkctl.FormattingEnabled = True
-        Me.art_Uitzonderlijkctl.Location = New System.Drawing.Point(110, 4)
+        Me.art_Uitzonderlijkctl.Location = New System.Drawing.Point(109, 4)
         Me.art_Uitzonderlijkctl.Name = "art_Uitzonderlijkctl"
         Me.art_Uitzonderlijkctl.nIO = b040.IOValues.IOAlwaysDisable
         Me.art_Uitzonderlijkctl.setAutocomplete = False
-        Me.art_Uitzonderlijkctl.Size = New System.Drawing.Size(275, 26)
+        Me.art_Uitzonderlijkctl.Size = New System.Drawing.Size(275, 31)
         Me.art_Uitzonderlijkctl.TabIndex = 12
         '
         'Art_PerpersoonCtl
@@ -478,7 +478,7 @@ Partial Class frmArtikel
         Me.Art_PerpersoonCtl.Name = "Art_PerpersoonCtl"
         Me.Art_PerpersoonCtl.nIO = b040.IOValues.IOAlwaysDisable
         Me.Art_PerpersoonCtl.setAutocomplete = False
-        Me.Art_PerpersoonCtl.Size = New System.Drawing.Size(275, 26)
+        Me.Art_PerpersoonCtl.Size = New System.Drawing.Size(275, 31)
         Me.Art_PerpersoonCtl.TabIndex = 13
         '
         'Art_OpschriftCtl
@@ -493,7 +493,7 @@ Partial Class frmArtikel
         Me.Art_OpschriftCtl.Name = "Art_OpschriftCtl"
         Me.Art_OpschriftCtl.nIO = b040.IOValues.IOAlwaysDisable
         Me.Art_OpschriftCtl.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.Art_OpschriftCtl.Size = New System.Drawing.Size(275, 21)
+        Me.Art_OpschriftCtl.Size = New System.Drawing.Size(275, 28)
         Me.Art_OpschriftCtl.TabIndex = 15
         '
         'Art_BestBoodschapCtl
@@ -508,7 +508,7 @@ Partial Class frmArtikel
         Me.Art_BestBoodschapCtl.Name = "Art_BestBoodschapCtl"
         Me.Art_BestBoodschapCtl.nIO = b040.IOValues.IOAlwaysDisable
         Me.Art_BestBoodschapCtl.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.Art_BestBoodschapCtl.Size = New System.Drawing.Size(275, 21)
+        Me.Art_BestBoodschapCtl.Size = New System.Drawing.Size(275, 28)
         Me.Art_BestBoodschapCtl.TabIndex = 16
         '
         'LblBase16
@@ -517,7 +517,7 @@ Partial Class frmArtikel
         Me.LblBase16.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase16.Location = New System.Drawing.Point(5, 91)
         Me.LblBase16.Name = "LblBase16"
-        Me.LblBase16.Size = New System.Drawing.Size(59, 16)
+        Me.LblBase16.Size = New System.Drawing.Size(84, 23)
         Me.LblBase16.TabIndex = 7
         Me.LblBase16.Text = "Instructie"
         '
@@ -527,7 +527,7 @@ Partial Class frmArtikel
         Me.LblBase17.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase17.Location = New System.Drawing.Point(5, 70)
         Me.LblBase17.Name = "LblBase17"
-        Me.LblBase17.Size = New System.Drawing.Size(56, 16)
+        Me.LblBase17.Size = New System.Drawing.Size(80, 23)
         Me.LblBase17.TabIndex = 6
         Me.LblBase17.Text = "Opschrift"
         '
@@ -537,7 +537,7 @@ Partial Class frmArtikel
         Me.LblBase18.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase18.Location = New System.Drawing.Point(5, 49)
         Me.LblBase18.Name = "LblBase18"
-        Me.LblBase18.Size = New System.Drawing.Size(86, 16)
+        Me.LblBase18.Size = New System.Drawing.Size(130, 23)
         Me.LblBase18.TabIndex = 5
         Me.LblBase18.Text = "Portie (in gram)"
         '
@@ -547,7 +547,7 @@ Partial Class frmArtikel
         Me.LblBase19.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase19.Location = New System.Drawing.Point(5, 28)
         Me.LblBase19.Name = "LblBase19"
-        Me.LblBase19.Size = New System.Drawing.Size(66, 16)
+        Me.LblBase19.Size = New System.Drawing.Size(98, 23)
         Me.LblBase19.TabIndex = 4
         Me.LblBase19.Text = "Per Persoon"
         '
@@ -557,7 +557,7 @@ Partial Class frmArtikel
         Me.LblBase20.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase20.Location = New System.Drawing.Point(5, 7)
         Me.LblBase20.Name = "LblBase20"
-        Me.LblBase20.Size = New System.Drawing.Size(56, 16)
+        Me.LblBase20.Size = New System.Drawing.Size(82, 23)
         Me.LblBase20.TabIndex = 3
         Me.LblBase20.Text = "Bijzonder"
         '
@@ -573,7 +573,7 @@ Partial Class frmArtikel
         Me.Art_PortieCtl.Name = "Art_PortieCtl"
         Me.Art_PortieCtl.nIO = b040.IOValues.IOAlwaysDisable
         Me.Art_PortieCtl.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.Art_PortieCtl.Size = New System.Drawing.Size(275, 21)
+        Me.Art_PortieCtl.Size = New System.Drawing.Size(275, 28)
         Me.Art_PortieCtl.TabIndex = 14
         '
         'ArtikelTableAdapter
@@ -628,11 +628,11 @@ Partial Class frmArtikel
         Me.Art_ACtiefCTl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Art_ACtiefCTl.ForeColor = System.Drawing.Color.DarkBlue
         Me.Art_ACtiefCTl.FormattingEnabled = True
-        Me.Art_ACtiefCTl.Location = New System.Drawing.Point(110, 4)
+        Me.Art_ACtiefCTl.Location = New System.Drawing.Point(109, 4)
         Me.Art_ACtiefCTl.Name = "Art_ACtiefCTl"
         Me.Art_ACtiefCTl.nIO = b040.IOValues.IORecordEntryEnable
         Me.Art_ACtiefCTl.setAutocomplete = False
-        Me.Art_ACtiefCTl.Size = New System.Drawing.Size(275, 26)
+        Me.Art_ACtiefCTl.Size = New System.Drawing.Size(275, 31)
         Me.Art_ACtiefCTl.TabIndex = 17
         '
         'LblBase21
@@ -641,20 +641,20 @@ Partial Class frmArtikel
         Me.LblBase21.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase21.Location = New System.Drawing.Point(6, 7)
         Me.LblBase21.Name = "LblBase21"
-        Me.LblBase21.Size = New System.Drawing.Size(38, 16)
+        Me.LblBase21.Size = New System.Drawing.Size(56, 23)
         Me.LblBase21.TabIndex = 3
         Me.LblBase21.Text = "Actief"
         '
         'frmArtikel
         '
         Me.CancelButton = Me.CloseBtn
-        Me.ClientSize = New System.Drawing.Size(407, 463)
+        Me.ClientSize = New System.Drawing.Size(408, 468)
         Me.Controls.Add(Me.PnlBase4)
         Me.Controls.Add(Me.CloseBtn)
         Me.Controls.Add(Me.SaveButton)
         Me.Controls.Add(Me.PnlBase3)
-        Me.Controls.Add(Me.PnlBase2)
         Me.Controls.Add(Me.PnlBase1)
+        Me.Controls.Add(Me.PnlBase2)
         Me.KeyPreview = True
         Me.Name = "frmArtikel"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

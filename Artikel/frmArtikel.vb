@@ -50,7 +50,7 @@
         Me.clear()
     End Sub
     Private Sub TxtArtSearch_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles TxtArtSearch.Validating
-        Dim input As String = TxtArtSearch.Text
+        Dim Input As String = TxtArtSearch.Text
         If Me.lastKeycode = Keys.Tab And input = "" Then
             Me.txtArt_Nr.Text = getNextArt_Nr()
             Me.TxtArt_Alphacode.nIO = IOValues.IORecordEntryEnable
@@ -278,7 +278,7 @@
 
     End Function
 
- 
+
     Private Sub CloseBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CloseBtn.Click
         Me.Close()
     End Sub
@@ -330,4 +330,6 @@
         End If
         Me.FormMode = Me.FormMode
     End Sub
+
+
 End Class
