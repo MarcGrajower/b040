@@ -263,6 +263,7 @@ Public Class Bestelfrm
         sqlString &= "order by bestH_id"
         oSQLP.Execute(sqlString)
         displayInHistory(oSQLP, Me.particulierenOverzichtDatagridview)
+
     End Sub
     Sub displayInHistory(ByVal osql As sqlClass, historyGrid As DataGridView)
         If osql.dt.Rows.Count = 0 Then Exit Sub
@@ -288,23 +289,6 @@ Public Class Bestelfrm
         historyGrid.Columns(7).Visible = False
         Dim f As Font = historyGrid.DefaultCellStyle.Font
         historyGrid.DefaultCellStyle.Font = New Font(f.FontFamily, 12, FontStyle.Bold)
-
-
-        'For Each oRow As DataRow In osql.dt.Rows
-        '    nRow += 1
-        '    frmMain.ToolStripProgressBar1.Value = nRow
-        '    historyGrid.Rows.Add()
-        '    historyGrid(0, nRow).Value = oRow("Kl_Naam")
-        '    historyGrid(1, nRow).Value = Strings.Right(oRow("BestH_DocNr").ToString, 4)
-        '    historyGrid(2, nRow).Value = oRow("BestH_DatLevering")
-        '    historyGrid(3, nRow).Value = modDutch.cDagInDeWeek(oRow("BestH_DatLevering"))
-        '    historyGrid(4, nRow).Value = oRow("Besth_Id")
-        '    historyGrid(5, nRow).Value = nNvlD(oRow("Besth_totLijnen"))
-        '    historyGrid(6, nRow).Value = nNvlD(oRow("Besth_totTeBetalen"))
-        '    historyGrid(7, nRow).Value = oRow("Besth_Docnr")
-
-        'Next
-
         frmMain.ToolStripProgressBar1.Visible = False
         Dim nRow As Integer = osql.dt.Rows.Count
         historyGrid.CurrentCell = historyGrid(0, nRow - 1)
@@ -317,9 +301,9 @@ Public Class Bestelfrm
         Dim tableName As String = IIf(bzKlanten.isParticulier(nKL_ID), "pH", "BestH")
         Dim historyGrid As DataGridView = IIf(bzKlanten.isParticulier(nKL_ID), Me.particulierenOverzichtDatagridview, Me.grdHistory)
         Dim oSql As New sqlClass
-        Dim sql As String = "select Klanten.KL_Naam,right(BestH_Docnr,3),BestH_DatLevering,space(8) as Dag,BestH_ID,besth_totLijnen,besth_totTeBetalen,BestH_Docnr "
+        Dim sql As String = "Select Klanten.KL_Naam,right(BestH_Docnr,3),BestH_DatLevering,space(8) As Dag,BestH_ID,besth_totLijnen,besth_totTeBetalen,BestH_Docnr "
         sql &= "from " & tableName & ",Klanten "
-        sql &= "where BestH_Klant = Kl_id  and Kl_Id = " & nKL_ID & " order by BestH_Id"
+        sql &= "where BestH_Klant = Kl_id  And Kl_Id = " & nKL_ID & " order by BestH_Id"
         oSql.Execute(sql)
         displayInHistory(oSql, historyGrid)
     End Sub
@@ -924,7 +908,7 @@ Public Class Bestelfrm
     End Function
     Sub loadArtikel()
         ' MG zondag 13 februari 2011
-        Me.grdBestelD.currentColumnValue("Omschrijving") = Me.obzArtikel.Record.Art_Omschrijving
+        Me.grdBestelD.currentColumnValue("Omschrijving") = Me.obzArtikel.Record.art_omschrijving
         Dim SnijdenApplicable As Boolean = Me.obzArtikel.SnijdenApplicable()
         Me.grdBestelD.currentColumnEnable("bestd_Snijden", SnijdenApplicable)
         ' MG zondag 13 februari 2011 - this does not work for some reason.
@@ -1916,12 +1900,36 @@ Public Class Bestelfrm
         Me.MonthCalendar1.SetSelectionRange(CDate(Me.BestH_DatLevering.Text), CDate(Me.BestH_DatLevering.Text))
     End Sub
     Private Sub TpgBase1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bestelTabpage.SelectedIndexChanged
+        If Me.bestelTabpage.SelectedIndex < 3 Then Exit Sub
         Dim groothandelPage As Integer = 3
         Dim particulierenPage As Integer = 4
+        Dim total As Decimal = 0
+        Dim dt As DataTable
         If Me.bestelTabpage.SelectedIndex = groothandelPage Then
+            If grdHistory Is Nothing Then Exit Sub
+            If grdHistory.DataSource Is Nothing Then Exit Sub
+            dt = grdHistory.DataSource
+            For Each dr As DataRow In dt.Rows
+                total += dr("BestH_TotTeBetalen")
+            Next
+            Me.TxtBaseNumericTotalOverzicht.Font = grdHistory.DefaultCellStyle.Font
+            Me.TxtBaseNumericTotalOverzicht.Text = $"{total:n2}"
+            Me.TxtBaseNumericTotalOverzicht.TextAlign = HorizontalAlignment.Right
+            Me.TxtBaseNumericTotalOverzicht.BackColor = Color.Beige
             Me.grdHistory.Focus()
         End If
         If Me.bestelTabpage.SelectedIndex = particulierenPage Then
+            If particulierenOverzichtDatagridview Is Nothing Then Exit Sub
+            If particulierenOverzichtDatagridview.DataSource Is Nothing Then Exit Sub
+
+            dt = particulierenOverzichtDatagridview.DataSource
+            For Each dr As DataRow In dt.Rows
+                total += dr("BestH_TotTeBetalen")
+            Next
+            Me.TxtBaseNumericTotalPartikulieren.Font = particulierenOverzichtDatagridview.DefaultCellStyle.Font
+            Me.TxtBaseNumericTotalPartikulieren.Text = $"{total:n2}"
+            Me.TxtBaseNumericTotalPartikulieren.TextAlign = HorizontalAlignment.Right
+            Me.TxtBaseNumericTotalPartikulieren.BackColor = Color.Beige
             Me.particulierenOverzichtDatagridview.Focus()
         End If
     End Sub

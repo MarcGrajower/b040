@@ -21,21 +21,21 @@ Partial Class Bestelfrm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Bestelfrm))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle57 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BestelHBS = New System.Windows.Forms.BindingSource(Me.components)
         Me.BestelDS = New b040.BestelDS()
         Me.AdresBS = New System.Windows.Forms.BindingSource(Me.components)
@@ -144,10 +144,12 @@ Partial Class Bestelfrm
         Me.Adr_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Kies = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.TxtBaseNumericTotalOverzicht = New b040.txtBaseNumeric()
         Me.overzichtGobottomButton = New System.Windows.Forms.Button()
         Me.overzichtGotopButton = New System.Windows.Forms.Button()
         Me.grdHistory = New System.Windows.Forms.DataGridView()
         Me.particulierenTabPage = New System.Windows.Forms.TabPage()
+        Me.TxtBaseNumericTotalPartikulieren = New b040.txtBaseNumeric()
         Me.particulierenOverzichtDatagridview = New System.Windows.Forms.DataGridView()
         Me.particulierenGobottomButton = New System.Windows.Forms.Button()
         Me.particulierenGotopButton = New System.Windows.Forms.Button()
@@ -251,10 +253,10 @@ Partial Class Bestelfrm
         Me.TabPage2.Controls.Add(Me.SaveAsStandaard)
         Me.TabPage2.Controls.Add(Me.PnlBase1)
         Me.TabPage2.Controls.Add(Me.grdBestelD)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 32)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 27)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1129, 674)
+        Me.TabPage2.Size = New System.Drawing.Size(1129, 679)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Bestelling"
         '
@@ -457,7 +459,7 @@ Partial Class Bestelfrm
         Me.BestH_Standaard.Name = "BestH_Standaard"
         Me.BestH_Standaard.nIO = b040.IOValues.IOKeyEntryEnable
         Me.BestH_Standaard.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.BestH_Standaard.Size = New System.Drawing.Size(50, 28)
+        Me.BestH_Standaard.Size = New System.Drawing.Size(50, 21)
         Me.BestH_Standaard.TabIndex = 2
         Me.BestH_Standaard.TabStop = False
         '
@@ -473,7 +475,7 @@ Partial Class Bestelfrm
         Me.BestH_StToegepast.Name = "BestH_StToegepast"
         Me.BestH_StToegepast.nIO = b040.IOValues.IOKeyEntryEnable
         Me.BestH_StToegepast.setAutocomplete = False
-        Me.BestH_StToegepast.Size = New System.Drawing.Size(111, 29)
+        Me.BestH_StToegepast.Size = New System.Drawing.Size(111, 22)
         Me.BestH_StToegepast.TabIndex = 0
         Me.BestH_StToegepast.TabStop = False
         '
@@ -487,7 +489,7 @@ Partial Class Bestelfrm
         Me.StType.Name = "StType"
         Me.StType.nIO = b040.IOValues.IOKeyEntryEnable
         Me.StType.setAutocomplete = False
-        Me.StType.Size = New System.Drawing.Size(87, 29)
+        Me.StType.Size = New System.Drawing.Size(87, 22)
         Me.StType.TabIndex = 1
         Me.StType.TabStop = False
         '
@@ -497,7 +499,7 @@ Partial Class Bestelfrm
         Me.LblBase17.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
         Me.LblBase17.Location = New System.Drawing.Point(196, 4)
         Me.LblBase17.Name = "LblBase17"
-        Me.LblBase17.Size = New System.Drawing.Size(71, 22)
+        Me.LblBase17.Size = New System.Drawing.Size(51, 16)
         Me.LblBase17.TabIndex = 8
         Me.LblBase17.Text = "Nr (1..3)"
         '
@@ -507,7 +509,7 @@ Partial Class Bestelfrm
         Me.LblBase18.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
         Me.LblBase18.Location = New System.Drawing.Point(111, 4)
         Me.LblBase18.Name = "LblBase18"
-        Me.LblBase18.Size = New System.Drawing.Size(78, 22)
+        Me.LblBase18.Size = New System.Drawing.Size(56, 16)
         Me.LblBase18.TabIndex = 6
         Me.LblBase18.Text = "Type Best"
         '
@@ -517,7 +519,7 @@ Partial Class Bestelfrm
         Me.LblBase19.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
         Me.LblBase19.Location = New System.Drawing.Point(-1, 4)
         Me.LblBase19.Name = "LblBase19"
-        Me.LblBase19.Size = New System.Drawing.Size(176, 23)
+        Me.LblBase19.Size = New System.Drawing.Size(124, 18)
         Me.LblBase19.TabIndex = 0
         Me.LblBase19.Text = "Standaard Toepassen"
         '
@@ -551,7 +553,7 @@ Partial Class Bestelfrm
         Me.BetalingTextbox.Name = "BetalingTextbox"
         Me.BetalingTextbox.nIO = b040.IOValues.IOAlwaysDisable
         Me.BetalingTextbox.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.BetalingTextbox.Size = New System.Drawing.Size(131, 28)
+        Me.BetalingTextbox.Size = New System.Drawing.Size(131, 21)
         Me.BetalingTextbox.TabIndex = 16
         Me.BetalingTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -561,7 +563,7 @@ Partial Class Bestelfrm
         Me.LblBase3.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
         Me.LblBase3.Location = New System.Drawing.Point(274, 3)
         Me.LblBase3.Name = "LblBase3"
-        Me.LblBase3.Size = New System.Drawing.Size(67, 22)
+        Me.LblBase3.Size = New System.Drawing.Size(48, 16)
         Me.LblBase3.TabIndex = 15
         Me.LblBase3.Text = "Betaling"
         '
@@ -571,7 +573,7 @@ Partial Class Bestelfrm
         Me.LblBase6.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
         Me.LblBase6.Location = New System.Drawing.Point(369, 3)
         Me.LblBase6.Name = "LblBase6"
-        Me.LblBase6.Size = New System.Drawing.Size(142, 22)
+        Me.LblBase6.Size = New System.Drawing.Size(101, 16)
         Me.LblBase6.TabIndex = 14
         Me.LblBase6.Text = "Volgende Feestdag"
         '
@@ -586,7 +588,7 @@ Partial Class Bestelfrm
         Me.VolgendeFeestdag.Name = "VolgendeFeestdag"
         Me.VolgendeFeestdag.nIO = b040.IOValues.IOAlwaysDisable
         Me.VolgendeFeestdag.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.VolgendeFeestdag.Size = New System.Drawing.Size(182, 28)
+        Me.VolgendeFeestdag.Size = New System.Drawing.Size(182, 21)
         Me.VolgendeFeestdag.TabIndex = 13
         '
         'TotBTW
@@ -600,7 +602,7 @@ Partial Class Bestelfrm
         Me.TotBTW.Name = "TotBTW"
         Me.TotBTW.nIO = b040.IOValues.IOAlwaysDisable
         Me.TotBTW.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.TotBTW.Size = New System.Drawing.Size(78, 28)
+        Me.TotBTW.Size = New System.Drawing.Size(78, 21)
         Me.TotBTW.TabIndex = 10
         Me.TotBTW.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -615,7 +617,7 @@ Partial Class Bestelfrm
         Me.TotaalEur.Name = "TotaalEur"
         Me.TotaalEur.nIO = b040.IOValues.IOAlwaysDisable
         Me.TotaalEur.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.TotaalEur.Size = New System.Drawing.Size(78, 28)
+        Me.TotaalEur.Size = New System.Drawing.Size(78, 21)
         Me.TotaalEur.TabIndex = 9
         Me.TotaalEur.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -625,7 +627,7 @@ Partial Class Bestelfrm
         Me.LblBase7.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
         Me.LblBase7.Location = New System.Drawing.Point(165, 3)
         Me.LblBase7.Name = "LblBase7"
-        Me.LblBase7.Size = New System.Drawing.Size(90, 22)
+        Me.LblBase7.Size = New System.Drawing.Size(63, 16)
         Me.LblBase7.TabIndex = 8
         Me.LblBase7.Text = "Totaal BTW"
         '
@@ -635,7 +637,7 @@ Partial Class Bestelfrm
         Me.LblBase15.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
         Me.LblBase15.Location = New System.Drawing.Point(89, 3)
         Me.LblBase15.Name = "LblBase15"
-        Me.LblBase15.Size = New System.Drawing.Size(80, 22)
+        Me.LblBase15.Size = New System.Drawing.Size(58, 16)
         Me.LblBase15.TabIndex = 6
         Me.LblBase15.Text = "Totaal Eur"
         '
@@ -650,7 +652,7 @@ Partial Class Bestelfrm
         Me.Bestellinglijnen.Name = "Bestellinglijnen"
         Me.Bestellinglijnen.nIO = b040.IOValues.IOAlwaysDisable
         Me.Bestellinglijnen.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.Bestellinglijnen.Size = New System.Drawing.Size(78, 28)
+        Me.Bestellinglijnen.Size = New System.Drawing.Size(78, 21)
         Me.Bestellinglijnen.TabIndex = 0
         Me.Bestellinglijnen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -660,7 +662,7 @@ Partial Class Bestelfrm
         Me.LblBase16.Font = New System.Drawing.Font("Trebuchet MS", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblBase16.Location = New System.Drawing.Point(3, 3)
         Me.LblBase16.Name = "LblBase16"
-        Me.LblBase16.Size = New System.Drawing.Size(54, 22)
+        Me.LblBase16.Size = New System.Drawing.Size(39, 16)
         Me.LblBase16.TabIndex = 0
         Me.LblBase16.Text = "Lijnen"
         '
@@ -695,7 +697,7 @@ Partial Class Bestelfrm
         Me.KL_Nummer.Name = "KL_Nummer"
         Me.KL_Nummer.nIO = b040.IOValues.IOKeyEntryEnable
         Me.KL_Nummer.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.KL_Nummer.Size = New System.Drawing.Size(55, 28)
+        Me.KL_Nummer.Size = New System.Drawing.Size(55, 21)
         Me.KL_Nummer.TabIndex = 0
         '
         'LblBase11
@@ -704,7 +706,7 @@ Partial Class Bestelfrm
         Me.LblBase11.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
         Me.LblBase11.Location = New System.Drawing.Point(434, 7)
         Me.LblBase11.Name = "LblBase11"
-        Me.LblBase11.Size = New System.Drawing.Size(89, 23)
+        Me.LblBase11.Size = New System.Drawing.Size(62, 18)
         Me.LblBase11.TabIndex = 22
         Me.LblBase11.Text = "Bediening"
         '
@@ -718,7 +720,7 @@ Partial Class Bestelfrm
         Me.Bediening.Name = "Bediening"
         Me.Bediening.nIO = b040.IOValues.IORecordEntryEnable
         Me.Bediening.setAutocomplete = False
-        Me.Bediening.Size = New System.Drawing.Size(121, 29)
+        Me.Bediening.Size = New System.Drawing.Size(121, 22)
         Me.Bediening.TabIndex = 20
         Me.Bediening.TabStop = False
         '
@@ -728,7 +730,7 @@ Partial Class Bestelfrm
         Me.LblBase10.Font = New System.Drawing.Font("Trebuchet MS", 7.0!)
         Me.LblBase10.Location = New System.Drawing.Point(376, 7)
         Me.LblBase10.Name = "LblBase10"
-        Me.LblBase10.Size = New System.Drawing.Size(80, 18)
+        Me.LblBase10.Size = New System.Drawing.Size(56, 15)
         Me.LblBase10.TabIndex = 21
         Me.LblBase10.Text = "Komt Halen"
         '
@@ -743,7 +745,7 @@ Partial Class Bestelfrm
         Me.BestH_KomtHalen.Name = "BestH_KomtHalen"
         Me.BestH_KomtHalen.nIO = b040.IOValues.IORecordEntryEnable
         Me.BestH_KomtHalen.setAutocomplete = False
-        Me.BestH_KomtHalen.Size = New System.Drawing.Size(56, 29)
+        Me.BestH_KomtHalen.Size = New System.Drawing.Size(56, 22)
         Me.BestH_KomtHalen.TabIndex = 5
         '
         'Adr_Telefoon
@@ -758,7 +760,7 @@ Partial Class Bestelfrm
         Me.Adr_Telefoon.Name = "Adr_Telefoon"
         Me.Adr_Telefoon.nIO = b040.IOValues.IOKeyEntryEnable
         Me.Adr_Telefoon.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.Adr_Telefoon.Size = New System.Drawing.Size(117, 28)
+        Me.Adr_Telefoon.Size = New System.Drawing.Size(117, 21)
         Me.Adr_Telefoon.TabIndex = 6
         '
         'LblBase9
@@ -767,7 +769,7 @@ Partial Class Bestelfrm
         Me.LblBase9.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
         Me.LblBase9.Location = New System.Drawing.Point(256, 6)
         Me.LblBase9.Name = "LblBase9"
-        Me.LblBase9.Size = New System.Drawing.Size(30, 22)
+        Me.LblBase9.Size = New System.Drawing.Size(21, 16)
         Me.LblBase9.TabIndex = 19
         Me.LblBase9.Text = "Tel"
         '
@@ -783,7 +785,7 @@ Partial Class Bestelfrm
         Me.KL_Naam.Name = "KL_Naam"
         Me.KL_Naam.nIO = b040.IOValues.IOAlwaysDisable
         Me.KL_Naam.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.KL_Naam.Size = New System.Drawing.Size(198, 28)
+        Me.KL_Naam.Size = New System.Drawing.Size(198, 21)
         Me.KL_Naam.TabIndex = 18
         '
         'LblBase8
@@ -792,7 +794,7 @@ Partial Class Bestelfrm
         Me.LblBase8.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
         Me.LblBase8.Location = New System.Drawing.Point(59, 7)
         Me.LblBase8.Name = "LblBase8"
-        Me.LblBase8.Size = New System.Drawing.Size(49, 22)
+        Me.LblBase8.Size = New System.Drawing.Size(35, 16)
         Me.LblBase8.TabIndex = 17
         Me.LblBase8.Text = "Naam"
         '
@@ -802,7 +804,7 @@ Partial Class Bestelfrm
         Me.KlantLbl.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
         Me.KlantLbl.Location = New System.Drawing.Point(6, 6)
         Me.KlantLbl.Name = "KlantLbl"
-        Me.KlantLbl.Size = New System.Drawing.Size(45, 22)
+        Me.KlantLbl.Size = New System.Drawing.Size(33, 16)
         Me.KlantLbl.TabIndex = 15
         Me.KlantLbl.Text = "Klant"
         '
@@ -844,7 +846,7 @@ Partial Class Bestelfrm
         Me.LblNrLevering.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
         Me.LblNrLevering.Location = New System.Drawing.Point(226, 4)
         Me.LblNrLevering.Name = "LblNrLevering"
-        Me.LblNrLevering.Size = New System.Drawing.Size(109, 22)
+        Me.LblNrLevering.Size = New System.Drawing.Size(76, 16)
         Me.LblNrLevering.TabIndex = 11
         Me.LblNrLevering.Text = "Volgende Lev."
         '
@@ -861,7 +863,7 @@ Partial Class Bestelfrm
         Me.TxtNrLevering.Name = "TxtNrLevering"
         Me.TxtNrLevering.nIO = b040.IOValues.IOAlwaysDisable
         Me.TxtNrLevering.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.TxtNrLevering.Size = New System.Drawing.Size(64, 28)
+        Me.TxtNrLevering.Size = New System.Drawing.Size(64, 21)
         Me.TxtNrLevering.TabIndex = 12
         Me.TxtNrLevering.TabStop = False
         Me.TxtNrLevering.ValidatingType = GetType(Date)
@@ -872,7 +874,7 @@ Partial Class Bestelfrm
         Me.LblBase5.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
         Me.LblBase5.Location = New System.Drawing.Point(160, 4)
         Me.LblBase5.Name = "LblBase5"
-        Me.LblBase5.Size = New System.Drawing.Size(101, 22)
+        Me.LblBase5.Size = New System.Drawing.Size(73, 16)
         Me.LblBase5.TabIndex = 0
         Me.LblBase5.Text = "Uur Levering"
         '
@@ -888,7 +890,7 @@ Partial Class Bestelfrm
         Me.BestH_UurLevering.Name = "BestH_UurLevering"
         Me.BestH_UurLevering.nIO = b040.IOValues.IORecordEntryEnable
         Me.BestH_UurLevering.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.BestH_UurLevering.Size = New System.Drawing.Size(64, 28)
+        Me.BestH_UurLevering.Size = New System.Drawing.Size(64, 21)
         Me.BestH_UurLevering.TabIndex = 3
         Me.BestH_UurLevering.TabStop = False
         Me.BestH_UurLevering.ValidatingType = GetType(Date)
@@ -899,7 +901,7 @@ Partial Class Bestelfrm
         Me.LblBase4.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
         Me.LblBase4.Location = New System.Drawing.Point(90, 4)
         Me.LblBase4.Name = "LblBase4"
-        Me.LblBase4.Size = New System.Drawing.Size(107, 22)
+        Me.LblBase4.Size = New System.Drawing.Size(77, 16)
         Me.LblBase4.TabIndex = 10
         Me.LblBase4.Text = "Dat. Levering"
         '
@@ -917,7 +919,7 @@ Partial Class Bestelfrm
         Me.BestH_DatLevering.Name = "BestH_DatLevering"
         Me.BestH_DatLevering.nIO = b040.IOValues.IOAlwaysDisable
         Me.BestH_DatLevering.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.BestH_DatLevering.Size = New System.Drawing.Size(66, 28)
+        Me.BestH_DatLevering.Size = New System.Drawing.Size(66, 21)
         Me.BestH_DatLevering.TabIndex = 0
         '
         'DagLevering
@@ -931,7 +933,7 @@ Partial Class Bestelfrm
         Me.DagLevering.Name = "DagLevering"
         Me.DagLevering.nIO = b040.IOValues.IOAlwaysDisable
         Me.DagLevering.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.DagLevering.Size = New System.Drawing.Size(88, 28)
+        Me.DagLevering.Size = New System.Drawing.Size(88, 21)
         Me.DagLevering.TabIndex = 1
         Me.DagLevering.TabStop = False
         '
@@ -941,7 +943,7 @@ Partial Class Bestelfrm
         Me.lblDag.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
         Me.lblDag.Location = New System.Drawing.Point(4, 4)
         Me.lblDag.Name = "lblDag"
-        Me.lblDag.Size = New System.Drawing.Size(103, 22)
+        Me.lblDag.Size = New System.Drawing.Size(74, 16)
         Me.lblDag.TabIndex = 8
         Me.lblDag.Text = "Dag Levering"
         '
@@ -950,25 +952,25 @@ Partial Class Bestelfrm
         Me.grdBestelD.AutoGenerateColumns = False
         Me.grdBestelD.BackgroundColor = System.Drawing.Color.White
         Me.grdBestelD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Bisque
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdBestelD.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle46.BackColor = System.Drawing.Color.Bisque
+        DataGridViewCellStyle46.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle46.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdBestelD.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle46
         Me.grdBestelD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdBestelD.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.BestDIDDataGridViewTextBoxColumn, Me.BestDBestHDataGridViewTextBoxColumn, Me.BestDIsStandaardDataGridViewCheckBoxColumn, Me.BestDArtikelDataGridViewTextBoxColumn, Me.Art_Nr, Me.Omschrijving, Me.BestD_Snijden, Me.Tour, Me.BestD_Portie, Me.Standaard, Me.BestD_Hoev1, Me.Eenh_HoevInvoer, Me.BestD_EenhPrijs, Me.Eenh_omschrijving, Me.BestD_Waarde, Me.voorafdrukken, Me.BestD_Verwittigen, Me.BestD_Opschrift, Me.BestD_Boodschap, Me.colArtNrBound})
         Me.grdBestelD.DataSource = Me.BestelDBS
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(223, Byte), Integer), CType(CType(198, Byte), Integer))
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdBestelD.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle53.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle53.ForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle53.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(223, Byte), Integer), CType(CType(198, Byte), Integer))
+        DataGridViewCellStyle53.SelectionForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdBestelD.DefaultCellStyle = DataGridViewCellStyle53
         Me.grdBestelD.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.grdBestelD.GridColor = System.Drawing.Color.Silver
         Me.grdBestelD.lKeepHighlightOnLostFocus = False
@@ -976,14 +978,14 @@ Partial Class Bestelfrm
         Me.grdBestelD.MultiSelect = False
         Me.grdBestelD.Name = "grdBestelD"
         Me.grdBestelD.nIO = b040.IOValues.IORecordEntryEnable
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.Bisque
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdBestelD.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle54.BackColor = System.Drawing.Color.Bisque
+        DataGridViewCellStyle54.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdBestelD.RowHeadersDefaultCellStyle = DataGridViewCellStyle54
         Me.grdBestelD.RowHeadersVisible = False
         Me.grdBestelD.RowHeadersWidth = 62
         Me.grdBestelD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -1034,8 +1036,8 @@ Partial Class Bestelfrm
         'Art_Nr
         '
         Me.Art_Nr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Art_Nr.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Art_Nr.DefaultCellStyle = DataGridViewCellStyle47
         Me.Art_Nr.FillWeight = 8.0!
         Me.Art_Nr.HeaderText = "Artikel"
         Me.Art_Nr.MinimumWidth = 8
@@ -1046,8 +1048,8 @@ Partial Class Bestelfrm
         '
         Me.Omschrijving.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Omschrijving.DataPropertyName = "BestD_Omschrijving"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.Omschrijving.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.Omschrijving.DefaultCellStyle = DataGridViewCellStyle48
         Me.Omschrijving.FillWeight = 20.0!
         Me.Omschrijving.HeaderText = "Omschrijving"
         Me.Omschrijving.MinimumWidth = 8
@@ -1066,7 +1068,7 @@ Partial Class Bestelfrm
         Me.BestD_Snijden.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.BestD_Snijden.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.BestD_Snijden.TrueValue = "true"
-        Me.BestD_Snijden.Width = 72
+        Me.BestD_Snijden.Width = 50
         '
         'Tour
         '
@@ -1076,7 +1078,7 @@ Partial Class Bestelfrm
         Me.Tour.HeaderText = "Tr"
         Me.Tour.MinimumWidth = 8
         Me.Tour.Name = "Tour"
-        Me.Tour.Width = 61
+        Me.Tour.Width = 44
         '
         'BestD_Portie
         '
@@ -1087,7 +1089,6 @@ Partial Class Bestelfrm
         Me.BestD_Portie.MinimumWidth = 8
         Me.BestD_Portie.Name = "BestD_Portie"
         Me.BestD_Portie.Visible = False
-        Me.BestD_Portie.Width = 150
         '
         'Standaard
         '
@@ -1113,8 +1114,8 @@ Partial Class Bestelfrm
         '
         Me.Eenh_HoevInvoer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.Eenh_HoevInvoer.DataPropertyName = "Eenh_HoevInvoer"
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Eenh_HoevInvoer.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle49.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Eenh_HoevInvoer.DefaultCellStyle = DataGridViewCellStyle49
         Me.Eenh_HoevInvoer.FillWeight = 8.0!
         Me.Eenh_HoevInvoer.HeaderText = ""
         Me.Eenh_HoevInvoer.MaxInputLength = 10
@@ -1136,8 +1137,8 @@ Partial Class Bestelfrm
         '
         Me.Eenh_omschrijving.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.Eenh_omschrijving.DataPropertyName = "Eenh_omschrijving"
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Eenh_omschrijving.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle50.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Eenh_omschrijving.DefaultCellStyle = DataGridViewCellStyle50
         Me.Eenh_omschrijving.FillWeight = 8.0!
         Me.Eenh_omschrijving.HeaderText = ""
         Me.Eenh_omschrijving.MaxInputLength = 10
@@ -1174,13 +1175,12 @@ Partial Class Bestelfrm
         Me.BestD_Verwittigen.Name = "BestD_Verwittigen"
         Me.BestD_Verwittigen.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.BestD_Verwittigen.Visible = False
-        Me.BestD_Verwittigen.Width = 150
         '
         'BestD_Opschrift
         '
         Me.BestD_Opschrift.DataPropertyName = "BestD_Opschrift"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.BestD_Opschrift.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.BestD_Opschrift.DefaultCellStyle = DataGridViewCellStyle51
         Me.BestD_Opschrift.FillWeight = 20.0!
         Me.BestD_Opschrift.HeaderText = "Opschrift"
         Me.BestD_Opschrift.MinimumWidth = 8
@@ -1193,8 +1193,8 @@ Partial Class Bestelfrm
         'BestD_Boodschap
         '
         Me.BestD_Boodschap.DataPropertyName = "BestD_Boodschap"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.BestD_Boodschap.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.BestD_Boodschap.DefaultCellStyle = DataGridViewCellStyle52
         Me.BestD_Boodschap.FillWeight = 20.0!
         Me.BestD_Boodschap.HeaderText = "Boodschap"
         Me.BestD_Boodschap.MinimumWidth = 8
@@ -1227,10 +1227,10 @@ Partial Class Bestelfrm
         '
         Me.TabPage1.Controls.Add(Me.PnlBase5)
         Me.TabPage1.Controls.Add(Me.PnlBase4)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 32)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 27)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1129, 674)
+        Me.TabPage1.Size = New System.Drawing.Size(1129, 679)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Document"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -1254,7 +1254,7 @@ Partial Class Bestelfrm
         Me.LblBase2.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
         Me.LblBase2.Location = New System.Drawing.Point(3, 33)
         Me.LblBase2.Name = "LblBase2"
-        Me.LblBase2.Size = New System.Drawing.Size(147, 23)
+        Me.LblBase2.Size = New System.Drawing.Size(102, 18)
         Me.LblBase2.TabIndex = 8
         Me.LblBase2.Text = "Datum Document"
         '
@@ -1264,7 +1264,7 @@ Partial Class Bestelfrm
         Me.LblBase1.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
         Me.LblBase1.Location = New System.Drawing.Point(3, 10)
         Me.LblBase1.Name = "LblBase1"
-        Me.LblBase1.Size = New System.Drawing.Size(133, 23)
+        Me.LblBase1.Size = New System.Drawing.Size(95, 18)
         Me.LblBase1.TabIndex = 7
         Me.LblBase1.Text = "Type Transactie"
         '
@@ -1279,7 +1279,7 @@ Partial Class Bestelfrm
         Me.txtBestH_DatBest2.Name = "txtBestH_DatBest2"
         Me.txtBestH_DatBest2.nIO = b040.IOValues.IOAlwaysEnable
         Me.txtBestH_DatBest2.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.txtBestH_DatBest2.Size = New System.Drawing.Size(100, 28)
+        Me.txtBestH_DatBest2.Size = New System.Drawing.Size(100, 21)
         Me.txtBestH_DatBest2.TabIndex = 0
         '
         'lblDate
@@ -1288,7 +1288,7 @@ Partial Class Bestelfrm
         Me.lblDate.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
         Me.lblDate.Location = New System.Drawing.Point(135, 10)
         Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(61, 23)
+        Me.lblDate.Size = New System.Drawing.Size(42, 18)
         Me.lblDate.TabIndex = 6
         Me.lblDate.Text = "Datum"
         '
@@ -1333,7 +1333,7 @@ Partial Class Bestelfrm
         Me.txtBestH_DatLeveing2.Name = "txtBestH_DatLeveing2"
         Me.txtBestH_DatLeveing2.nIO = b040.IOValues.IOAlwaysDisable
         Me.txtBestH_DatLeveing2.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.txtBestH_DatLeveing2.Size = New System.Drawing.Size(125, 28)
+        Me.txtBestH_DatLeveing2.Size = New System.Drawing.Size(125, 21)
         Me.txtBestH_DatLeveing2.TabIndex = 8
         '
         'lblDatLeving
@@ -1342,7 +1342,7 @@ Partial Class Bestelfrm
         Me.lblDatLeving.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
         Me.lblDatLeving.Location = New System.Drawing.Point(3, 28)
         Me.lblDatLeving.Name = "lblDatLeving"
-        Me.lblDatLeving.Size = New System.Drawing.Size(135, 23)
+        Me.lblDatLeving.Size = New System.Drawing.Size(92, 18)
         Me.lblDatLeving.TabIndex = 7
         Me.lblDatLeving.Text = "Datum Levering"
         '
@@ -1358,7 +1358,7 @@ Partial Class Bestelfrm
         Me.BestH_Docnr.Name = "BestH_Docnr"
         Me.BestH_Docnr.nIO = b040.IOValues.IOKeyEntryEnable
         Me.BestH_Docnr.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.BestH_Docnr.Size = New System.Drawing.Size(125, 28)
+        Me.BestH_Docnr.Size = New System.Drawing.Size(125, 21)
         Me.BestH_Docnr.TabIndex = 0
         '
         'LblBase20
@@ -1367,7 +1367,7 @@ Partial Class Bestelfrm
         Me.LblBase20.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
         Me.LblBase20.Location = New System.Drawing.Point(3, 8)
         Me.LblBase20.Name = "LblBase20"
-        Me.LblBase20.Size = New System.Drawing.Size(58, 23)
+        Me.LblBase20.Size = New System.Drawing.Size(42, 18)
         Me.LblBase20.TabIndex = 0
         Me.LblBase20.Text = "DocNr"
         '
@@ -1389,10 +1389,10 @@ Partial Class Bestelfrm
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.AdresG)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 32)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 27)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1129, 674)
+        Me.TabPage3.Size = New System.Drawing.Size(1129, 679)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Adres"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -1403,25 +1403,25 @@ Partial Class Bestelfrm
         Me.AdresG.AutoGenerateColumns = False
         Me.AdresG.BackgroundColor = System.Drawing.Color.White
         Me.AdresG.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AdresG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle57.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle57.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle57.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle57.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle57.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AdresG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle57
         Me.AdresG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.AdresG.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Adr_Adres, Me.Adr_PostNummer, Me.Adr_Gemeente, Me.Adr_Land, Me.AdrFacturatieDataGridViewCheckBoxColumn, Me.Adr_id, Me.Kies})
         Me.AdresG.DataSource = Me.AdresBS
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.AdresG.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle58.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle58.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle58.ForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle58.SelectionBackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.AdresG.DefaultCellStyle = DataGridViewCellStyle58
         Me.AdresG.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.AdresG.GridColor = System.Drawing.Color.LightGray
         Me.AdresG.lKeepHighlightOnLostFocus = False
@@ -1500,16 +1500,32 @@ Partial Class Bestelfrm
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.TxtBaseNumericTotalOverzicht)
         Me.TabPage4.Controls.Add(Me.overzichtGobottomButton)
         Me.TabPage4.Controls.Add(Me.overzichtGotopButton)
         Me.TabPage4.Controls.Add(Me.grdHistory)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 32)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 27)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1129, 674)
+        Me.TabPage4.Size = New System.Drawing.Size(1129, 679)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Overzicht (^O)"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'TxtBaseNumericTotalOverzicht
+        '
+        Me.TxtBaseNumericTotalOverzicht.BackColor = System.Drawing.Color.Beige
+        Me.TxtBaseNumericTotalOverzicht.fieldLength = 0
+        Me.TxtBaseNumericTotalOverzicht.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.TxtBaseNumericTotalOverzicht.forceUppercase = True
+        Me.TxtBaseNumericTotalOverzicht.ForeColor = System.Drawing.Color.DarkBlue
+        Me.TxtBaseNumericTotalOverzicht.lIsSearch = False
+        Me.TxtBaseNumericTotalOverzicht.Location = New System.Drawing.Point(559, 652)
+        Me.TxtBaseNumericTotalOverzicht.Name = "TxtBaseNumericTotalOverzicht"
+        Me.TxtBaseNumericTotalOverzicht.nIO = b040.IOValues.IOAlwaysEnable
+        Me.TxtBaseNumericTotalOverzicht.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.TxtBaseNumericTotalOverzicht.Size = New System.Drawing.Size(102, 21)
+        Me.TxtBaseNumericTotalOverzicht.TabIndex = 48
         '
         'overzichtGobottomButton
         '
@@ -1542,24 +1558,24 @@ Partial Class Bestelfrm
         Me.grdHistory.AllowUserToDeleteRows = False
         Me.grdHistory.BackgroundColor = System.Drawing.Color.Beige
         Me.grdHistory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdHistory.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle59.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle59.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle59.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdHistory.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle59
         Me.grdHistory.ColumnHeadersHeight = 21
         Me.grdHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.Beige
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Beige
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdHistory.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle60.BackColor = System.Drawing.Color.Beige
+        DataGridViewCellStyle60.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle60.ForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle60.SelectionBackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle60.SelectionForeColor = System.Drawing.Color.Beige
+        DataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdHistory.DefaultCellStyle = DataGridViewCellStyle60
         Me.grdHistory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.grdHistory.GridColor = System.Drawing.Color.LightGray
         Me.grdHistory.Location = New System.Drawing.Point(0, 6)
@@ -1574,16 +1590,32 @@ Partial Class Bestelfrm
         '
         'particulierenTabPage
         '
+        Me.particulierenTabPage.Controls.Add(Me.TxtBaseNumericTotalPartikulieren)
         Me.particulierenTabPage.Controls.Add(Me.particulierenOverzichtDatagridview)
         Me.particulierenTabPage.Controls.Add(Me.particulierenGobottomButton)
         Me.particulierenTabPage.Controls.Add(Me.particulierenGotopButton)
-        Me.particulierenTabPage.Location = New System.Drawing.Point(4, 32)
+        Me.particulierenTabPage.Location = New System.Drawing.Point(4, 27)
         Me.particulierenTabPage.Name = "particulierenTabPage"
         Me.particulierenTabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.particulierenTabPage.Size = New System.Drawing.Size(1129, 674)
+        Me.particulierenTabPage.Size = New System.Drawing.Size(1129, 679)
         Me.particulierenTabPage.TabIndex = 4
         Me.particulierenTabPage.Text = "Particulieren (^T)"
         Me.particulierenTabPage.UseVisualStyleBackColor = True
+        '
+        'TxtBaseNumericTotalPartikulieren
+        '
+        Me.TxtBaseNumericTotalPartikulieren.BackColor = System.Drawing.Color.Beige
+        Me.TxtBaseNumericTotalPartikulieren.fieldLength = 0
+        Me.TxtBaseNumericTotalPartikulieren.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.TxtBaseNumericTotalPartikulieren.forceUppercase = True
+        Me.TxtBaseNumericTotalPartikulieren.ForeColor = System.Drawing.Color.DarkBlue
+        Me.TxtBaseNumericTotalPartikulieren.lIsSearch = False
+        Me.TxtBaseNumericTotalPartikulieren.Location = New System.Drawing.Point(574, 652)
+        Me.TxtBaseNumericTotalPartikulieren.Name = "TxtBaseNumericTotalPartikulieren"
+        Me.TxtBaseNumericTotalPartikulieren.nIO = b040.IOValues.IOAlwaysEnable
+        Me.TxtBaseNumericTotalPartikulieren.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.TxtBaseNumericTotalPartikulieren.Size = New System.Drawing.Size(100, 21)
+        Me.TxtBaseNumericTotalPartikulieren.TabIndex = 49
         '
         'particulierenOverzichtDatagridview
         '
@@ -1591,24 +1623,24 @@ Partial Class Bestelfrm
         Me.particulierenOverzichtDatagridview.AllowUserToDeleteRows = False
         Me.particulierenOverzichtDatagridview.BackgroundColor = System.Drawing.Color.Beige
         Me.particulierenOverzichtDatagridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.particulierenOverzichtDatagridview.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle55.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle55.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle55.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle55.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle55.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.particulierenOverzichtDatagridview.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle55
         Me.particulierenOverzichtDatagridview.ColumnHeadersHeight = 21
         Me.particulierenOverzichtDatagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.Color.Beige
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Beige
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.particulierenOverzichtDatagridview.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle56.BackColor = System.Drawing.Color.Beige
+        DataGridViewCellStyle56.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle56.ForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle56.SelectionBackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle56.SelectionForeColor = System.Drawing.Color.Beige
+        DataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.particulierenOverzichtDatagridview.DefaultCellStyle = DataGridViewCellStyle56
         Me.particulierenOverzichtDatagridview.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.particulierenOverzichtDatagridview.GridColor = System.Drawing.Color.LightGray
         Me.particulierenOverzichtDatagridview.Location = New System.Drawing.Point(7, 6)
@@ -1786,8 +1818,10 @@ Partial Class Bestelfrm
         Me.TabPage3.ResumeLayout(False)
         CType(Me.AdresG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
         CType(Me.grdHistory, System.ComponentModel.ISupportInitialize).EndInit()
         Me.particulierenTabPage.ResumeLayout(False)
+        Me.particulierenTabPage.PerformLayout()
         CType(Me.particulierenOverzichtDatagridview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1917,4 +1951,6 @@ Partial Class Bestelfrm
     Friend WithEvents BedieningTableAdapter1 As b040_beDataSet1TableAdapters.BedieningTableAdapter
     Friend WithEvents BetalingTextbox As txtBase
     Friend WithEvents LblBase3 As lblBase
+    Friend WithEvents TxtBaseNumericTotalOverzicht As txtBaseNumeric
+    Friend WithEvents TxtBaseNumericTotalPartikulieren As txtBaseNumeric
 End Class

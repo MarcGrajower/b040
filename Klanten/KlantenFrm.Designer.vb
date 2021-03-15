@@ -22,10 +22,10 @@ Partial Class KlantenFrm
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(KlantenFrm))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BS = New System.Windows.Forms.BindingSource(Me.components)
         Me.KlantenDS = New b040.KlantenDS()
         Me.AdresBS = New System.Windows.Forms.BindingSource(Me.components)
@@ -40,6 +40,12 @@ Partial Class KlantenFrm
         Me.AnnuleerKlantenKortingButton = New b040.btnBase()
         Me.LblBase21 = New b040.lblBase()
         Me.KlantenKortingG = New b040.grdBase()
+        Me.colArtSearch = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Art_Omschrijving = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.KKKortingDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.KKIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.KKArtikelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Art_Nr = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PnlBase8 = New b040.pnlBase()
         Me.KL_Korting = New b040.txtBaseNumeric()
         Me.LblBase8 = New b040.lblBase()
@@ -121,12 +127,6 @@ Partial Class KlantenFrm
         Me.zoekButton = New b040.btnBase()
         Me.SaveButton = New b040.btnBase()
         Me.BestelDS2 = New b040.BestelDS()
-        Me.colArtSearch = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Art_Omschrijving = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.KKKortingDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.KKIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.KKArtikelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Art_Nr = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.BS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KlantenDS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AdresBS, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -204,10 +204,10 @@ Partial Class KlantenFrm
         '
         Me.TabPage2.Controls.Add(Me.PnlBase11)
         Me.TabPage2.Controls.Add(Me.PnlBase8)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(752, 420)
+        Me.TabPage2.Size = New System.Drawing.Size(752, 422)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Voorwaarden"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -221,7 +221,7 @@ Partial Class KlantenFrm
         Me.PnlBase11.Controls.Add(Me.LblBase21)
         Me.PnlBase11.Controls.Add(Me.KlantenKortingG)
         Me.PnlBase11.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        Me.PnlBase11.Location = New System.Drawing.Point(239, 16)
+        Me.PnlBase11.Location = New System.Drawing.Point(239, 17)
         Me.PnlBase11.Name = "PnlBase11"
         Me.PnlBase11.Size = New System.Drawing.Size(507, 389)
         Me.PnlBase11.TabIndex = 33
@@ -245,7 +245,7 @@ Partial Class KlantenFrm
         Me.LblBase21.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase21.Location = New System.Drawing.Point(5, 5)
         Me.LblBase21.Name = "LblBase21"
-        Me.LblBase21.Size = New System.Drawing.Size(140, 18)
+        Me.LblBase21.Size = New System.Drawing.Size(112, 16)
         Me.LblBase21.TabIndex = 29
         Me.LblBase21.Text = "Kortingen per Artikel"
         '
@@ -286,6 +286,58 @@ Partial Class KlantenFrm
         Me.KlantenKortingG.Size = New System.Drawing.Size(491, 329)
         Me.KlantenKortingG.TabIndex = 21
         '
+        'colArtSearch
+        '
+        Me.colArtSearch.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.colArtSearch.DataPropertyName = "KK_Artikel"
+        Me.colArtSearch.FillWeight = 5.0!
+        Me.colArtSearch.HeaderText = "Artikel"
+        Me.colArtSearch.MinimumWidth = 20
+        Me.colArtSearch.Name = "colArtSearch"
+        Me.colArtSearch.Width = 69
+        '
+        'Art_Omschrijving
+        '
+        Me.Art_Omschrijving.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Art_Omschrijving.DataPropertyName = "Art_Omschrijving"
+        Me.Art_Omschrijving.FillWeight = 20.0!
+        Me.Art_Omschrijving.HeaderText = "Omschrijving"
+        Me.Art_Omschrijving.Name = "Art_Omschrijving"
+        '
+        'KKKortingDataGridViewTextBoxColumn
+        '
+        Me.KKKortingDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.KKKortingDataGridViewTextBoxColumn.DataPropertyName = "KK_Korting"
+        Me.KKKortingDataGridViewTextBoxColumn.FillWeight = 5.0!
+        Me.KKKortingDataGridViewTextBoxColumn.HeaderText = "Korting (%)"
+        Me.KKKortingDataGridViewTextBoxColumn.Name = "KKKortingDataGridViewTextBoxColumn"
+        Me.KKKortingDataGridViewTextBoxColumn.Width = 92
+        '
+        'KKIDDataGridViewTextBoxColumn
+        '
+        Me.KKIDDataGridViewTextBoxColumn.DataPropertyName = "KK_ID"
+        Me.KKIDDataGridViewTextBoxColumn.HeaderText = "KK_ID"
+        Me.KKIDDataGridViewTextBoxColumn.Name = "KKIDDataGridViewTextBoxColumn"
+        Me.KKIDDataGridViewTextBoxColumn.Visible = False
+        '
+        'KKArtikelDataGridViewTextBoxColumn
+        '
+        Me.KKArtikelDataGridViewTextBoxColumn.DataPropertyName = "KK_Artikel"
+        Me.KKArtikelDataGridViewTextBoxColumn.HeaderText = "KK_Artikel"
+        Me.KKArtikelDataGridViewTextBoxColumn.Name = "KKArtikelDataGridViewTextBoxColumn"
+        Me.KKArtikelDataGridViewTextBoxColumn.Visible = False
+        '
+        'Art_Nr
+        '
+        Me.Art_Nr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.Art_Nr.DataPropertyName = "Art_Nr"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Art_Nr.DefaultCellStyle = DataGridViewCellStyle2
+        Me.Art_Nr.FillWeight = 5.0!
+        Me.Art_Nr.HeaderText = "KK_Artikel"
+        Me.Art_Nr.Name = "Art_Nr"
+        Me.Art_Nr.Visible = False
+        '
         'PnlBase8
         '
         Me.PnlBase8.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -294,7 +346,7 @@ Partial Class KlantenFrm
         Me.PnlBase8.Controls.Add(Me.KL_Korting)
         Me.PnlBase8.Controls.Add(Me.LblBase8)
         Me.PnlBase8.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        Me.PnlBase8.Location = New System.Drawing.Point(4, 16)
+        Me.PnlBase8.Location = New System.Drawing.Point(4, 17)
         Me.PnlBase8.Name = "PnlBase8"
         Me.PnlBase8.Size = New System.Drawing.Size(233, 388)
         Me.PnlBase8.TabIndex = 32
@@ -312,7 +364,7 @@ Partial Class KlantenFrm
         Me.KL_Korting.Name = "KL_Korting"
         Me.KL_Korting.nIO = b040.IOValues.IORecordEntryEnable
         Me.KL_Korting.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.KL_Korting.Size = New System.Drawing.Size(62, 31)
+        Me.KL_Korting.Size = New System.Drawing.Size(62, 26)
         Me.KL_Korting.TabIndex = 29
         Me.KL_Korting.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -322,16 +374,16 @@ Partial Class KlantenFrm
         Me.LblBase8.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase8.Location = New System.Drawing.Point(13, 5)
         Me.LblBase8.Name = "LblBase8"
-        Me.LblBase8.Size = New System.Drawing.Size(142, 18)
+        Me.LblBase8.Size = New System.Drawing.Size(112, 16)
         Me.LblBase8.TabIndex = 28
         Me.LblBase8.Text = "Algemene Korting (%)"
         '
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.AdresG)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(752, 420)
+        Me.TabPage3.Size = New System.Drawing.Size(752, 422)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Adressen"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -389,7 +441,7 @@ Partial Class KlantenFrm
         Me.postnrColumn.FillWeight = 8.0!
         Me.postnrColumn.HeaderText = "PostNr"
         Me.postnrColumn.Name = "postnrColumn"
-        Me.postnrColumn.Width = 78
+        Me.postnrColumn.Width = 66
         '
         'gemeenteColumn
         '
@@ -424,7 +476,7 @@ Partial Class KlantenFrm
         Me.factColumn.HeaderText = "Fact"
         Me.factColumn.Name = "factColumn"
         Me.factColumn.TrueValue = "true"
-        Me.factColumn.Width = 41
+        Me.factColumn.Width = 37
         '
         'AdridDataGridViewTextBoxColumn
         '
@@ -448,10 +500,10 @@ Partial Class KlantenFrm
         Me.TabPage1.Controls.Add(Me.PnlBase2)
         Me.TabPage1.Controls.Add(Me.PnlBase1)
         Me.TabPage1.Controls.Add(Me.PnlBase6)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(752, 420)
+        Me.TabPage1.Size = New System.Drawing.Size(752, 422)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Klant"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -463,7 +515,7 @@ Partial Class KlantenFrm
         Me.PnlBase7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PnlBase7.Controls.Add(Me.TxtBaseMultiline1)
         Me.PnlBase7.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        Me.PnlBase7.Location = New System.Drawing.Point(390, 317)
+        Me.PnlBase7.Location = New System.Drawing.Point(390, 318)
         Me.PnlBase7.Name = "PnlBase7"
         Me.PnlBase7.Size = New System.Drawing.Size(356, 106)
         Me.PnlBase7.TabIndex = 5
@@ -491,7 +543,7 @@ Partial Class KlantenFrm
         Me.PnlBase4.Controls.Add(Me.KL_Komthalen)
         Me.PnlBase4.Controls.Add(Me.LblBase27)
         Me.PnlBase4.Controls.Add(Me.LblBase19)
-        Me.PnlBase4.Location = New System.Drawing.Point(390, 248)
+        Me.PnlBase4.Location = New System.Drawing.Point(390, 249)
         Me.PnlBase4.Name = "PnlBase4"
         Me.PnlBase4.Size = New System.Drawing.Size(356, 68)
         Me.PnlBase4.TabIndex = 4
@@ -502,7 +554,7 @@ Partial Class KlantenFrm
         Me.laatsteBestellingBehoudenLabel.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.laatsteBestellingBehoudenLabel.Location = New System.Drawing.Point(127, 40)
         Me.laatsteBestellingBehoudenLabel.Name = "laatsteBestellingBehoudenLabel"
-        Me.laatsteBestellingBehoudenLabel.Size = New System.Drawing.Size(188, 18)
+        Me.laatsteBestellingBehoudenLabel.Size = New System.Drawing.Size(148, 16)
         Me.laatsteBestellingBehoudenLabel.TabIndex = 42
         Me.laatsteBestellingBehoudenLabel.Text = "Laatste Bestelling Behouden"
         '
@@ -531,7 +583,7 @@ Partial Class KlantenFrm
         Me.Bed_naam.Name = "Bed_naam"
         Me.Bed_naam.nIO = b040.IOValues.IORecordEntryEnable
         Me.Bed_naam.setAutocomplete = False
-        Me.Bed_naam.Size = New System.Drawing.Size(258, 34)
+        Me.Bed_naam.Size = New System.Drawing.Size(258, 30)
         Me.Bed_naam.TabIndex = 0
         '
         'KL_Komthalen
@@ -553,7 +605,7 @@ Partial Class KlantenFrm
         Me.LblBase27.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase27.Location = New System.Drawing.Point(9, 8)
         Me.LblBase27.Name = "LblBase27"
-        Me.LblBase27.Size = New System.Drawing.Size(71, 18)
+        Me.LblBase27.Size = New System.Drawing.Size(56, 16)
         Me.LblBase27.TabIndex = 40
         Me.LblBase27.Text = "Bediening"
         '
@@ -563,7 +615,7 @@ Partial Class KlantenFrm
         Me.LblBase19.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase19.Location = New System.Drawing.Point(9, 38)
         Me.LblBase19.Name = "LblBase19"
-        Me.LblBase19.Size = New System.Drawing.Size(79, 18)
+        Me.LblBase19.Size = New System.Drawing.Size(62, 16)
         Me.LblBase19.TabIndex = 38
         Me.LblBase19.Text = "Komt halen"
         '
@@ -577,7 +629,7 @@ Partial Class KlantenFrm
         Me.PnlBase3.Controls.Add(Me.KL_Code)
         Me.PnlBase3.Controls.Add(Me.LblBase2)
         Me.PnlBase3.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        Me.PnlBase3.Location = New System.Drawing.Point(390, 7)
+        Me.PnlBase3.Location = New System.Drawing.Point(390, 8)
         Me.PnlBase3.Name = "PnlBase3"
         Me.PnlBase3.Size = New System.Drawing.Size(356, 83)
         Me.PnlBase3.TabIndex = 2
@@ -588,7 +640,7 @@ Partial Class KlantenFrm
         Me.LblBase20.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase20.Location = New System.Drawing.Point(9, 44)
         Me.LblBase20.Name = "LblBase20"
-        Me.LblBase20.Size = New System.Drawing.Size(47, 18)
+        Me.LblBase20.Size = New System.Drawing.Size(38, 16)
         Me.LblBase20.TabIndex = 39
         Me.LblBase20.Text = "Actief"
         '
@@ -620,7 +672,7 @@ Partial Class KlantenFrm
         Me.KL_Code.Name = "KL_Code"
         Me.KL_Code.nIO = b040.IOValues.IORecordEntryEnable
         Me.KL_Code.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.KL_Code.Size = New System.Drawing.Size(258, 31)
+        Me.KL_Code.Size = New System.Drawing.Size(258, 26)
         Me.KL_Code.TabIndex = 34
         '
         'LblBase2
@@ -629,7 +681,7 @@ Partial Class KlantenFrm
         Me.LblBase2.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase2.Location = New System.Drawing.Point(9, 11)
         Me.LblBase2.Name = "LblBase2"
-        Me.LblBase2.Size = New System.Drawing.Size(74, 18)
+        Me.LblBase2.Size = New System.Drawing.Size(58, 16)
         Me.LblBase2.TabIndex = 35
         Me.LblBase2.Text = "Alphacode"
         '
@@ -662,7 +714,7 @@ Partial Class KlantenFrm
         Me.PnlBase2.Controls.Add(Me.LblBase4)
         Me.PnlBase2.Controls.Add(Me.LblBase3)
         Me.PnlBase2.Controls.Add(Me.KL_Naam)
-        Me.PnlBase2.Location = New System.Drawing.Point(6, 92)
+        Me.PnlBase2.Location = New System.Drawing.Point(6, 93)
         Me.PnlBase2.Name = "PnlBase2"
         Me.PnlBase2.Size = New System.Drawing.Size(383, 331)
         Me.PnlBase2.TabIndex = 1
@@ -680,7 +732,7 @@ Partial Class KlantenFrm
         Me.KL_Fax.Name = "KL_Fax"
         Me.KL_Fax.nIO = b040.IOValues.IORecordEntryEnable
         Me.KL_Fax.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.KL_Fax.Size = New System.Drawing.Size(284, 31)
+        Me.KL_Fax.Size = New System.Drawing.Size(284, 26)
         Me.KL_Fax.TabIndex = 8
         '
         'LblBase13
@@ -689,7 +741,7 @@ Partial Class KlantenFrm
         Me.LblBase13.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase13.Location = New System.Drawing.Point(9, 217)
         Me.LblBase13.Name = "LblBase13"
-        Me.LblBase13.Size = New System.Drawing.Size(29, 18)
+        Me.LblBase13.Size = New System.Drawing.Size(26, 16)
         Me.LblBase13.TabIndex = 25
         Me.LblBase13.Text = "Fax"
         '
@@ -699,7 +751,7 @@ Partial Class KlantenFrm
         Me.LblBase18.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase18.Location = New System.Drawing.Point(9, 140)
         Me.LblBase18.Name = "LblBase18"
-        Me.LblBase18.Size = New System.Drawing.Size(48, 18)
+        Me.LblBase18.Size = New System.Drawing.Size(40, 16)
         Me.LblBase18.TabIndex = 24
         Me.LblBase18.Text = "Postnr"
         '
@@ -709,7 +761,7 @@ Partial Class KlantenFrm
         Me.LblBase16.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase16.Location = New System.Drawing.Point(9, 192)
         Me.LblBase16.Name = "LblBase16"
-        Me.LblBase16.Size = New System.Drawing.Size(38, 18)
+        Me.LblBase16.Size = New System.Drawing.Size(32, 16)
         Me.LblBase16.TabIndex = 23
         Me.LblBase16.Text = "Land"
         '
@@ -726,7 +778,7 @@ Partial Class KlantenFrm
         Me.land.Name = "land"
         Me.land.nIO = b040.IOValues.IORecordEntryEnable
         Me.land.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.land.Size = New System.Drawing.Size(284, 31)
+        Me.land.Size = New System.Drawing.Size(284, 26)
         Me.land.TabIndex = 7
         '
         'LblBase11
@@ -735,7 +787,7 @@ Partial Class KlantenFrm
         Me.LblBase11.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase11.Location = New System.Drawing.Point(9, 166)
         Me.LblBase11.Name = "LblBase11"
-        Me.LblBase11.Size = New System.Drawing.Size(74, 18)
+        Me.LblBase11.Size = New System.Drawing.Size(58, 16)
         Me.LblBase11.TabIndex = 21
         Me.LblBase11.Text = "Gemeente"
         '
@@ -753,7 +805,7 @@ Partial Class KlantenFrm
         Me.adres.Name = "adres"
         Me.adres.nIO = b040.IOValues.IORecordEntryEnable
         Me.adres.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.adres.Size = New System.Drawing.Size(284, 31)
+        Me.adres.Size = New System.Drawing.Size(284, 26)
         Me.adres.TabIndex = 4
         '
         'LblBase14
@@ -762,7 +814,7 @@ Partial Class KlantenFrm
         Me.LblBase14.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase14.Location = New System.Drawing.Point(9, 114)
         Me.LblBase14.Name = "LblBase14"
-        Me.LblBase14.Size = New System.Drawing.Size(44, 18)
+        Me.LblBase14.Size = New System.Drawing.Size(36, 16)
         Me.LblBase14.TabIndex = 20
         Me.LblBase14.Text = "Adres"
         '
@@ -779,7 +831,7 @@ Partial Class KlantenFrm
         Me.postnr.Name = "postnr"
         Me.postnr.nIO = b040.IOValues.IORecordEntryEnable
         Me.postnr.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.postnr.Size = New System.Drawing.Size(284, 31)
+        Me.postnr.Size = New System.Drawing.Size(284, 26)
         Me.postnr.TabIndex = 5
         '
         'gemeente
@@ -795,7 +847,7 @@ Partial Class KlantenFrm
         Me.gemeente.Name = "gemeente"
         Me.gemeente.nIO = b040.IOValues.IORecordEntryEnable
         Me.gemeente.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.gemeente.Size = New System.Drawing.Size(284, 31)
+        Me.gemeente.Size = New System.Drawing.Size(284, 26)
         Me.gemeente.TabIndex = 6
         '
         'LblBase15
@@ -804,7 +856,7 @@ Partial Class KlantenFrm
         Me.LblBase15.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase15.Location = New System.Drawing.Point(9, 88)
         Me.LblBase15.Name = "LblBase15"
-        Me.LblBase15.Size = New System.Drawing.Size(62, 18)
+        Me.LblBase15.Size = New System.Drawing.Size(49, 16)
         Me.LblBase15.TabIndex = 16
         Me.LblBase15.Text = "Telefoon"
         '
@@ -820,7 +872,7 @@ Partial Class KlantenFrm
         Me.Telefoon.Name = "Telefoon"
         Me.Telefoon.nIO = b040.IOValues.IORecordEntryEnable
         Me.Telefoon.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.Telefoon.Size = New System.Drawing.Size(284, 31)
+        Me.Telefoon.Size = New System.Drawing.Size(284, 26)
         Me.Telefoon.TabIndex = 3
         '
         'LblBase5
@@ -829,7 +881,7 @@ Partial Class KlantenFrm
         Me.LblBase5.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase5.Location = New System.Drawing.Point(9, 62)
         Me.LblBase5.Name = "LblBase5"
-        Me.LblBase5.Size = New System.Drawing.Size(70, 18)
+        Me.LblBase5.Size = New System.Drawing.Size(57, 16)
         Me.LblBase5.TabIndex = 14
         Me.LblBase5.Text = "Voornaam"
         '
@@ -846,7 +898,7 @@ Partial Class KlantenFrm
         Me.KL_EMail.Name = "KL_EMail"
         Me.KL_EMail.nIO = b040.IOValues.IORecordEntryEnable
         Me.KL_EMail.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.KL_EMail.Size = New System.Drawing.Size(284, 31)
+        Me.KL_EMail.Size = New System.Drawing.Size(284, 26)
         Me.KL_EMail.TabIndex = 11
         '
         'KL_Telefoon2
@@ -862,7 +914,7 @@ Partial Class KlantenFrm
         Me.KL_Telefoon2.Name = "KL_Telefoon2"
         Me.KL_Telefoon2.nIO = b040.IOValues.IORecordEntryEnable
         Me.KL_Telefoon2.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.KL_Telefoon2.Size = New System.Drawing.Size(284, 31)
+        Me.KL_Telefoon2.Size = New System.Drawing.Size(284, 26)
         Me.KL_Telefoon2.TabIndex = 9
         '
         'KL_Titel
@@ -879,7 +931,7 @@ Partial Class KlantenFrm
         Me.KL_Titel.Name = "KL_Titel"
         Me.KL_Titel.nIO = b040.IOValues.IORecordEntryEnable
         Me.KL_Titel.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.KL_Titel.Size = New System.Drawing.Size(284, 31)
+        Me.KL_Titel.Size = New System.Drawing.Size(284, 26)
         Me.KL_Titel.TabIndex = 1
         '
         'KL_GSM
@@ -895,7 +947,7 @@ Partial Class KlantenFrm
         Me.KL_GSM.Name = "KL_GSM"
         Me.KL_GSM.nIO = b040.IOValues.IORecordEntryEnable
         Me.KL_GSM.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.KL_GSM.Size = New System.Drawing.Size(284, 31)
+        Me.KL_GSM.Size = New System.Drawing.Size(284, 26)
         Me.KL_GSM.TabIndex = 10
         '
         'KL_Voornaam
@@ -912,7 +964,7 @@ Partial Class KlantenFrm
         Me.KL_Voornaam.Name = "KL_Voornaam"
         Me.KL_Voornaam.nIO = b040.IOValues.IORecordEntryEnable
         Me.KL_Voornaam.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.KL_Voornaam.Size = New System.Drawing.Size(284, 31)
+        Me.KL_Voornaam.Size = New System.Drawing.Size(284, 26)
         Me.KL_Voornaam.TabIndex = 2
         '
         'LblBase9
@@ -921,7 +973,7 @@ Partial Class KlantenFrm
         Me.LblBase9.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase9.Location = New System.Drawing.Point(9, 293)
         Me.LblBase9.Name = "LblBase9"
-        Me.LblBase9.Size = New System.Drawing.Size(41, 18)
+        Me.LblBase9.Size = New System.Drawing.Size(33, 16)
         Me.LblBase9.TabIndex = 9
         Me.LblBase9.Text = "EMail"
         '
@@ -931,7 +983,7 @@ Partial Class KlantenFrm
         Me.LblBase7.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase7.Location = New System.Drawing.Point(9, 269)
         Me.LblBase7.Name = "LblBase7"
-        Me.LblBase7.Size = New System.Drawing.Size(35, 18)
+        Me.LblBase7.Size = New System.Drawing.Size(28, 16)
         Me.LblBase7.TabIndex = 7
         Me.LblBase7.Text = "GSM"
         '
@@ -941,7 +993,7 @@ Partial Class KlantenFrm
         Me.LblBase6.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase6.Location = New System.Drawing.Point(9, 244)
         Me.LblBase6.Name = "LblBase6"
-        Me.LblBase6.Size = New System.Drawing.Size(83, 18)
+        Me.LblBase6.Size = New System.Drawing.Size(66, 16)
         Me.LblBase6.TabIndex = 6
         Me.LblBase6.Text = "Telefoon (2)"
         '
@@ -951,7 +1003,7 @@ Partial Class KlantenFrm
         Me.LblBase4.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase4.Location = New System.Drawing.Point(9, 36)
         Me.LblBase4.Name = "LblBase4"
-        Me.LblBase4.Size = New System.Drawing.Size(36, 18)
+        Me.LblBase4.Size = New System.Drawing.Size(30, 16)
         Me.LblBase4.TabIndex = 4
         Me.LblBase4.Text = "Titel"
         '
@@ -961,7 +1013,7 @@ Partial Class KlantenFrm
         Me.LblBase3.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase3.Location = New System.Drawing.Point(9, 10)
         Me.LblBase3.Name = "LblBase3"
-        Me.LblBase3.Size = New System.Drawing.Size(42, 18)
+        Me.LblBase3.Size = New System.Drawing.Size(35, 16)
         Me.LblBase3.TabIndex = 3
         Me.LblBase3.Text = "Naam"
         '
@@ -978,7 +1030,7 @@ Partial Class KlantenFrm
         Me.KL_Naam.Name = "KL_Naam"
         Me.KL_Naam.nIO = b040.IOValues.IORecordEntryEnable
         Me.KL_Naam.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.KL_Naam.Size = New System.Drawing.Size(284, 31)
+        Me.KL_Naam.Size = New System.Drawing.Size(284, 26)
         Me.KL_Naam.TabIndex = 0
         '
         'PnlBase1
@@ -990,7 +1042,7 @@ Partial Class KlantenFrm
         Me.PnlBase1.Controls.Add(Me.typeFacturatieControl)
         Me.PnlBase1.Controls.Add(Me.LblBase1)
         Me.PnlBase1.Controls.Add(Me.KL_Nummer)
-        Me.PnlBase1.Location = New System.Drawing.Point(6, 7)
+        Me.PnlBase1.Location = New System.Drawing.Point(6, 8)
         Me.PnlBase1.Name = "PnlBase1"
         Me.PnlBase1.Size = New System.Drawing.Size(383, 83)
         Me.PnlBase1.TabIndex = 0
@@ -1001,7 +1053,7 @@ Partial Class KlantenFrm
         Me.LblBase17.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase17.Location = New System.Drawing.Point(9, 31)
         Me.LblBase17.Name = "LblBase17"
-        Me.LblBase17.Size = New System.Drawing.Size(37, 18)
+        Me.LblBase17.Size = New System.Drawing.Size(31, 16)
         Me.LblBase17.TabIndex = 24
         Me.LblBase17.Text = "Type"
         '
@@ -1043,7 +1095,7 @@ Partial Class KlantenFrm
         Me.KL_Nummer.Name = "KL_Nummer"
         Me.KL_Nummer.nIO = b040.IOValues.IOKeyEntryEnable
         Me.KL_Nummer.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.KL_Nummer.Size = New System.Drawing.Size(284, 31)
+        Me.KL_Nummer.Size = New System.Drawing.Size(284, 26)
         Me.KL_Nummer.TabIndex = 0
         '
         'PnlBase6
@@ -1059,7 +1111,7 @@ Partial Class KlantenFrm
         Me.PnlBase6.Controls.Add(Me.LblBase23)
         Me.PnlBase6.Controls.Add(Me.BTW_Omschrijving)
         Me.PnlBase6.Controls.Add(Me.LblBase12)
-        Me.PnlBase6.Location = New System.Drawing.Point(390, 92)
+        Me.PnlBase6.Location = New System.Drawing.Point(390, 93)
         Me.PnlBase6.Name = "PnlBase6"
         Me.PnlBase6.Size = New System.Drawing.Size(354, 155)
         Me.PnlBase6.TabIndex = 3
@@ -1084,7 +1136,7 @@ Partial Class KlantenFrm
         Me.LblBase24.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase24.Location = New System.Drawing.Point(9, 124)
         Me.LblBase24.Name = "LblBase24"
-        Me.LblBase24.Size = New System.Drawing.Size(57, 18)
+        Me.LblBase24.Size = New System.Drawing.Size(46, 16)
         Me.LblBase24.TabIndex = 42
         Me.LblBase24.Text = "Voldaan"
         '
@@ -1108,7 +1160,7 @@ Partial Class KlantenFrm
         Me.LblBase22.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase22.Location = New System.Drawing.Point(176, 124)
         Me.LblBase22.Name = "LblBase22"
-        Me.LblBase22.Size = New System.Drawing.Size(88, 18)
+        Me.LblBase22.Size = New System.Drawing.Size(70, 16)
         Me.LblBase22.TabIndex = 30
         Me.LblBase22.Text = "Automatisch"
         '
@@ -1125,7 +1177,7 @@ Partial Class KlantenFrm
         Me.kl_btw.Name = "kl_btw"
         Me.kl_btw.nIO = b040.IOValues.IORecordEntryEnable
         Me.kl_btw.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.kl_btw.Size = New System.Drawing.Size(257, 31)
+        Me.kl_btw.Size = New System.Drawing.Size(257, 26)
         Me.kl_btw.TabIndex = 27
         '
         'LblBase23
@@ -1134,7 +1186,7 @@ Partial Class KlantenFrm
         Me.LblBase23.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase23.Location = New System.Drawing.Point(9, 97)
         Me.LblBase23.Name = "LblBase23"
-        Me.LblBase23.Size = New System.Drawing.Size(54, 18)
+        Me.LblBase23.Size = New System.Drawing.Size(45, 16)
         Me.LblBase23.TabIndex = 26
         Me.LblBase23.Text = "BTW Nr"
         '
@@ -1148,7 +1200,7 @@ Partial Class KlantenFrm
         Me.BTW_Omschrijving.Location = New System.Drawing.Point(85, 5)
         Me.BTW_Omschrijving.Name = "BTW_Omschrijving"
         Me.BTW_Omschrijving.nIO = b040.IOValues.IORecordEntryEnable
-        Me.BTW_Omschrijving.Size = New System.Drawing.Size(257, 82)
+        Me.BTW_Omschrijving.Size = New System.Drawing.Size(257, 67)
         Me.BTW_Omschrijving.TabIndex = 0
         '
         'LblBase12
@@ -1157,7 +1209,7 @@ Partial Class KlantenFrm
         Me.LblBase12.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase12.Location = New System.Drawing.Point(9, 5)
         Me.LblBase12.Name = "LblBase12"
-        Me.LblBase12.Size = New System.Drawing.Size(69, 18)
+        Me.LblBase12.Size = New System.Drawing.Size(56, 16)
         Me.LblBase12.TabIndex = 24
         Me.LblBase12.Text = "BTW Type"
         '
@@ -1174,7 +1226,7 @@ Partial Class KlantenFrm
         Me.Zoek.Name = "Zoek"
         Me.Zoek.nIO = b040.IOValues.IOKeyEntryEnable
         Me.Zoek.setAutocomplete = False
-        Me.Zoek.Size = New System.Drawing.Size(267, 34)
+        Me.Zoek.Size = New System.Drawing.Size(267, 30)
         Me.Zoek.TabIndex = 0
         Me.Zoek.ValueMember = "KL_id"
         '
@@ -1235,7 +1287,7 @@ Partial Class KlantenFrm
         Me.Title.ForeColor = System.Drawing.Color.DarkBlue
         Me.Title.Location = New System.Drawing.Point(15, 8)
         Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(86, 38)
+        Me.Title.Size = New System.Drawing.Size(68, 30)
         Me.Title.TabIndex = 44
         Me.Title.Text = "Title"
         '
@@ -1292,59 +1344,6 @@ Partial Class KlantenFrm
         '
         Me.BestelDS2.DataSetName = "BestelDS"
         Me.BestelDS2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'colArtSearch
-        '
-        Me.colArtSearch.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.colArtSearch.DataPropertyName = "KK_Artikel"
-        Me.colArtSearch.FillWeight = 5.0!
-        Me.colArtSearch.HeaderText = "Artikel"
-        Me.colArtSearch.MinimumWidth = 20
-        Me.colArtSearch.Name = "colArtSearch"
-        Me.colArtSearch.Width = 82
-        '
-        'Art_Omschrijving
-        '
-        Me.Art_Omschrijving.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Art_Omschrijving.DataPropertyName = "Art_Omschrijving"
-        Me.Art_Omschrijving.FillWeight = 20.0!
-        Me.Art_Omschrijving.HeaderText = "Omschrijving"
-        Me.Art_Omschrijving.Name = "Art_Omschrijving"
-        '
-        'KKKortingDataGridViewTextBoxColumn
-        '
-        Me.KKKortingDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.KKKortingDataGridViewTextBoxColumn.DataPropertyName = "KK_Korting"
-        Me.KKKortingDataGridViewTextBoxColumn.FillWeight = 5.0!
-        Me.KKKortingDataGridViewTextBoxColumn.HeaderText = "Korting (%)"
-        Me.KKKortingDataGridViewTextBoxColumn.Name = "KKKortingDataGridViewTextBoxColumn"
-        Me.KKKortingDataGridViewTextBoxColumn.Width = 113
-        '
-        'KKIDDataGridViewTextBoxColumn
-        '
-        Me.KKIDDataGridViewTextBoxColumn.DataPropertyName = "KK_ID"
-        Me.KKIDDataGridViewTextBoxColumn.HeaderText = "KK_ID"
-        Me.KKIDDataGridViewTextBoxColumn.Name = "KKIDDataGridViewTextBoxColumn"
-        Me.KKIDDataGridViewTextBoxColumn.Visible = False
-        '
-        'KKArtikelDataGridViewTextBoxColumn
-        '
-        Me.KKArtikelDataGridViewTextBoxColumn.DataPropertyName = "KK_Artikel"
-        Me.KKArtikelDataGridViewTextBoxColumn.HeaderText = "KK_Artikel"
-        Me.KKArtikelDataGridViewTextBoxColumn.Name = "KKArtikelDataGridViewTextBoxColumn"
-        Me.KKArtikelDataGridViewTextBoxColumn.Visible = False
-        '
-        'Art_Nr
-        '
-        Me.Art_Nr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.Art_Nr.DataPropertyName = "Art_Nr"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Art_Nr.DefaultCellStyle = DataGridViewCellStyle2
-        Me.Art_Nr.FillWeight = 5.0!
-        Me.Art_Nr.HeaderText = "KK_Artikel"
-        Me.Art_Nr.Name = "Art_Nr"
-        Me.Art_Nr.Visible = False
-        Me.Art_Nr.Width = 108
         '
         'KlantenFrm
         '
