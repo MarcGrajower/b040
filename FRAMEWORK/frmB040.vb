@@ -44,7 +44,6 @@
         Return MyBase.ProcessCmdKey(msg, keyData)
     End Function
     Private Sub frmB040_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-  
         Me.FormMode = ModeValues.KeyEntry
         Me.nLogSession = nLog("Opening", Me.Name)
         Me.designHeight = Me.Height

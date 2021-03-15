@@ -28,12 +28,13 @@ Partial Class frmArtikel
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DsArtikel1 = New b040.dsArtikel()
         Me.PnlBase2 = New b040.pnlBase()
+        Me.Art_KortingCtl = New b040.checkboxBase()
+        Me.Art_VerwittigenGewichtCtl = New b040.checkboxBase()
+        Me.ARt_SnijdenCtl = New b040.checkboxBase()
         Me.MeelTextBase = New b040.txtBase()
         Me.LblBase12 = New b040.lblBase()
         Me.TxtArt_Alphacode = New b040.txtBase()
         Me.LblBase2 = New b040.lblBase()
-        Me.Art_VerwittigenGewichtCtl = New b040.cbobaseJaNeen()
-        Me.Art_KortingCtl = New b040.cbobaseJaNeen()
         Me.Art_PrijslijstCtl = New b040.txtBase()
         Me.Eenh_OmschrijvingCbo = New b040.cboBase()
         Me.Kat_Naamcbo = New b040.cboBase()
@@ -49,30 +50,29 @@ Partial Class frmArtikel
         Me.LblBase4 = New b040.lblBase()
         Me.LblBase3 = New b040.lblBase()
         Me.txtArt_omschrijving = New b040.txtBase()
-        Me.PnlBase3 = New b040.pnlBase()
-        Me.art_Uitzonderlijkctl = New b040.cbobaseJaNeen()
-        Me.Art_PerpersoonCtl = New b040.cbobaseJaNeen()
-        Me.Art_OpschriftCtl = New b040.txtBase()
-        Me.Art_BestBoodschapCtl = New b040.txtBase()
-        Me.LblBase16 = New b040.lblBase()
-        Me.LblBase17 = New b040.lblBase()
-        Me.LblBase18 = New b040.lblBase()
-        Me.LblBase19 = New b040.lblBase()
-        Me.LblBase20 = New b040.lblBase()
-        Me.Art_PortieCtl = New b040.txtBaseNumeric()
         Me.ArtikelTableAdapter = New b040.dsArtikelTableAdapters.ArtikelTableAdapter()
         Me.SaveButton = New b040.btnBase()
         Me.CloseBtn = New b040.btnBase()
-        Me.PnlBase4 = New b040.pnlBase()
-        Me.Art_ACtiefCTl = New b040.cbobaseJaNeen()
         Me.LblBase21 = New b040.lblBase()
-        Me.ARt_SnijdenCtl = New b040.cbobaseJaNeen()
+        Me.PnlBase4 = New b040.pnlBase()
+        Me.Art_ActiefCtl = New b040.checkboxBase()
+        Me.Art_UitzonderlijkCtl = New b040.checkboxBase()
+        Me.Art_perpersoonctl = New b040.checkboxBase()
+        Me.Art_PortieCtl = New b040.txtBaseNumeric()
+        Me.LblBase20 = New b040.lblBase()
+        Me.LblBase19 = New b040.lblBase()
+        Me.LblBase18 = New b040.lblBase()
+        Me.LblBase17 = New b040.lblBase()
+        Me.LblBase16 = New b040.lblBase()
+        Me.Art_BestBoodschapCtl = New b040.txtBase()
+        Me.Art_OpschriftCtl = New b040.txtBase()
+        Me.PnlBase3 = New b040.pnlBase()
         Me.PnlBase1.SuspendLayout()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsArtikel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlBase2.SuspendLayout()
-        Me.PnlBase3.SuspendLayout()
         Me.PnlBase4.SuspendLayout()
+        Me.PnlBase3.SuspendLayout()
         Me.SuspendLayout()
         '
         'PnlBase1
@@ -86,6 +86,7 @@ Partial Class frmArtikel
         Me.PnlBase1.Name = "PnlBase1"
         Me.PnlBase1.Size = New System.Drawing.Size(399, 33)
         Me.PnlBase1.TabIndex = 0
+        Me.PnlBase1.TabStop = True
         '
         'TxtArtSearch
         '
@@ -141,13 +142,13 @@ Partial Class frmArtikel
         '
         Me.PnlBase2.BackColor = System.Drawing.Color.Silver
         Me.PnlBase2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PnlBase2.Controls.Add(Me.Art_KortingCtl)
+        Me.PnlBase2.Controls.Add(Me.Art_VerwittigenGewichtCtl)
         Me.PnlBase2.Controls.Add(Me.ARt_SnijdenCtl)
         Me.PnlBase2.Controls.Add(Me.MeelTextBase)
         Me.PnlBase2.Controls.Add(Me.LblBase12)
         Me.PnlBase2.Controls.Add(Me.TxtArt_Alphacode)
         Me.PnlBase2.Controls.Add(Me.LblBase2)
-        Me.PnlBase2.Controls.Add(Me.Art_VerwittigenGewichtCtl)
-        Me.PnlBase2.Controls.Add(Me.Art_KortingCtl)
         Me.PnlBase2.Controls.Add(Me.Art_PrijslijstCtl)
         Me.PnlBase2.Controls.Add(Me.Eenh_OmschrijvingCbo)
         Me.PnlBase2.Controls.Add(Me.Kat_Naamcbo)
@@ -167,6 +168,46 @@ Partial Class frmArtikel
         Me.PnlBase2.Name = "PnlBase2"
         Me.PnlBase2.Size = New System.Drawing.Size(399, 249)
         Me.PnlBase2.TabIndex = 1
+        Me.PnlBase2.TabStop = True
+        '
+        'Art_KortingCtl
+        '
+        Me.Art_KortingCtl.BackColor = System.Drawing.SystemColors.Window
+        Me.Art_KortingCtl.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.BindingSource1, "Art_Korting", True))
+        Me.Art_KortingCtl.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
+        Me.Art_KortingCtl.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Art_KortingCtl.Location = New System.Drawing.Point(110, 129)
+        Me.Art_KortingCtl.Name = "Art_KortingCtl"
+        Me.Art_KortingCtl.nIO = b040.IOValues.IORecordEntryEnable
+        Me.Art_KortingCtl.Size = New System.Drawing.Size(21, 21)
+        Me.Art_KortingCtl.TabIndex = 6
+        Me.Art_KortingCtl.UseVisualStyleBackColor = False
+        '
+        'Art_VerwittigenGewichtCtl
+        '
+        Me.Art_VerwittigenGewichtCtl.BackColor = System.Drawing.SystemColors.Window
+        Me.Art_VerwittigenGewichtCtl.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.BindingSource1, "Art_VerwittigenGewicht", True))
+        Me.Art_VerwittigenGewichtCtl.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
+        Me.Art_VerwittigenGewichtCtl.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Art_VerwittigenGewichtCtl.Location = New System.Drawing.Point(110, 193)
+        Me.Art_VerwittigenGewichtCtl.Name = "Art_VerwittigenGewichtCtl"
+        Me.Art_VerwittigenGewichtCtl.nIO = b040.IOValues.IORecordEntryEnable
+        Me.Art_VerwittigenGewichtCtl.Size = New System.Drawing.Size(21, 21)
+        Me.Art_VerwittigenGewichtCtl.TabIndex = 9
+        Me.Art_VerwittigenGewichtCtl.UseVisualStyleBackColor = False
+        '
+        'ARt_SnijdenCtl
+        '
+        Me.ARt_SnijdenCtl.BackColor = System.Drawing.SystemColors.Window
+        Me.ARt_SnijdenCtl.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.BindingSource1, "Art_Snijden", True))
+        Me.ARt_SnijdenCtl.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
+        Me.ARt_SnijdenCtl.ForeColor = System.Drawing.Color.DarkBlue
+        Me.ARt_SnijdenCtl.Location = New System.Drawing.Point(110, 171)
+        Me.ARt_SnijdenCtl.Name = "ARt_SnijdenCtl"
+        Me.ARt_SnijdenCtl.nIO = b040.IOValues.IORecordEntryEnable
+        Me.ARt_SnijdenCtl.Size = New System.Drawing.Size(21, 21)
+        Me.ARt_SnijdenCtl.TabIndex = 8
+        Me.ARt_SnijdenCtl.UseVisualStyleBackColor = False
         '
         'MeelTextBase
         '
@@ -176,18 +217,18 @@ Partial Class frmArtikel
         Me.MeelTextBase.forceUppercase = False
         Me.MeelTextBase.ForeColor = System.Drawing.Color.DarkBlue
         Me.MeelTextBase.lIsSearch = False
-        Me.MeelTextBase.Location = New System.Drawing.Point(109, 213)
+        Me.MeelTextBase.Location = New System.Drawing.Point(109, 215)
         Me.MeelTextBase.Name = "MeelTextBase"
         Me.MeelTextBase.nIO = b040.IOValues.IORecordEntryEnable
         Me.MeelTextBase.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.MeelTextBase.Size = New System.Drawing.Size(275, 21)
-        Me.MeelTextBase.TabIndex = 20
+        Me.MeelTextBase.TabIndex = 10
         '
         'LblBase12
         '
         Me.LblBase12.AutoSize = True
         Me.LblBase12.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
-        Me.LblBase12.Location = New System.Drawing.Point(4, 217)
+        Me.LblBase12.Location = New System.Drawing.Point(4, 218)
         Me.LblBase12.Name = "LblBase12"
         Me.LblBase12.Size = New System.Drawing.Size(78, 16)
         Me.LblBase12.TabIndex = 19
@@ -207,7 +248,7 @@ Partial Class frmArtikel
         Me.TxtArt_Alphacode.nIO = b040.IOValues.IORecordEntryEnable
         Me.TxtArt_Alphacode.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.TxtArt_Alphacode.Size = New System.Drawing.Size(275, 21)
-        Me.TxtArt_Alphacode.TabIndex = 3
+        Me.TxtArt_Alphacode.TabIndex = 1
         '
         'LblBase2
         '
@@ -218,32 +259,6 @@ Partial Class frmArtikel
         Me.LblBase2.Size = New System.Drawing.Size(58, 16)
         Me.LblBase2.TabIndex = 13
         Me.LblBase2.Text = "Alphacode"
-        '
-        'Art_VerwittigenGewichtCtl
-        '
-        Me.Art_VerwittigenGewichtCtl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BindingSource1, "Art_VerwittigenGewicht", True))
-        Me.Art_VerwittigenGewichtCtl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Art_VerwittigenGewichtCtl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Art_VerwittigenGewichtCtl.FormattingEnabled = True
-        Me.Art_VerwittigenGewichtCtl.Location = New System.Drawing.Point(109, 192)
-        Me.Art_VerwittigenGewichtCtl.Name = "Art_VerwittigenGewichtCtl"
-        Me.Art_VerwittigenGewichtCtl.nIO = b040.IOValues.IOAlwaysDisable
-        Me.Art_VerwittigenGewichtCtl.setAutocomplete = False
-        Me.Art_VerwittigenGewichtCtl.Size = New System.Drawing.Size(275, 26)
-        Me.Art_VerwittigenGewichtCtl.TabIndex = 11
-        '
-        'Art_KortingCtl
-        '
-        Me.Art_KortingCtl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BindingSource1, "Art_Korting", True))
-        Me.Art_KortingCtl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Art_KortingCtl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Art_KortingCtl.FormattingEnabled = True
-        Me.Art_KortingCtl.Location = New System.Drawing.Point(109, 129)
-        Me.Art_KortingCtl.Name = "Art_KortingCtl"
-        Me.Art_KortingCtl.nIO = b040.IOValues.IORecordEntryEnable
-        Me.Art_KortingCtl.setAutocomplete = False
-        Me.Art_KortingCtl.Size = New System.Drawing.Size(275, 26)
-        Me.Art_KortingCtl.TabIndex = 8
         '
         'Art_PrijslijstCtl
         '
@@ -258,7 +273,7 @@ Partial Class frmArtikel
         Me.Art_PrijslijstCtl.nIO = b040.IOValues.IORecordEntryEnable
         Me.Art_PrijslijstCtl.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.Art_PrijslijstCtl.Size = New System.Drawing.Size(275, 21)
-        Me.Art_PrijslijstCtl.TabIndex = 9
+        Me.Art_PrijslijstCtl.TabIndex = 7
         '
         'Eenh_OmschrijvingCbo
         '
@@ -271,7 +286,7 @@ Partial Class frmArtikel
         Me.Eenh_OmschrijvingCbo.nIO = b040.IOValues.IORecordEntryEnable
         Me.Eenh_OmschrijvingCbo.setAutocomplete = False
         Me.Eenh_OmschrijvingCbo.Size = New System.Drawing.Size(275, 26)
-        Me.Eenh_OmschrijvingCbo.TabIndex = 6
+        Me.Eenh_OmschrijvingCbo.TabIndex = 4
         '
         'Kat_Naamcbo
         '
@@ -285,7 +300,7 @@ Partial Class frmArtikel
         Me.Kat_Naamcbo.nIO = b040.IOValues.IORecordEntryEnable
         Me.Kat_Naamcbo.setAutocomplete = False
         Me.Kat_Naamcbo.Size = New System.Drawing.Size(275, 26)
-        Me.Kat_Naamcbo.TabIndex = 4
+        Me.Kat_Naamcbo.TabIndex = 2
         '
         'Art_BTW
         '
@@ -300,7 +315,7 @@ Partial Class frmArtikel
         Me.Art_BTW.nIO = b040.IOValues.IORecordEntryEnable
         Me.Art_BTW.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.Art_BTW.Size = New System.Drawing.Size(275, 21)
-        Me.Art_BTW.TabIndex = 7
+        Me.Art_BTW.TabIndex = 5
         '
         'PrijsTxt
         '
@@ -316,7 +331,7 @@ Partial Class frmArtikel
         Me.PrijsTxt.nIO = b040.IOValues.IORecordEntryEnable
         Me.PrijsTxt.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.PrijsTxt.Size = New System.Drawing.Size(275, 21)
-        Me.PrijsTxt.TabIndex = 5
+        Me.PrijsTxt.TabIndex = 3
         '
         'LblBase11
         '
@@ -405,7 +420,7 @@ Partial Class frmArtikel
         Me.LblBase3.Location = New System.Drawing.Point(4, 7)
         Me.LblBase3.Name = "LblBase3"
         Me.LblBase3.Size = New System.Drawing.Size(74, 16)
-        Me.LblBase3.TabIndex = 3
+        Me.LblBase3.TabIndex = 11
         Me.LblBase3.Text = "Omschrijving"
         '
         'txtArt_omschrijving
@@ -421,147 +436,7 @@ Partial Class frmArtikel
         Me.txtArt_omschrijving.nIO = b040.IOValues.IORecordEntryEnable
         Me.txtArt_omschrijving.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.txtArt_omschrijving.Size = New System.Drawing.Size(275, 21)
-        Me.txtArt_omschrijving.TabIndex = 2
-        '
-        'PnlBase3
-        '
-        Me.PnlBase3.BackColor = System.Drawing.Color.Silver
-        Me.PnlBase3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PnlBase3.Controls.Add(Me.art_Uitzonderlijkctl)
-        Me.PnlBase3.Controls.Add(Me.Art_PerpersoonCtl)
-        Me.PnlBase3.Controls.Add(Me.Art_OpschriftCtl)
-        Me.PnlBase3.Controls.Add(Me.Art_BestBoodschapCtl)
-        Me.PnlBase3.Controls.Add(Me.LblBase16)
-        Me.PnlBase3.Controls.Add(Me.LblBase17)
-        Me.PnlBase3.Controls.Add(Me.LblBase18)
-        Me.PnlBase3.Controls.Add(Me.LblBase19)
-        Me.PnlBase3.Controls.Add(Me.LblBase20)
-        Me.PnlBase3.Controls.Add(Me.Art_PortieCtl)
-        Me.PnlBase3.Location = New System.Drawing.Point(3, 287)
-        Me.PnlBase3.Name = "PnlBase3"
-        Me.PnlBase3.Size = New System.Drawing.Size(400, 114)
-        Me.PnlBase3.TabIndex = 12
-        '
-        'art_Uitzonderlijkctl
-        '
-        Me.art_Uitzonderlijkctl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BindingSource1, "Art_Uitzonderlijk", True))
-        Me.art_Uitzonderlijkctl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.art_Uitzonderlijkctl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.art_Uitzonderlijkctl.FormattingEnabled = True
-        Me.art_Uitzonderlijkctl.Location = New System.Drawing.Point(109, 4)
-        Me.art_Uitzonderlijkctl.Name = "art_Uitzonderlijkctl"
-        Me.art_Uitzonderlijkctl.nIO = b040.IOValues.IOAlwaysDisable
-        Me.art_Uitzonderlijkctl.setAutocomplete = False
-        Me.art_Uitzonderlijkctl.Size = New System.Drawing.Size(275, 26)
-        Me.art_Uitzonderlijkctl.TabIndex = 12
-        '
-        'Art_PerpersoonCtl
-        '
-        Me.Art_PerpersoonCtl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BindingSource1, "Art_PerPersoon", True))
-        Me.Art_PerpersoonCtl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Art_PerpersoonCtl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Art_PerpersoonCtl.FormattingEnabled = True
-        Me.Art_PerpersoonCtl.Location = New System.Drawing.Point(109, 25)
-        Me.Art_PerpersoonCtl.Name = "Art_PerpersoonCtl"
-        Me.Art_PerpersoonCtl.nIO = b040.IOValues.IOAlwaysDisable
-        Me.Art_PerpersoonCtl.setAutocomplete = False
-        Me.Art_PerpersoonCtl.Size = New System.Drawing.Size(275, 26)
-        Me.Art_PerpersoonCtl.TabIndex = 13
-        '
-        'Art_OpschriftCtl
-        '
-        Me.Art_OpschriftCtl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BindingSource1, "Art_Opschrift", True))
-        Me.Art_OpschriftCtl.fieldLength = 0
-        Me.Art_OpschriftCtl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Art_OpschriftCtl.forceUppercase = False
-        Me.Art_OpschriftCtl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Art_OpschriftCtl.lIsSearch = False
-        Me.Art_OpschriftCtl.Location = New System.Drawing.Point(109, 65)
-        Me.Art_OpschriftCtl.Name = "Art_OpschriftCtl"
-        Me.Art_OpschriftCtl.nIO = b040.IOValues.IOAlwaysDisable
-        Me.Art_OpschriftCtl.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.Art_OpschriftCtl.Size = New System.Drawing.Size(275, 21)
-        Me.Art_OpschriftCtl.TabIndex = 15
-        '
-        'Art_BestBoodschapCtl
-        '
-        Me.Art_BestBoodschapCtl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BindingSource1, "Art_BestBoodschap", True))
-        Me.Art_BestBoodschapCtl.fieldLength = 0
-        Me.Art_BestBoodschapCtl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Art_BestBoodschapCtl.forceUppercase = False
-        Me.Art_BestBoodschapCtl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Art_BestBoodschapCtl.lIsSearch = False
-        Me.Art_BestBoodschapCtl.Location = New System.Drawing.Point(109, 85)
-        Me.Art_BestBoodschapCtl.Name = "Art_BestBoodschapCtl"
-        Me.Art_BestBoodschapCtl.nIO = b040.IOValues.IOAlwaysDisable
-        Me.Art_BestBoodschapCtl.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.Art_BestBoodschapCtl.Size = New System.Drawing.Size(275, 21)
-        Me.Art_BestBoodschapCtl.TabIndex = 16
-        '
-        'LblBase16
-        '
-        Me.LblBase16.AutoSize = True
-        Me.LblBase16.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
-        Me.LblBase16.Location = New System.Drawing.Point(5, 91)
-        Me.LblBase16.Name = "LblBase16"
-        Me.LblBase16.Size = New System.Drawing.Size(59, 16)
-        Me.LblBase16.TabIndex = 7
-        Me.LblBase16.Text = "Instructie"
-        '
-        'LblBase17
-        '
-        Me.LblBase17.AutoSize = True
-        Me.LblBase17.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
-        Me.LblBase17.Location = New System.Drawing.Point(5, 70)
-        Me.LblBase17.Name = "LblBase17"
-        Me.LblBase17.Size = New System.Drawing.Size(56, 16)
-        Me.LblBase17.TabIndex = 6
-        Me.LblBase17.Text = "Opschrift"
-        '
-        'LblBase18
-        '
-        Me.LblBase18.AutoSize = True
-        Me.LblBase18.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
-        Me.LblBase18.Location = New System.Drawing.Point(5, 49)
-        Me.LblBase18.Name = "LblBase18"
-        Me.LblBase18.Size = New System.Drawing.Size(86, 16)
-        Me.LblBase18.TabIndex = 5
-        Me.LblBase18.Text = "Portie (in gram)"
-        '
-        'LblBase19
-        '
-        Me.LblBase19.AutoSize = True
-        Me.LblBase19.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
-        Me.LblBase19.Location = New System.Drawing.Point(5, 28)
-        Me.LblBase19.Name = "LblBase19"
-        Me.LblBase19.Size = New System.Drawing.Size(66, 16)
-        Me.LblBase19.TabIndex = 4
-        Me.LblBase19.Text = "Per Persoon"
-        '
-        'LblBase20
-        '
-        Me.LblBase20.AutoSize = True
-        Me.LblBase20.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
-        Me.LblBase20.Location = New System.Drawing.Point(5, 7)
-        Me.LblBase20.Name = "LblBase20"
-        Me.LblBase20.Size = New System.Drawing.Size(56, 16)
-        Me.LblBase20.TabIndex = 3
-        Me.LblBase20.Text = "Bijzonder"
-        '
-        'Art_PortieCtl
-        '
-        Me.Art_PortieCtl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BindingSource1, "Art_Portie", True))
-        Me.Art_PortieCtl.fieldLength = 0
-        Me.Art_PortieCtl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Art_PortieCtl.forceUppercase = True
-        Me.Art_PortieCtl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Art_PortieCtl.lIsSearch = False
-        Me.Art_PortieCtl.Location = New System.Drawing.Point(109, 45)
-        Me.Art_PortieCtl.Name = "Art_PortieCtl"
-        Me.Art_PortieCtl.nIO = b040.IOValues.IOAlwaysDisable
-        Me.Art_PortieCtl.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.Art_PortieCtl.Size = New System.Drawing.Size(275, 21)
-        Me.Art_PortieCtl.TabIndex = 14
+        Me.txtArt_omschrijving.TabIndex = 0
         '
         'ArtikelTableAdapter
         '
@@ -576,7 +451,7 @@ Partial Class frmArtikel
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.nIO = b040.IOValues.IORecordEntryEnable
         Me.SaveButton.Size = New System.Drawing.Size(75, 25)
-        Me.SaveButton.TabIndex = 21
+        Me.SaveButton.TabIndex = 4
         Me.SaveButton.Text = "Bewaar"
         Me.SaveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.SaveButton.UseVisualStyleBackColor = True
@@ -592,35 +467,12 @@ Partial Class frmArtikel
         Me.CloseBtn.Name = "CloseBtn"
         Me.CloseBtn.nIO = b040.IOValues.IOAlwaysEnable
         Me.CloseBtn.Size = New System.Drawing.Size(75, 25)
-        Me.CloseBtn.TabIndex = 22
+        Me.CloseBtn.TabIndex = 5
+        Me.CloseBtn.TabStop = False
         Me.CloseBtn.Text = "Sluit"
         Me.CloseBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.CloseBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.CloseBtn.UseVisualStyleBackColor = True
-        '
-        'PnlBase4
-        '
-        Me.PnlBase4.BackColor = System.Drawing.Color.Silver
-        Me.PnlBase4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PnlBase4.Controls.Add(Me.Art_ACtiefCTl)
-        Me.PnlBase4.Controls.Add(Me.LblBase21)
-        Me.PnlBase4.Location = New System.Drawing.Point(3, 401)
-        Me.PnlBase4.Name = "PnlBase4"
-        Me.PnlBase4.Size = New System.Drawing.Size(400, 34)
-        Me.PnlBase4.TabIndex = 17
-        '
-        'Art_ACtiefCTl
-        '
-        Me.Art_ACtiefCTl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BindingSource1, "Art_Actief", True))
-        Me.Art_ACtiefCTl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Art_ACtiefCTl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Art_ACtiefCTl.FormattingEnabled = True
-        Me.Art_ACtiefCTl.Location = New System.Drawing.Point(109, 4)
-        Me.Art_ACtiefCTl.Name = "Art_ACtiefCTl"
-        Me.Art_ACtiefCTl.nIO = b040.IOValues.IORecordEntryEnable
-        Me.Art_ACtiefCTl.setAutocomplete = False
-        Me.Art_ACtiefCTl.Size = New System.Drawing.Size(275, 26)
-        Me.Art_ACtiefCTl.TabIndex = 17
         '
         'LblBase21
         '
@@ -632,30 +484,181 @@ Partial Class frmArtikel
         Me.LblBase21.TabIndex = 3
         Me.LblBase21.Text = "Actief"
         '
-        'ARt_SnijdenCtl
+        'PnlBase4
         '
-        Me.ARt_SnijdenCtl.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.ARt_SnijdenCtl.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ARt_SnijdenCtl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BindingSource1, "Art_Snijden", True))
-        Me.ARt_SnijdenCtl.FormattingEnabled = True
-        Me.ARt_SnijdenCtl.Location = New System.Drawing.Point(109, 171)
-        Me.ARt_SnijdenCtl.Name = "ARt_SnijdenCtl"
-        Me.ARt_SnijdenCtl.nIO = b040.IOValues.IORecordEntryEnable
-        Me.ARt_SnijdenCtl.setAutocomplete = False
-        Me.ARt_SnijdenCtl.Size = New System.Drawing.Size(275, 21)
-        Me.ARt_SnijdenCtl.TabIndex = 26
+        Me.PnlBase4.BackColor = System.Drawing.Color.Silver
+        Me.PnlBase4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PnlBase4.Controls.Add(Me.Art_ActiefCtl)
+        Me.PnlBase4.Controls.Add(Me.LblBase21)
+        Me.PnlBase4.Location = New System.Drawing.Point(3, 401)
+        Me.PnlBase4.Name = "PnlBase4"
+        Me.PnlBase4.Size = New System.Drawing.Size(400, 34)
+        Me.PnlBase4.TabIndex = 3
+        '
+        'Art_ActiefCtl
+        '
+        Me.Art_ActiefCtl.BackColor = System.Drawing.SystemColors.Window
+        Me.Art_ActiefCtl.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.BindingSource1, "Art_Actief", True))
+        Me.Art_ActiefCtl.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
+        Me.Art_ActiefCtl.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Art_ActiefCtl.Location = New System.Drawing.Point(110, 4)
+        Me.Art_ActiefCtl.Name = "Art_ActiefCtl"
+        Me.Art_ActiefCtl.nIO = b040.IOValues.IORecordEntryEnable
+        Me.Art_ActiefCtl.Size = New System.Drawing.Size(21, 21)
+        Me.Art_ActiefCtl.TabIndex = 0
+        Me.Art_ActiefCtl.UseVisualStyleBackColor = False
+        '
+        'Art_UitzonderlijkCtl
+        '
+        Me.Art_UitzonderlijkCtl.BackColor = System.Drawing.SystemColors.Window
+        Me.Art_UitzonderlijkCtl.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.BindingSource1, "Art_Uitzonderlijk", True))
+        Me.Art_UitzonderlijkCtl.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
+        Me.Art_UitzonderlijkCtl.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Art_UitzonderlijkCtl.Location = New System.Drawing.Point(110, 3)
+        Me.Art_UitzonderlijkCtl.Name = "Art_UitzonderlijkCtl"
+        Me.Art_UitzonderlijkCtl.nIO = b040.IOValues.IOAlwaysDisable
+        Me.Art_UitzonderlijkCtl.Size = New System.Drawing.Size(21, 21)
+        Me.Art_UitzonderlijkCtl.TabIndex = 0
+        Me.Art_UitzonderlijkCtl.UseVisualStyleBackColor = False
+        '
+        'Art_perpersoonctl
+        '
+        Me.Art_perpersoonctl.BackColor = System.Drawing.SystemColors.Window
+        Me.Art_perpersoonctl.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.BindingSource1, "Art_PerPersoon", True))
+        Me.Art_perpersoonctl.Font = New System.Drawing.Font("Trebuchet MS", 8.0!)
+        Me.Art_perpersoonctl.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Art_perpersoonctl.Location = New System.Drawing.Point(110, 25)
+        Me.Art_perpersoonctl.Name = "Art_perpersoonctl"
+        Me.Art_perpersoonctl.nIO = b040.IOValues.IOAlwaysDisable
+        Me.Art_perpersoonctl.Size = New System.Drawing.Size(21, 21)
+        Me.Art_perpersoonctl.TabIndex = 1
+        Me.Art_perpersoonctl.UseVisualStyleBackColor = False
+        '
+        'Art_PortieCtl
+        '
+        Me.Art_PortieCtl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BindingSource1, "Art_Portie", True))
+        Me.Art_PortieCtl.fieldLength = 0
+        Me.Art_PortieCtl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Art_PortieCtl.forceUppercase = True
+        Me.Art_PortieCtl.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Art_PortieCtl.lIsSearch = False
+        Me.Art_PortieCtl.Location = New System.Drawing.Point(109, 46)
+        Me.Art_PortieCtl.Name = "Art_PortieCtl"
+        Me.Art_PortieCtl.nIO = b040.IOValues.IOAlwaysDisable
+        Me.Art_PortieCtl.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.Art_PortieCtl.Size = New System.Drawing.Size(275, 21)
+        Me.Art_PortieCtl.TabIndex = 2
+        '
+        'LblBase20
+        '
+        Me.LblBase20.AutoSize = True
+        Me.LblBase20.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
+        Me.LblBase20.Location = New System.Drawing.Point(5, 7)
+        Me.LblBase20.Name = "LblBase20"
+        Me.LblBase20.Size = New System.Drawing.Size(56, 16)
+        Me.LblBase20.TabIndex = 3
+        Me.LblBase20.Text = "Bijzonder"
+        '
+        'LblBase19
+        '
+        Me.LblBase19.AutoSize = True
+        Me.LblBase19.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
+        Me.LblBase19.Location = New System.Drawing.Point(5, 28)
+        Me.LblBase19.Name = "LblBase19"
+        Me.LblBase19.Size = New System.Drawing.Size(66, 16)
+        Me.LblBase19.TabIndex = 4
+        Me.LblBase19.Text = "Per Persoon"
+        '
+        'LblBase18
+        '
+        Me.LblBase18.AutoSize = True
+        Me.LblBase18.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
+        Me.LblBase18.Location = New System.Drawing.Point(5, 49)
+        Me.LblBase18.Name = "LblBase18"
+        Me.LblBase18.Size = New System.Drawing.Size(86, 16)
+        Me.LblBase18.TabIndex = 5
+        Me.LblBase18.Text = "Portie (in gram)"
+        '
+        'LblBase17
+        '
+        Me.LblBase17.AutoSize = True
+        Me.LblBase17.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
+        Me.LblBase17.Location = New System.Drawing.Point(5, 70)
+        Me.LblBase17.Name = "LblBase17"
+        Me.LblBase17.Size = New System.Drawing.Size(56, 16)
+        Me.LblBase17.TabIndex = 6
+        Me.LblBase17.Text = "Opschrift"
+        '
+        'LblBase16
+        '
+        Me.LblBase16.AutoSize = True
+        Me.LblBase16.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
+        Me.LblBase16.Location = New System.Drawing.Point(5, 91)
+        Me.LblBase16.Name = "LblBase16"
+        Me.LblBase16.Size = New System.Drawing.Size(59, 16)
+        Me.LblBase16.TabIndex = 7
+        Me.LblBase16.Text = "Instructie"
+        '
+        'Art_BestBoodschapCtl
+        '
+        Me.Art_BestBoodschapCtl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BindingSource1, "Art_BestBoodschap", True))
+        Me.Art_BestBoodschapCtl.fieldLength = 0
+        Me.Art_BestBoodschapCtl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Art_BestBoodschapCtl.forceUppercase = False
+        Me.Art_BestBoodschapCtl.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Art_BestBoodschapCtl.lIsSearch = False
+        Me.Art_BestBoodschapCtl.Location = New System.Drawing.Point(109, 86)
+        Me.Art_BestBoodschapCtl.Name = "Art_BestBoodschapCtl"
+        Me.Art_BestBoodschapCtl.nIO = b040.IOValues.IOAlwaysDisable
+        Me.Art_BestBoodschapCtl.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.Art_BestBoodschapCtl.Size = New System.Drawing.Size(275, 21)
+        Me.Art_BestBoodschapCtl.TabIndex = 4
+        '
+        'Art_OpschriftCtl
+        '
+        Me.Art_OpschriftCtl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BindingSource1, "Art_Opschrift", True))
+        Me.Art_OpschriftCtl.fieldLength = 0
+        Me.Art_OpschriftCtl.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Art_OpschriftCtl.forceUppercase = False
+        Me.Art_OpschriftCtl.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Art_OpschriftCtl.lIsSearch = False
+        Me.Art_OpschriftCtl.Location = New System.Drawing.Point(109, 66)
+        Me.Art_OpschriftCtl.Name = "Art_OpschriftCtl"
+        Me.Art_OpschriftCtl.nIO = b040.IOValues.IOAlwaysDisable
+        Me.Art_OpschriftCtl.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.Art_OpschriftCtl.Size = New System.Drawing.Size(275, 21)
+        Me.Art_OpschriftCtl.TabIndex = 3
+        '
+        'PnlBase3
+        '
+        Me.PnlBase3.BackColor = System.Drawing.Color.Silver
+        Me.PnlBase3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PnlBase3.Controls.Add(Me.Art_perpersoonctl)
+        Me.PnlBase3.Controls.Add(Me.Art_OpschriftCtl)
+        Me.PnlBase3.Controls.Add(Me.Art_UitzonderlijkCtl)
+        Me.PnlBase3.Controls.Add(Me.Art_BestBoodschapCtl)
+        Me.PnlBase3.Controls.Add(Me.LblBase16)
+        Me.PnlBase3.Controls.Add(Me.LblBase17)
+        Me.PnlBase3.Controls.Add(Me.LblBase18)
+        Me.PnlBase3.Controls.Add(Me.LblBase19)
+        Me.PnlBase3.Controls.Add(Me.LblBase20)
+        Me.PnlBase3.Controls.Add(Me.Art_PortieCtl)
+        Me.PnlBase3.Location = New System.Drawing.Point(3, 287)
+        Me.PnlBase3.Name = "PnlBase3"
+        Me.PnlBase3.Size = New System.Drawing.Size(400, 114)
+        Me.PnlBase3.TabIndex = 2
         '
         'frmArtikel
         '
         Me.CancelButton = Me.CloseBtn
-        Me.ClientSize = New System.Drawing.Size(408, 468)
+        Me.ClientSize = New System.Drawing.Size(408, 458)
+        Me.Controls.Add(Me.PnlBase1)
+        Me.Controls.Add(Me.PnlBase2)
+        Me.Controls.Add(Me.PnlBase3)
         Me.Controls.Add(Me.PnlBase4)
         Me.Controls.Add(Me.CloseBtn)
         Me.Controls.Add(Me.SaveButton)
-        Me.Controls.Add(Me.PnlBase3)
-        Me.Controls.Add(Me.PnlBase1)
-        Me.Controls.Add(Me.PnlBase2)
-        Me.ForeColor = System.Drawing.Color.Chocolate
+        Me.ForeColor = System.Drawing.Color.Black
         Me.KeyPreview = True
         Me.Name = "frmArtikel"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -666,10 +669,10 @@ Partial Class frmArtikel
         CType(Me.DsArtikel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlBase2.ResumeLayout(False)
         Me.PnlBase2.PerformLayout()
-        Me.PnlBase3.ResumeLayout(False)
-        Me.PnlBase3.PerformLayout()
         Me.PnlBase4.ResumeLayout(False)
         Me.PnlBase4.PerformLayout()
+        Me.PnlBase3.ResumeLayout(False)
+        Me.PnlBase3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -690,36 +693,35 @@ Partial Class frmArtikel
     Friend WithEvents LblBase7 As b040.lblBase
     Friend WithEvents LblBase6 As b040.lblBase
     Friend WithEvents LblBase5 As b040.lblBase
-    Friend WithEvents PnlBase3 As b040.pnlBase
-    Friend WithEvents LblBase16 As b040.lblBase
-    Friend WithEvents LblBase17 As b040.lblBase
-    Friend WithEvents LblBase18 As b040.lblBase
-    Friend WithEvents LblBase19 As b040.lblBase
-    Friend WithEvents LblBase20 As b040.lblBase
-    Friend WithEvents Art_OpschriftCtl As b040.txtBase
-    Friend WithEvents Art_BestBoodschapCtl As b040.txtBase
     Friend WithEvents Eenh_OmschrijvingCbo As b040.cboBase
     Friend WithEvents Kat_Naamcbo As b040.cboBase
     '    Friend WithEvents KategorieDSBindingSource As System.Windows.Forms.BindingSource
     '    Friend WithEvents KategorieDS As b040.KategorieDS
     Friend WithEvents PrijsTxt As b040.txtBaseNumeric
     Friend WithEvents Art_BTW As b040.txtBaseNumeric
-    Friend WithEvents Art_KortingCtl As b040.cbobaseJaNeen
     Friend WithEvents Art_PrijslijstCtl As b040.txtBase
-    Friend WithEvents Art_VerwittigenGewichtCtl As b040.cbobaseJaNeen
-    Friend WithEvents art_Uitzonderlijkctl As b040.cbobaseJaNeen
-    Friend WithEvents Art_PerpersoonCtl As b040.cbobaseJaNeen
-    Friend WithEvents Art_PortieCtl As b040.txtBaseNumeric
     Friend WithEvents SaveButton As b040.btnBase
     Friend WithEvents CloseBtn As b040.btnBase
     Friend WithEvents TxtArt_Alphacode As b040.txtBase
     Friend WithEvents LblBase2 As b040.lblBase
-    Friend WithEvents PnlBase4 As b040.pnlBase
-    Friend WithEvents Art_ACtiefCTl As b040.cbobaseJaNeen
-    Friend WithEvents LblBase21 As b040.lblBase
     Friend WithEvents TxtArtSearch As b040.txtBase
     Friend WithEvents MeelTextBase As txtBase
     Friend WithEvents LblBase12 As lblBase
-    Friend WithEvents ARt_SnijdenCtl As cbobaseJaNeen
-
+    Friend WithEvents ARt_SnijdenCtl As checkboxBase
+    Friend WithEvents Art_VerwittigenGewichtCtl As checkboxBase
+    Friend WithEvents LblBase21 As lblBase
+    Friend WithEvents PnlBase4 As pnlBase
+    Friend WithEvents Art_UitzonderlijkCtl As checkboxBase
+    Friend WithEvents Art_perpersoonctl As checkboxBase
+    Friend WithEvents Art_PortieCtl As txtBaseNumeric
+    Friend WithEvents LblBase20 As lblBase
+    Friend WithEvents LblBase19 As lblBase
+    Friend WithEvents LblBase18 As lblBase
+    Friend WithEvents LblBase17 As lblBase
+    Friend WithEvents LblBase16 As lblBase
+    Friend WithEvents Art_BestBoodschapCtl As txtBase
+    Friend WithEvents Art_OpschriftCtl As txtBase
+    Friend WithEvents PnlBase3 As pnlBase
+    Friend WithEvents Art_ActiefCtl As checkboxBase
+    Friend WithEvents Art_KortingCtl As checkboxBase
 End Class

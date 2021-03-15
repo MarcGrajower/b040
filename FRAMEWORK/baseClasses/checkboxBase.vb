@@ -67,7 +67,6 @@ Public Class checkboxBase
         ' Me.PromptChar = " "
         Me.ForeColor = Color.DarkBlue
         Me.Font = New Font("Trebuchet MS", 12.0!, FontStyle.Regular)
-
     End Sub
     Public Property nIO() As IOValues
         Get
@@ -91,6 +90,8 @@ Public Class checkboxBase
         e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Using Brush = New SolidBrush(Color.DarkBlue)
             e.Graphics.FillRectangle(New SolidBrush(Me.BackColor), Me.ClientRectangle)
+            e.Graphics.DrawRectangle(New Pen(Color.White, 1), Me.ClientRectangle)
+
             Dim h As Integer = Me.ClientRectangle.Height
             Dim center As New Point(h / 2, h / 2)
             Dim radius As Integer = Me.FontHeight / 3

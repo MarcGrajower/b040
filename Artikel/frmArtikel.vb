@@ -56,6 +56,9 @@
             Me.TxtArt_Alphacode.nIO = IOValues.IORecordEntryEnable
             Me.FormMode = ModeValues.RecordEntry
             Me.TxtArtSearch.Visible = False
+
+            Me.txtArt_omschrijving.Focus()
+            Me.FormMode = Me.FormMode
             Exit Sub
         End If
         If Me.lastKeycode <> Keys.Tab And input = "" Then Exit Sub
@@ -72,7 +75,8 @@
                     Exit Sub
                 End If
                 Me.TxtArtSearch.Visible = False
-                Me.txtArt_Nr.Focus()
+                Me.txtArt_omschrijving.Focus()
+                Me.FormMode = Me.FormMode
                 Exit Sub
             End If
             e.Cancel = True
@@ -80,7 +84,6 @@
                 MsgBox(.cMessage)
             End If
         End With
-
     End Sub
     Function lLoadArtikel() As Boolean
         Dim n As Long = Art_Id(Me.txtArt_Nr.Text)
@@ -102,14 +105,18 @@
         Dim input As String = txtArt_Nr.Text
         If Me.lastKeycode = Keys.Tab And input = "" Then
             Me.txtArt_Nr.Text = getNextArt_Nr()
+            Me.txtArt_omschrijving.Focus()
             Me.TxtArt_Alphacode.nIO = IOValues.IORecordEntryEnable
             Me.FormMode = ModeValues.RecordEntry
+            Me.txtArt_omschrijving.Focus()
             Exit Sub
         End If
         If Me.lastKeycode = Keys.Tab Then
             If input = Me.txtArt_Nr.previousText Then
                 If lLock(Me.nLogSession, "Artikel", Me.loadPK, "") Then
                     Me.FormMode = ModeValues.RecordEntry
+
+                    Me.txtArt_omschrijving.Focus()
                 Else
                     e.Cancel = True
                 End If
@@ -149,7 +156,7 @@
         Me.Art_VerwittigenGewichtCtl.nIO = IOValues.IORecordEntryEnable
         Me.Art_PerpersoonCtl.nIO = IOValues.IORecordEntryEnable
         Me.Art_PortieCtl.nIO = IOValues.IORecordEntryEnable
-        Me.Art_ACtiefCTl.Text = "Ja"
+        Me.Art_ActiefCtl.Checked = True
         Me.Art_BTW.Text = "6,00"
         Me.FormMode = ModeValues.KeyEntry
         unlockSession(Me.nLogSession)
@@ -164,8 +171,8 @@
             Return
         End If
         Me.TxtArtSearch.Visible = True
-        Me.TxtArtSearch.BackColor = Color.LightPink
         Me.TxtArtSearch.Text = ""
+        Me.TxtArtSearch.BackColor = Color.LightPink
         Me.TxtArtSearch.Focus()
     End Sub
     Private Sub SaveButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveButton.Click
@@ -180,7 +187,7 @@
         unLock("Artikel", Me.loadPK)
         Dim c As String = IIf(Me.loadPK = 0, "Append ", "Update ") & Me.txtArt_omschrijving.Text
         Dim a As LogAction = IIf(Me.loadPK = 0, LogAction.logCreate, LogAction.logUpdate)
-        nLog(c, Me.Name, LogType.logNormal, a, "Artikel", Me.loadPK)
+        nlog(c, Me.Name, LogType.logNormal, a, "Artikel", Me.loadPK)
         Dim cArtikel As String = Me.txtArt_Nr.Text
         Me.clear()
         If Me.ModeShow = b040.ModeShow.Modal Then
@@ -204,7 +211,7 @@
             Return False
         End If
         '
-        If Me.Art_PerpersoonCtl.Text = "Ja" And Val(cNvl(Me.Art_PortieCtl.Text)) = 0 Then
+        If Me.Art_perpersoonctl.Checked And Val(cNvl(Me.Art_PortieCtl.Text)) = 0 Then
             MsgBox("Gelieve de Portie te willen aangeven")
             Me.Art_PortieCtl.Focus()
             Return False
@@ -235,26 +242,6 @@
 
             lWarning = True
         End If
-        If Me.Art_KortingCtl.Text = "" Then
-            cMsg &= "Voor de Korting wordt 'Neen' verondersteld. " & vbCrLf
-            lWarning = True
-        End If
-        If Me.ARt_SnijdenCtl.Text = "" Then
-            cMsg &= "Voor de Snijden wordt 'Neen' verondersteld. " & vbCrLf
-            lWarning = True
-        End If
-        If Me.art_Uitzonderlijkctl.Text = "" Then
-            cMsg &= "Voor de Uitzonderlijk wordt 'Neen' verondersteld. " & vbCrLf
-            lWarning = True
-        End If
-        If Me.Art_VerwittigenGewichtCtl.Text = "" Then
-            cMsg &= "Voor de Verwittigen Gewicht wordt 'Neen' verondersteld. " & vbCrLf
-            lWarning = True
-        End If
-        If Me.Art_PerpersoonCtl.Text = "" Then
-            cMsg &= "Voor de Per Persoon wordt 'Neen' verondersteld. " & vbCrLf
-            lWarning = True
-        End If
         If Me.PrijsTxt.Text = "" Then
             cMsg &= "U hebt geen prijs ingegeven.  De prijs wordt 0 verondersteld" & vbCrLf
             Me.BindingSource1(0)("Art_prijs") = 0
@@ -267,12 +254,11 @@
             End If
         End If
         Me.BindingSource1(0)("Art_Eenheid") = EenhedenFromOmschrijving(Me.Eenh_OmschrijvingCbo.Text)
-        Me.BindingSource1(0)("Art_Snijden") = IIf(Me.ARt_SnijdenCtl.Text = "Ja", True, False)
-        Me.BindingSource1(0)("Art_Korting") = IIf(Me.Art_KortingCtl.Text = "Ja", True, False)
-        Me.BindingSource1(0)("Art_Uitzonderlijk") = IIf(Me.art_Uitzonderlijkctl.Text = "Ja", True, False)
-        Me.BindingSource1(0)("Art_VerwittigenGewicht") = IIf(Me.Art_VerwittigenGewichtCtl.Text = "Ja", True, False)
-        Me.BindingSource1(0)("Art_Perpersoon") = IIf(Me.Art_PerpersoonCtl.Text = "Ja", True, False)
-        Me.BindingSource1(0)("Art_Actief") = IIf(Me.Art_ACtiefCTl.Text = "Ja", True, False)
+        Me.BindingSource1(0)("Art_Snijden") = Me.ARt_SnijdenCtl.Checked
+        Me.BindingSource1(0)("Art_Korting") = Me.Art_KortingCtl.Checked
+        Me.BindingSource1(0)("Art_Uitzonderlijk") = Me.Art_UitzonderlijkCtl.Checked
+        Me.BindingSource1(0)("Art_Perpersoon") = Me.Art_perpersoonctl.Checked
+        Me.BindingSource1(0)("Art_Actief") = Me.Art_ActiefCtl.Checked
         Me.BindingSource1(0)("Art_Opschrift") = cNvl(Me.Art_OpschriftCtl.Text)
         Me.BindingSource1(0)("Art_BestBoodschap") = cNvl(Me.Art_BestBoodschapCtl.Text)
 
@@ -299,7 +285,7 @@
             Me.Art_VerwittigenGewichtCtl.nIO = IOValues.IOAlwaysDisable
             Me.Art_PerpersoonCtl.nIO = IOValues.IOAlwaysDisable
             Me.Art_PortieCtl.nIO = IOValues.IOAlwaysDisable
-            Me.Art_VerwittigenGewichtCtl.Text = "Neen"
+            Me.Art_VerwittigenGewichtCtl.Text = False
             Me.Art_PerpersoonCtl.Text = "Neen"
             Me.Art_PortieCtl.Text = ""
         Else
@@ -311,25 +297,31 @@
 
     End Sub
 
-    Private Sub art_Uitzonderlijkctl_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles art_Uitzonderlijkctl.SelectedIndexChanged
-        If Me.art_Uitzonderlijkctl.Text = "Neen" Then
-            Me.Art_PerpersoonCtl.nIO = IOValues.IOAlwaysDisable
+    Private Sub art_Uitzonderlijkctl_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        If Me.Art_UitzonderlijkCtl.Checked = False Then
+            Me.Art_perpersoonctl.nIO = IOValues.IOAlwaysDisable
             Me.Art_PortieCtl.nIO = IOValues.IOAlwaysDisable
             Me.Art_OpschriftCtl.nIO = IOValues.IOAlwaysDisable
             Me.Art_BestBoodschapCtl.nIO = IOValues.IOAlwaysDisable
-            Me.Art_PerpersoonCtl.Text = "Neen"
+            Me.Art_perpersoonctl.Checked = False
             Me.Art_PortieCtl.Text = ""
             Me.Art_OpschriftCtl.Text = ""
             Me.Art_BestBoodschapCtl.Text = ""
-            Me.Art_ACtiefCTl.Focus()
+            Me.Art_ActiefCtl.Focus()
         Else
-            Me.Art_PerpersoonCtl.nIO = IOValues.IORecordEntryEnable
+            Me.Art_perpersoonctl.nIO = IOValues.IORecordEntryEnable
             Me.Art_PortieCtl.nIO = IOValues.IORecordEntryEnable
             Me.Art_OpschriftCtl.nIO = IOValues.IORecordEntryEnable
             Me.Art_BestBoodschapCtl.nIO = IOValues.IORecordEntryEnable
         End If
         Me.FormMode = Me.FormMode
     End Sub
+    Private Sub TxtArtSearch_LostFocus(sender As Object, e As EventArgs) Handles TxtArtSearch.LostFocus
+        Me.txtArt_omschrijving.Focus()
+    End Sub
 
-
+    Private Sub txtArt_Nr_Leave(sender As Object, e As EventArgs) Handles txtArt_Nr.Leave
+        FormMode = FormMode
+        Me.txtArt_omschrijving.Focus()
+    End Sub
 End Class
