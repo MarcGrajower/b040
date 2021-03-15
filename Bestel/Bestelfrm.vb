@@ -1917,19 +1917,9 @@ Public Class Bestelfrm
             Me.TxtBaseNumericTotalOverzicht.TextAlign = HorizontalAlignment.Right
             Me.TxtBaseNumericTotalOverzicht.BackColor = Color.Beige
             Me.grdHistory.Focus()
+            Exit Sub
         End If
         If Me.bestelTabpage.SelectedIndex = particulierenPage Then
-            If particulierenOverzichtDatagridview Is Nothing Then Exit Sub
-            If particulierenOverzichtDatagridview.DataSource Is Nothing Then Exit Sub
-
-            dt = particulierenOverzichtDatagridview.DataSource
-            For Each dr As DataRow In dt.Rows
-                total += dr("BestH_TotTeBetalen")
-            Next
-            Me.TxtBaseNumericTotalPartikulieren.Font = particulierenOverzichtDatagridview.DefaultCellStyle.Font
-            Me.TxtBaseNumericTotalPartikulieren.Text = $"{total:n2}"
-            Me.TxtBaseNumericTotalPartikulieren.TextAlign = HorizontalAlignment.Right
-            Me.TxtBaseNumericTotalPartikulieren.BackColor = Color.Beige
             Me.particulierenOverzichtDatagridview.Focus()
         End If
     End Sub

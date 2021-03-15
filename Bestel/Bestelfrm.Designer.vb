@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Bestelfrm
     Inherits b040.frmB040
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,25 +17,25 @@ Partial Class Bestelfrm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Bestelfrm))
-        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle57 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BestelHBS = New System.Windows.Forms.BindingSource(Me.components)
         Me.BestelDS = New b040.BestelDS()
         Me.AdresBS = New System.Windows.Forms.BindingSource(Me.components)
@@ -149,7 +149,6 @@ Partial Class Bestelfrm
         Me.overzichtGotopButton = New System.Windows.Forms.Button()
         Me.grdHistory = New System.Windows.Forms.DataGridView()
         Me.particulierenTabPage = New System.Windows.Forms.TabPage()
-        Me.TxtBaseNumericTotalPartikulieren = New b040.txtBaseNumeric()
         Me.particulierenOverzichtDatagridview = New System.Windows.Forms.DataGridView()
         Me.particulierenGobottomButton = New System.Windows.Forms.Button()
         Me.particulierenGotopButton = New System.Windows.Forms.Button()
@@ -952,25 +951,25 @@ Partial Class Bestelfrm
         Me.grdBestelD.AutoGenerateColumns = False
         Me.grdBestelD.BackgroundColor = System.Drawing.Color.White
         Me.grdBestelD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle46.BackColor = System.Drawing.Color.Bisque
-        DataGridViewCellStyle46.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle46.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdBestelD.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle46
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Bisque
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdBestelD.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.grdBestelD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdBestelD.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.BestDIDDataGridViewTextBoxColumn, Me.BestDBestHDataGridViewTextBoxColumn, Me.BestDIsStandaardDataGridViewCheckBoxColumn, Me.BestDArtikelDataGridViewTextBoxColumn, Me.Art_Nr, Me.Omschrijving, Me.BestD_Snijden, Me.Tour, Me.BestD_Portie, Me.Standaard, Me.BestD_Hoev1, Me.Eenh_HoevInvoer, Me.BestD_EenhPrijs, Me.Eenh_omschrijving, Me.BestD_Waarde, Me.voorafdrukken, Me.BestD_Verwittigen, Me.BestD_Opschrift, Me.BestD_Boodschap, Me.colArtNrBound})
         Me.grdBestelD.DataSource = Me.BestelDBS
-        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle53.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle53.ForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle53.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(223, Byte), Integer), CType(CType(198, Byte), Integer))
-        DataGridViewCellStyle53.SelectionForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdBestelD.DefaultCellStyle = DataGridViewCellStyle53
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(223, Byte), Integer), CType(CType(198, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdBestelD.DefaultCellStyle = DataGridViewCellStyle8
         Me.grdBestelD.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.grdBestelD.GridColor = System.Drawing.Color.Silver
         Me.grdBestelD.lKeepHighlightOnLostFocus = False
@@ -978,14 +977,14 @@ Partial Class Bestelfrm
         Me.grdBestelD.MultiSelect = False
         Me.grdBestelD.Name = "grdBestelD"
         Me.grdBestelD.nIO = b040.IOValues.IORecordEntryEnable
-        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle54.BackColor = System.Drawing.Color.Bisque
-        DataGridViewCellStyle54.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdBestelD.RowHeadersDefaultCellStyle = DataGridViewCellStyle54
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.Bisque
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdBestelD.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.grdBestelD.RowHeadersVisible = False
         Me.grdBestelD.RowHeadersWidth = 62
         Me.grdBestelD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -1036,8 +1035,8 @@ Partial Class Bestelfrm
         'Art_Nr
         '
         Me.Art_Nr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Art_Nr.DefaultCellStyle = DataGridViewCellStyle47
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Art_Nr.DefaultCellStyle = DataGridViewCellStyle2
         Me.Art_Nr.FillWeight = 8.0!
         Me.Art_Nr.HeaderText = "Artikel"
         Me.Art_Nr.MinimumWidth = 8
@@ -1048,8 +1047,8 @@ Partial Class Bestelfrm
         '
         Me.Omschrijving.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Omschrijving.DataPropertyName = "BestD_Omschrijving"
-        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.Omschrijving.DefaultCellStyle = DataGridViewCellStyle48
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.Omschrijving.DefaultCellStyle = DataGridViewCellStyle3
         Me.Omschrijving.FillWeight = 20.0!
         Me.Omschrijving.HeaderText = "Omschrijving"
         Me.Omschrijving.MinimumWidth = 8
@@ -1114,8 +1113,8 @@ Partial Class Bestelfrm
         '
         Me.Eenh_HoevInvoer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.Eenh_HoevInvoer.DataPropertyName = "Eenh_HoevInvoer"
-        DataGridViewCellStyle49.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Eenh_HoevInvoer.DefaultCellStyle = DataGridViewCellStyle49
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Eenh_HoevInvoer.DefaultCellStyle = DataGridViewCellStyle4
         Me.Eenh_HoevInvoer.FillWeight = 8.0!
         Me.Eenh_HoevInvoer.HeaderText = ""
         Me.Eenh_HoevInvoer.MaxInputLength = 10
@@ -1137,8 +1136,8 @@ Partial Class Bestelfrm
         '
         Me.Eenh_omschrijving.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.Eenh_omschrijving.DataPropertyName = "Eenh_omschrijving"
-        DataGridViewCellStyle50.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Eenh_omschrijving.DefaultCellStyle = DataGridViewCellStyle50
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Eenh_omschrijving.DefaultCellStyle = DataGridViewCellStyle5
         Me.Eenh_omschrijving.FillWeight = 8.0!
         Me.Eenh_omschrijving.HeaderText = ""
         Me.Eenh_omschrijving.MaxInputLength = 10
@@ -1179,8 +1178,8 @@ Partial Class Bestelfrm
         'BestD_Opschrift
         '
         Me.BestD_Opschrift.DataPropertyName = "BestD_Opschrift"
-        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.BestD_Opschrift.DefaultCellStyle = DataGridViewCellStyle51
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.BestD_Opschrift.DefaultCellStyle = DataGridViewCellStyle6
         Me.BestD_Opschrift.FillWeight = 20.0!
         Me.BestD_Opschrift.HeaderText = "Opschrift"
         Me.BestD_Opschrift.MinimumWidth = 8
@@ -1193,8 +1192,8 @@ Partial Class Bestelfrm
         'BestD_Boodschap
         '
         Me.BestD_Boodschap.DataPropertyName = "BestD_Boodschap"
-        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.BestD_Boodschap.DefaultCellStyle = DataGridViewCellStyle52
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.BestD_Boodschap.DefaultCellStyle = DataGridViewCellStyle7
         Me.BestD_Boodschap.FillWeight = 20.0!
         Me.BestD_Boodschap.HeaderText = "Boodschap"
         Me.BestD_Boodschap.MinimumWidth = 8
@@ -1403,25 +1402,25 @@ Partial Class Bestelfrm
         Me.AdresG.AutoGenerateColumns = False
         Me.AdresG.BackgroundColor = System.Drawing.Color.White
         Me.AdresG.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle57.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle57.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle57.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle57.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle57.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AdresG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle57
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AdresG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.AdresG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.AdresG.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Adr_Adres, Me.Adr_PostNummer, Me.Adr_Gemeente, Me.Adr_Land, Me.AdrFacturatieDataGridViewCheckBoxColumn, Me.Adr_id, Me.Kies})
         Me.AdresG.DataSource = Me.AdresBS
-        DataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle58.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle58.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle58.ForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle58.SelectionBackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.AdresG.DefaultCellStyle = DataGridViewCellStyle58
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.AdresG.DefaultCellStyle = DataGridViewCellStyle11
         Me.AdresG.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.AdresG.GridColor = System.Drawing.Color.LightGray
         Me.AdresG.lKeepHighlightOnLostFocus = False
@@ -1558,24 +1557,24 @@ Partial Class Bestelfrm
         Me.grdHistory.AllowUserToDeleteRows = False
         Me.grdHistory.BackgroundColor = System.Drawing.Color.Beige
         Me.grdHistory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle59.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle59.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle59.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdHistory.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle59
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdHistory.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.grdHistory.ColumnHeadersHeight = 21
         Me.grdHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle60.BackColor = System.Drawing.Color.Beige
-        DataGridViewCellStyle60.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle60.ForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle60.SelectionBackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle60.SelectionForeColor = System.Drawing.Color.Beige
-        DataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdHistory.DefaultCellStyle = DataGridViewCellStyle60
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.Beige
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Beige
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdHistory.DefaultCellStyle = DataGridViewCellStyle13
         Me.grdHistory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.grdHistory.GridColor = System.Drawing.Color.LightGray
         Me.grdHistory.Location = New System.Drawing.Point(0, 6)
@@ -1590,7 +1589,6 @@ Partial Class Bestelfrm
         '
         'particulierenTabPage
         '
-        Me.particulierenTabPage.Controls.Add(Me.TxtBaseNumericTotalPartikulieren)
         Me.particulierenTabPage.Controls.Add(Me.particulierenOverzichtDatagridview)
         Me.particulierenTabPage.Controls.Add(Me.particulierenGobottomButton)
         Me.particulierenTabPage.Controls.Add(Me.particulierenGotopButton)
@@ -1602,45 +1600,30 @@ Partial Class Bestelfrm
         Me.particulierenTabPage.Text = "Particulieren (^T)"
         Me.particulierenTabPage.UseVisualStyleBackColor = True
         '
-        'TxtBaseNumericTotalPartikulieren
-        '
-        Me.TxtBaseNumericTotalPartikulieren.BackColor = System.Drawing.Color.Beige
-        Me.TxtBaseNumericTotalPartikulieren.fieldLength = 0
-        Me.TxtBaseNumericTotalPartikulieren.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.TxtBaseNumericTotalPartikulieren.forceUppercase = True
-        Me.TxtBaseNumericTotalPartikulieren.ForeColor = System.Drawing.Color.DarkBlue
-        Me.TxtBaseNumericTotalPartikulieren.lIsSearch = False
-        Me.TxtBaseNumericTotalPartikulieren.Location = New System.Drawing.Point(574, 652)
-        Me.TxtBaseNumericTotalPartikulieren.Name = "TxtBaseNumericTotalPartikulieren"
-        Me.TxtBaseNumericTotalPartikulieren.nIO = b040.IOValues.IOAlwaysEnable
-        Me.TxtBaseNumericTotalPartikulieren.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.TxtBaseNumericTotalPartikulieren.Size = New System.Drawing.Size(100, 21)
-        Me.TxtBaseNumericTotalPartikulieren.TabIndex = 49
-        '
         'particulierenOverzichtDatagridview
         '
         Me.particulierenOverzichtDatagridview.AllowUserToAddRows = False
         Me.particulierenOverzichtDatagridview.AllowUserToDeleteRows = False
         Me.particulierenOverzichtDatagridview.BackgroundColor = System.Drawing.Color.Beige
         Me.particulierenOverzichtDatagridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle55.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle55.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle55.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle55.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle55.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.particulierenOverzichtDatagridview.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle55
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.particulierenOverzichtDatagridview.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.particulierenOverzichtDatagridview.ColumnHeadersHeight = 21
         Me.particulierenOverzichtDatagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle56.BackColor = System.Drawing.Color.Beige
-        DataGridViewCellStyle56.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
-        DataGridViewCellStyle56.ForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle56.SelectionBackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle56.SelectionForeColor = System.Drawing.Color.Beige
-        DataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.particulierenOverzichtDatagridview.DefaultCellStyle = DataGridViewCellStyle56
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.Beige
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Beige
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.particulierenOverzichtDatagridview.DefaultCellStyle = DataGridViewCellStyle15
         Me.particulierenOverzichtDatagridview.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.particulierenOverzichtDatagridview.GridColor = System.Drawing.Color.LightGray
         Me.particulierenOverzichtDatagridview.Location = New System.Drawing.Point(7, 6)
@@ -1821,7 +1804,6 @@ Partial Class Bestelfrm
         Me.TabPage4.PerformLayout()
         CType(Me.grdHistory, System.ComponentModel.ISupportInitialize).EndInit()
         Me.particulierenTabPage.ResumeLayout(False)
-        Me.particulierenTabPage.PerformLayout()
         CType(Me.particulierenOverzichtDatagridview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1952,5 +1934,4 @@ Partial Class Bestelfrm
     Friend WithEvents BetalingTextbox As txtBase
     Friend WithEvents LblBase3 As lblBase
     Friend WithEvents TxtBaseNumericTotalOverzicht As txtBaseNumeric
-    Friend WithEvents TxtBaseNumericTotalPartikulieren As txtBaseNumeric
 End Class
