@@ -912,7 +912,7 @@ Public Class Bestelfrm
         Dim SnijdenApplicable As Boolean = Me.obzArtikel.SnijdenApplicable()
         Me.grdBestelD.currentColumnEnable("bestd_Snijden", SnijdenApplicable)
         ' MG zondag 13 februari 2011 - this does not work for some reason.
-        Me.BestelDBS.Current("BESTD_SNIJDEN") = SnijdenApplicable
+        Me.BestelDBS.Current("BESTD_SNIJDEN") = Me.obzArtikel.Record.Art_Snijden
         Me.BestelDBS.Current("bestd_artikel") = Me.obzArtikel.Record.ARt_Id
         ' Me.BestelDG.currentColumnValue("Bestd_Snijden") = SnijdenApplicable
         'If Me.BestelDBS.Current("Bestd_EenhPrijs") <> Me.obzArtikel.Record("Art_Prijs") Then

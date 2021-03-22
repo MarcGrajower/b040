@@ -28,7 +28,7 @@
         End Set
     End Property
     Public Function SnijdenApplicable() As Boolean
-        Return Me.Record("Art_Categorie") = "1"
+        Return Me.Record("Art_Kategorie") = "1"
     End Function
     Public Function Art_NrExists(ByVal art_Nr As String) As Boolean
         Dim v = Me.da.ArtikelFromNrScalarQuery(art_Nr)
