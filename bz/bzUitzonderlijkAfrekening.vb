@@ -70,9 +70,6 @@ Public Class bzUitzonderlijkAfrekening
         Next
     End Sub
     Function getSnijden(r As DataRow) As String
-        If r("Art_Snijden") = False Then
-            Return ""
-        End If
         Return IIf(r("BestD_Snijden"), " [SN]", "")
     End Function
     Sub makeDetail(xl As clsExcel, l As Long, r As DataRow)
