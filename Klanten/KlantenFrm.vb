@@ -283,6 +283,7 @@ Public Class KlantenFrm
         Me.gemeente.Text = cNvl(AdresBS(0)("adr_gemeente"))
         Me.land.Text = cNvl(AdresBS(0)("adr_land"))
         Me.titleRefresh()
+        Me.KL_emailfacturen.Checked = Klanten.record.kl_emailfacturen
 
         With Me.KlantenKortingG.DefaultCellStyle
             .SelectionBackColor = .BackColor
