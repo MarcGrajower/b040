@@ -13,7 +13,7 @@ namespace B040.ExcelAddin
     {
         public void Go()
         {
-            MaandelijkseFacturatiStatistieken.GetData(2021, 2);
+            MaandelijkseFacturatiStatistieken.GetData();
             Select(1, "A");
             SetValue("Periode");
             FormatH2();

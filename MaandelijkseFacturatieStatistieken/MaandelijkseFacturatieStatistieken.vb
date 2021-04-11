@@ -4,7 +4,13 @@ Public Class MaandelijkseFacturatiStatistieken
         SetYear(year)
         SetMonth(month)
     End Sub
-
+    Shared Sub SetPreviousMonth()
+        Dim currentYear As Integer = DateTime.Now.Year()
+        Dim currentMonth As Integer = DateTime.Now.Month()
+        Dim LastDayPreviousMonth As DateTime = New Date(currentYear, currentMonth, 1).AddDays(-1)
+        SetYear(LastDayPreviousMonth.Year)
+        SetMonth(LastDayPreviousMonth.Month)
+    End Sub
     Public Shared Sub SetYear(year As Int16)
         _Year = year
     End Sub
@@ -14,6 +20,10 @@ Public Class MaandelijkseFacturatiStatistieken
     Public Shared Function GetRowCount() As Int16
         Return _RowsCount
     End Function
+    Public Shared Sub GetData()
+        SetPreviousMonth()
+        GetData(_Year, _Month)
+    End Sub
     Public Shared Sub GetData(year As Integer, month As Integer)
         _Year = year
         _Month = month
@@ -43,7 +53,7 @@ Public Class MaandelijkseFacturatiStatistieken
     End Sub
     Public Shared Function GetMonthString() As String
         Dim rv As String = ""
-        Dim shortMonths As String() = New String() {"jan", "feb", "maart", "apr", "jun", "jul", "aug", "sep", "okt", "nov", "dec"}
+        Dim shortMonths As String() = New String() {"jan", "feb", "mar", "apr", "jun", "jul", "aug", "sep", "okt", "nov", "dec"}
         rv = $"{shortMonths(_Month - 1)}/{_Year}"
         Return rv
     End Function
