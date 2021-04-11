@@ -227,6 +227,7 @@
     </Compile>
     <Compile Include="Index\IndexSelectedDetail.vb" />
     <Compile Include="Index\Index.vb" />
+    <Compile Include="MaandelijkseFacturatieStatistieken\MaandelijkseFacturatieStatistieken.vb" />
     <Compile Include="ParticulierenBestellingen\ParticulierenBestellingen.vb" />
     <Compile Include="ParticulierenBestellingen\ParticulierenBestellingenForm.Designer.vb">
       <DependentUpon>ParticulierenBestellingenForm.vb</DependentUpon>
@@ -968,7 +969,7 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_StartDate="2000/1/1" BuildVersion_UseGlobalSettings="True" />
+      <UserProperties BuildVersion_UseGlobalSettings="True" BuildVersion_StartDate="2000/1/1" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

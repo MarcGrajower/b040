@@ -3,6 +3,10 @@ Imports Microsoft.Office.Interop
 Imports System.Windows.Forms
 
 Public Class Tests
+    Public Shared Sub Test_MaandelijkseFacturatieStatistieken()
+        MaandelijkseFacturatiStatistieken.GetData(2021, 2)
+        Console.WriteLine($"{MaandelijkseFacturatiStatistieken.GetRowCount()}")
+    End Sub
     Public Shared Sub Test_Conversion()
         Dim d As Double = "8,5"
         Console.WriteLine(d + 1)

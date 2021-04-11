@@ -1,7 +1,8 @@
 ﻿Module Module1
 
     Sub Main()
-        Tests.Test_Conversion()
+        Tests.Test_MaandelijkseFacturatieStatistieken()
+        'Tests.Test_Conversion()
         'Tests.Test_ProductielijstInitialise()
         '6224
         'Tests.Test_xlPatternAutomatic()
