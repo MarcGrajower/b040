@@ -68,7 +68,8 @@ namespace B040.ExcelAddin
         }
         public void AddPivotTable()
         {
-            Range pivotData = _Ws.Range["a3:H343"];
+            Select("a3:h" + MaandelijkseFacturatiStatistieken.GetRowCount() + 3);
+            Range pivotData = _Xl.Selection;
             string pivotTableName = "Overzicht";
             Worksheet destinationSheet = _Wb.Sheets.Add();
             Range pivotDestination = destinationSheet.Range["A3", Type.Missing];
@@ -125,9 +126,9 @@ namespace B040.ExcelAddin
             netPivotField2.Calculation = XlPivotFieldCalculation.xlPercentOfColumn;
             netPivotField2.NumberFormat = "#,##0.0%";
             gefactureerdPivotField1.Caption = "Gefactureerd [EUR]";
-            gefactureerdPivotField2.Caption = "Gefactureerd (%)";
+            gefactureerdPivotField2.Caption = "Gefactureerd [%]";
             netPivotField1.Caption = "Netto [EUR]";
-            netPivotField2.Caption = "Netto (%)";
+            netPivotField2.Caption = "Netto [%]";
             destinationSheet.Select();
             _Ws = destinationSheet;
             Select("A3:E9");
@@ -138,9 +139,6 @@ namespace B040.ExcelAddin
             Select("A9:E9");
             _Xl.Selection.Interior.ThemeColor = XlThemeColor.xlThemeColorAccent1;
             _Xl.Selection.Interior.TintAndShade = 0.8;
-
-
-
         }
     }
 
