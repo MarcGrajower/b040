@@ -1,5 +1,6 @@
 ﻿Option Infer On
 Imports System.Data.OleDb
+Imports System.Text.RegularExpressions
 ''' <summary>
 ''' 6127 added tokenized klantensearch (with includeActief = true)
 ''' </summary>
@@ -45,7 +46,7 @@ Public Class KlantenFrm
         Me.land.Text = ""
     End Sub
     Private Sub clearSetDefaults()
-        Me.Bed_Naam.Text = "Niet Toegewezen"
+        Me.Bed_naam.Text = "Niet Toegewezen"
         Me.typeFacturatieControl.SelectedIndex = 0  ' Groothandel
         Me.typeFacturatieControl.nIO = IOValues.IORecordEntryEnable
         processTypeFactuur()
@@ -363,7 +364,7 @@ Public Class KlantenFrm
             Exit Sub
         End If
         Me.KL_Nummer.Text = bzKlanten.getKlNummer(klid)
-            lLoadKlant()
+        lLoadKlant()
 
 
     End Sub
@@ -443,6 +444,15 @@ Public Class KlantenFrm
             Next
         End With
         Me.TypeFacturatie.typF_Omschrijving = Me.typeFacturatieControl.SelectedItem.ToString
+        If Me.KL_emailfacturen.Checked = True Then
+            Dim emailPattern = "[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*@((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))"
+            Dim regex As New Regex(emailPattern)
+            If (regex.Matches(Me.KL_EMail.Text).Count() = 0) Then
+                MsgBox("Facturen Emailen voor deze Klant is aangevinkt, maar zijn Email adres is niet geldig")
+                Me.KL_EMail.Focus()
+                Return False
+            End If
+        End If
         Return True
     End Function
 #End Region
@@ -500,7 +510,7 @@ Public Class KlantenFrm
         ' Throw New InvalidOperationException("Testing rollback")
         t.Commit()
         Dim clog As String = Me.KL_Nummer.Text & "-" & Me.KL_Naam.Text
-        nLog(clog, Me.Name, LogType.logNormal, currLog, "Klanten", Me.loadPk)
+        nlog(clog, Me.Name, LogType.logNormal, currLog, "Klanten", Me.loadPk)
         conn.Close()
         unLock("KLANTEN", loadPk)
         updateTelefoon(loadPk)
