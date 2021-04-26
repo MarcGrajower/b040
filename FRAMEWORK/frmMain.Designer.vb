@@ -47,6 +47,7 @@ Partial Class frmMain
         Me.AfdrukkenOverzichtLijstMetNamenVanBestellingenParticulierenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AfdrkenBestelDocumentenParticulierenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FacturatieToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -68,7 +69,6 @@ Partial Class frmMain
         Me.PirgePDcouemntsuntilLastFacutratieDateVerwijderenLastBestlFalseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JustTestingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LblMessage = New b040.lblBase()
-        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -235,6 +235,12 @@ Partial Class frmMain
         Me.FacturatieToolStripMenuItem.Size = New System.Drawing.Size(439, 22)
         Me.FacturatieToolStripMenuItem.Text = "&Facturatie"
         '
+        'ToolStripMenuItem3
+        '
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(439, 22)
+        Me.ToolStripMenuItem3.Text = "E-mailen Facturen"
+        '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
@@ -363,12 +369,6 @@ Partial Class frmMain
         Me.LblMessage.Name = "LblMessage"
         Me.LblMessage.Size = New System.Drawing.Size(0, 16)
         Me.LblMessage.TabIndex = 9
-        '
-        'ToolStripMenuItem3
-        '
-        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(439, 22)
-        Me.ToolStripMenuItem3.Text = "E-mailen Facturen"
         '
         'frmMain
         '

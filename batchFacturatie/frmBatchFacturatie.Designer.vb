@@ -245,6 +245,7 @@ Partial Class frmBatchFacturatie
         '
         'PnlBase1
         '
+        Me.PnlBase1.AutoSize = True
         Me.PnlBase1.BackColor = System.Drawing.Color.Silver
         Me.PnlBase1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PnlBase1.Controls.Add(Me.txtLeveringDat)
@@ -255,14 +256,15 @@ Partial Class frmBatchFacturatie
         Me.PnlBase1.Controls.Add(Me.LblBase5)
         Me.PnlBase1.Controls.Add(Me.txtAantalFacturen)
         Me.PnlBase1.Controls.Add(Me.lblDate)
-        Me.PnlBase1.Location = New System.Drawing.Point(4, 7)
+        Me.PnlBase1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PnlBase1.Location = New System.Drawing.Point(3, 3)
         Me.PnlBase1.Name = "PnlBase1"
-        Me.PnlBase1.Size = New System.Drawing.Size(392, 49)
+        Me.PnlBase1.Size = New System.Drawing.Size(394, 48)
         Me.PnlBase1.TabIndex = 38
         '
         'txtLeveringDat
         '
-        Me.txtLeveringDat.BackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer))
+        Me.txtLeveringDat.BackColor = System.Drawing.Color.White
         Me.txtLeveringDat.fieldLength = 0
         Me.txtLeveringDat.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
         Me.txtLeveringDat.forceUppercase = True
@@ -274,7 +276,6 @@ Partial Class frmBatchFacturatie
         Me.txtLeveringDat.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.txtLeveringDat.Size = New System.Drawing.Size(80, 21)
         Me.txtLeveringDat.TabIndex = 0
-        Me.txtLeveringDat.TabStop = False
         '
         'LblBase2
         '
@@ -393,8 +394,8 @@ Partial Class frmBatchFacturatie
         Me.LblBase9.Name = "LblBase9"
         Me.LblBase9.Size = New System.Drawing.Size(281, 114)
         Me.LblBase9.TabIndex = 48
-        Me.LblBase9.Text = "Indien aangevinkt, worden alle Bestel en Lever documenten met leveringsdatum tot " & _
-    "en met <d> verwijderd.   Indien niet aangevinkt, worden laatste bestellingen van" & _
+        Me.LblBase9.Text = "Indien aangevinkt, worden alle Bestel en Lever documenten met leveringsdatum tot " &
+    "en met <d> verwijderd.   Indien niet aangevinkt, worden laatste bestellingen van" &
     " bepaalde klanten bijgehouden." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'particulierenTransactiesVerwijderen
@@ -417,7 +418,7 @@ Partial Class frmBatchFacturatie
         Me.LijnenverwijderenLabel.Name = "LijnenverwijderenLabel"
         Me.LijnenverwijderenLabel.Size = New System.Drawing.Size(281, 73)
         Me.LijnenverwijderenLabel.TabIndex = 46
-        Me.LijnenverwijderenLabel.Text = "Indien aangevinkt, worden alle Bestel en Lever documenten met leveringsdatum tot " & _
+        Me.LijnenverwijderenLabel.Text = "Indien aangevinkt, worden alle Bestel en Lever documenten met leveringsdatum tot " &
     "en met <d>  verwijderd." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'chkLijnenVerwijderen
@@ -458,7 +459,7 @@ Partial Class frmBatchFacturatie
         Me.CopijenLabel.Name = "CopijenLabel"
         Me.CopijenLabel.Size = New System.Drawing.Size(180, 91)
         Me.CopijenLabel.TabIndex = 47
-        Me.CopijenLabel.Text = "Alle facturen worden per copij afgedrukt." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Copijen VervoerDoc en Afrekeningen wor" & _
+        Me.CopijenLabel.Text = "Alle facturen worden per copij afgedrukt." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Copijen VervoerDoc en Afrekeningen wor" &
     "den na hun factuur afgedrukt." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'LblBase13
@@ -1207,6 +1208,7 @@ Partial Class frmBatchFacturatie
         Me.Text = "Batch Facturatie"
         Me.TpgBase1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         CType(Me.grdFacturatie, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlBase1.ResumeLayout(False)
         Me.PnlBase1.PerformLayout()

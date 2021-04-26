@@ -210,6 +210,12 @@
     <Compile Include="bz\BzWinkelproductie.vb" />
     <Compile Include="bz\bzKlantenSearch.vb" />
     <Compile Include="bz\bzUitzonderlijkAfrekening.vb" />
+    <Compile Include="EmailFacturenFrm.Designer.vb">
+      <DependentUpon>EmailFacturenFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EmailFacturenFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -601,6 +607,9 @@
     <EmbeddedResource Include="BestelTotalen\frmBestelTotalen.resx">
       <DependentUpon>frmBestelTotalen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmailFacturenFrm.resx">
+      <DependentUpon>EmailFacturenFrm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KLantenSearch\KlantenSearch.resx">
       <DependentUpon>KlantenSearch.vb</DependentUpon>
     </EmbeddedResource>
@@ -983,7 +992,7 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_StartDate="2000/1/1" BuildVersion_UseGlobalSettings="True" />
+      <UserProperties BuildVersion_UseGlobalSettings="True" BuildVersion_StartDate="2000/1/1" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

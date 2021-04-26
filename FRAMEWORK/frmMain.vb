@@ -309,5 +309,9 @@ Public Class frmMain
         f.Show()
     End Sub
 
-
+    Private Sub EmailenFacturen_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem3.Click
+        Dim f As New EmailFacturenFrm()
+        f.MdiParent = Me
+        f.Show()
+    End Sub
 End Class
