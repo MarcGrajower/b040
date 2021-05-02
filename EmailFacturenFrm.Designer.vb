@@ -26,12 +26,12 @@ Partial Class EmailFacturenFrm
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlBase1 = New b040.pnlBase()
-        Me.LblBase1 = New b040.lblBase()
-        Me.FactuurNrVanTextBase = New b040.txtBase()
-        Me.txtAantalFacturen = New b040.txtBase()
         Me.LblBase3 = New b040.lblBase()
         Me.FactuurNrTotTxtBase = New b040.txtBase()
         Me.LblBase5 = New b040.lblBase()
+        Me.LblBase1 = New b040.lblBase()
+        Me.FactuurNrVanTextBase = New b040.txtBase()
+        Me.txtAantalFacturen = New b040.txtBase()
         Me.EmailenFacturentGrdBase = New System.Windows.Forms.DataGridView()
         Me.Klant = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tr = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -59,50 +59,6 @@ Partial Class EmailFacturenFrm
         Me.PnlBase1.Name = "PnlBase1"
         Me.PnlBase1.Size = New System.Drawing.Size(731, 48)
         Me.PnlBase1.TabIndex = 39
-        '
-        'LblBase1
-        '
-        Me.LblBase1.AutoSize = True
-        Me.LblBase1.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
-        Me.LblBase1.Location = New System.Drawing.Point(5, 4)
-        Me.LblBase1.Name = "LblBase1"
-        Me.LblBase1.Size = New System.Drawing.Size(92, 16)
-        Me.LblBase1.TabIndex = 16
-        Me.LblBase1.Text = "Factuur Nt (Van)"
-        '
-        'FactuurNrVanTextBase
-        '
-        Me.FactuurNrVanTextBase.BackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer))
-        Me.FactuurNrVanTextBase.fieldLength = 0
-        Me.FactuurNrVanTextBase.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.FactuurNrVanTextBase.forceUppercase = True
-        Me.FactuurNrVanTextBase.ForeColor = System.Drawing.Color.DarkBlue
-        Me.FactuurNrVanTextBase.lIsSearch = False
-        Me.FactuurNrVanTextBase.Location = New System.Drawing.Point(6, 20)
-        Me.FactuurNrVanTextBase.Name = "FactuurNrVanTextBase"
-        Me.FactuurNrVanTextBase.nIO = b040.IOValues.IOAlwaysEnable
-        Me.FactuurNrVanTextBase.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.FactuurNrVanTextBase.Size = New System.Drawing.Size(83, 21)
-        Me.FactuurNrVanTextBase.TabIndex = 15
-        Me.FactuurNrVanTextBase.TabStop = False
-        Me.FactuurNrVanTextBase.ValidatingType = GetType(Date)
-        '
-        'txtAantalFacturen
-        '
-        Me.txtAantalFacturen.BackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer))
-        Me.txtAantalFacturen.fieldLength = 0
-        Me.txtAantalFacturen.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.txtAantalFacturen.forceUppercase = True
-        Me.txtAantalFacturen.ForeColor = System.Drawing.Color.DarkBlue
-        Me.txtAantalFacturen.lIsSearch = False
-        Me.txtAantalFacturen.Location = New System.Drawing.Point(184, 20)
-        Me.txtAantalFacturen.Name = "txtAantalFacturen"
-        Me.txtAantalFacturen.nIO = b040.IOValues.IOAlwaysDisable
-        Me.txtAantalFacturen.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.txtAantalFacturen.Size = New System.Drawing.Size(64, 21)
-        Me.txtAantalFacturen.TabIndex = 4
-        Me.txtAantalFacturen.TabStop = False
-        Me.txtAantalFacturen.ValidatingType = GetType(Date)
         '
         'LblBase3
         '
@@ -140,6 +96,50 @@ Partial Class EmailFacturenFrm
         Me.LblBase5.Size = New System.Drawing.Size(39, 16)
         Me.LblBase5.TabIndex = 12
         Me.LblBase5.Text = "Aantal"
+        '
+        'LblBase1
+        '
+        Me.LblBase1.AutoSize = True
+        Me.LblBase1.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
+        Me.LblBase1.Location = New System.Drawing.Point(5, 4)
+        Me.LblBase1.Name = "LblBase1"
+        Me.LblBase1.Size = New System.Drawing.Size(92, 16)
+        Me.LblBase1.TabIndex = 16
+        Me.LblBase1.Text = "Factuur Nt (Van)"
+        '
+        'FactuurNrVanTextBase
+        '
+        Me.FactuurNrVanTextBase.BackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer))
+        Me.FactuurNrVanTextBase.fieldLength = 0
+        Me.FactuurNrVanTextBase.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.FactuurNrVanTextBase.forceUppercase = True
+        Me.FactuurNrVanTextBase.ForeColor = System.Drawing.Color.DarkBlue
+        Me.FactuurNrVanTextBase.lIsSearch = False
+        Me.FactuurNrVanTextBase.Location = New System.Drawing.Point(6, 20)
+        Me.FactuurNrVanTextBase.Name = "FactuurNrVanTextBase"
+        Me.FactuurNrVanTextBase.nIO = b040.IOValues.IOAlwaysEnable
+        Me.FactuurNrVanTextBase.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.FactuurNrVanTextBase.Size = New System.Drawing.Size(83, 21)
+        Me.FactuurNrVanTextBase.TabIndex = 15
+        Me.FactuurNrVanTextBase.TabStop = False
+        Me.FactuurNrVanTextBase.ValidatingType = GetType(Integer)
+        '
+        'txtAantalFacturen
+        '
+        Me.txtAantalFacturen.BackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer))
+        Me.txtAantalFacturen.fieldLength = 0
+        Me.txtAantalFacturen.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.txtAantalFacturen.forceUppercase = True
+        Me.txtAantalFacturen.ForeColor = System.Drawing.Color.DarkBlue
+        Me.txtAantalFacturen.lIsSearch = False
+        Me.txtAantalFacturen.Location = New System.Drawing.Point(184, 20)
+        Me.txtAantalFacturen.Name = "txtAantalFacturen"
+        Me.txtAantalFacturen.nIO = b040.IOValues.IOAlwaysDisable
+        Me.txtAantalFacturen.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.txtAantalFacturen.Size = New System.Drawing.Size(64, 21)
+        Me.txtAantalFacturen.TabIndex = 4
+        Me.txtAantalFacturen.TabStop = False
+        Me.txtAantalFacturen.ValidatingType = GetType(Date)
         '
         'EmailenFacturentGrdBase
         '

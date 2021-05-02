@@ -1,7 +1,8 @@
 ﻿Module Module1
 
     Sub Main()
-        Tests.Test_MaandelijkseFacturatieStatistieken()
+        Tests.Test_GetInvoicesToEmail()
+        'Tests.Test_MaandelijkseFacturatieStatistieken()
         'Tests.Test_Conversion()
         'Tests.Test_ProductielijstInitialise()
         '6224
