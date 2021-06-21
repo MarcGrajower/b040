@@ -42,7 +42,49 @@
             _VanFactuurNr = _TotFactuurNr
             _TotFactuurNr = w
         End If
-        _AantalFacturen = _TotFactuurNr - _VanFactuurNr + 1
+        Dim s = New sqlClass()
+        s.AddParameter(True, DbType.Boolean)
+        s.AddParameter(_VanFactuurNr.ToString(), DbType.String)
+        s.AddParameter(_TotFactuurNr.ToString(), DbType.String)
+        Dim sql As String = "select "
+        sql += "kl_nummer as Klant , "
+        sql += "kl_naam, "
+        sql += "kl_email, "
+        sql += "facth_nummer, "
+        sql += " facth_TotBet "
+        sql += " From FactH,klanten Where facth_klant = kl_id And kl_emailfacturen = ? And facth_nummer >= ? And facth_nummer<=?"
+        Dim dt = New DataTable()
+        s.Execute(sql, dt)
+        _AantalFacturen = dt.Rows.Count()
+        'Me.EmailenFacturentGrdBase.Rows.Clear()
+        Dim line = 0
+        For Each row As DataRow In dt.Rows
+            ' Dim line = Me.EmailenFacturentGrdBase.Rows.Add
+            If (line >= EmailenFacturentGrdBase.Rows.Count) Then
+                EmailenFacturentGrdBase.Rows.Add()
+            End If
+            EmailenFacturentGrdBase(0, line).Value = row("Klant")
+            EmailenFacturentGrdBase(1, line).Value = row("Kl_naam")
+            EmailenFacturentGrdBase(2, line).Value = row("Kl_EMail")
+            CType(EmailenFacturentGrdBase(2, line), DataGridViewCell).Style.BackColor = Color.White
+            EmailenFacturentGrdBase(3, line).Value = row("facth_Nummer").Trim()
+            EmailenFacturentGrdBase(4, line).Value = $"{row("facth_totBet"):n2}"
+            EmailenFacturentGrdBase(5, line).Value = True
+            CType(EmailenFacturentGrdBase(5, line), DataGridViewCell).Style.BackColor = Color.White
+            line += 1
+        Next
+        For l = line To EmailenFacturentGrdBase.Rows.Count - 1
+            For Each f In EmailenFacturentGrdBase.Columns
+                EmailenFacturentGrdBase(f.Index, l).Value = Nothing
+                CType(EmailenFacturentGrdBase(f.Index, l), DataGridViewCell).Style.BackColor = EmailenFacturentGrdBase.DefaultCellStyle.BackColor
+            Next
+        Next
+        EmailenFacturentGrdBase(0, 0).Selected = True
+
+        ' Me.EmailenFacturentGrdBase.DataSource = dt
+
+
+
         RefreshForm()
 
     End Sub

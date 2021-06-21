@@ -20,11 +20,12 @@ Partial Class EmailFacturenFrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlBase1 = New b040.pnlBase()
         Me.LblBase3 = New b040.lblBase()
         Me.FactuurNrTotTxtBase = New b040.txtBase()
@@ -38,7 +39,7 @@ Partial Class EmailFacturenFrm
         Me.BTW = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Netto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.InclColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.InclColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.PnlBase1.SuspendLayout()
         CType(Me.EmailenFacturentGrdBase, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -57,7 +58,7 @@ Partial Class EmailFacturenFrm
         Me.PnlBase1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlBase1.Location = New System.Drawing.Point(0, 0)
         Me.PnlBase1.Name = "PnlBase1"
-        Me.PnlBase1.Size = New System.Drawing.Size(731, 48)
+        Me.PnlBase1.Size = New System.Drawing.Size(731, 55)
         Me.PnlBase1.TabIndex = 39
         '
         'LblBase3
@@ -66,7 +67,7 @@ Partial Class EmailFacturenFrm
         Me.LblBase3.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase3.Location = New System.Drawing.Point(95, 3)
         Me.LblBase3.Name = "LblBase3"
-        Me.LblBase3.Size = New System.Drawing.Size(90, 16)
+        Me.LblBase3.Size = New System.Drawing.Size(132, 23)
         Me.LblBase3.TabIndex = 20
         Me.LblBase3.Text = "Factuur Nt (Tot)"
         '
@@ -82,7 +83,7 @@ Partial Class EmailFacturenFrm
         Me.FactuurNrTotTxtBase.Name = "FactuurNrTotTxtBase"
         Me.FactuurNrTotTxtBase.nIO = b040.IOValues.IOAlwaysEnable
         Me.FactuurNrTotTxtBase.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.FactuurNrTotTxtBase.Size = New System.Drawing.Size(83, 21)
+        Me.FactuurNrTotTxtBase.Size = New System.Drawing.Size(83, 28)
         Me.FactuurNrTotTxtBase.TabIndex = 19
         Me.FactuurNrTotTxtBase.TabStop = False
         Me.FactuurNrTotTxtBase.ValidatingType = GetType(Date)
@@ -93,7 +94,7 @@ Partial Class EmailFacturenFrm
         Me.LblBase5.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase5.Location = New System.Drawing.Point(194, 4)
         Me.LblBase5.Name = "LblBase5"
-        Me.LblBase5.Size = New System.Drawing.Size(39, 16)
+        Me.LblBase5.Size = New System.Drawing.Size(60, 23)
         Me.LblBase5.TabIndex = 12
         Me.LblBase5.Text = "Aantal"
         '
@@ -103,7 +104,7 @@ Partial Class EmailFacturenFrm
         Me.LblBase1.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblBase1.Location = New System.Drawing.Point(5, 4)
         Me.LblBase1.Name = "LblBase1"
-        Me.LblBase1.Size = New System.Drawing.Size(92, 16)
+        Me.LblBase1.Size = New System.Drawing.Size(135, 23)
         Me.LblBase1.TabIndex = 16
         Me.LblBase1.Text = "Factuur Nt (Van)"
         '
@@ -119,7 +120,7 @@ Partial Class EmailFacturenFrm
         Me.FactuurNrVanTextBase.Name = "FactuurNrVanTextBase"
         Me.FactuurNrVanTextBase.nIO = b040.IOValues.IOAlwaysEnable
         Me.FactuurNrVanTextBase.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.FactuurNrVanTextBase.Size = New System.Drawing.Size(83, 21)
+        Me.FactuurNrVanTextBase.Size = New System.Drawing.Size(83, 28)
         Me.FactuurNrVanTextBase.TabIndex = 15
         Me.FactuurNrVanTextBase.TabStop = False
         Me.FactuurNrVanTextBase.ValidatingType = GetType(Integer)
@@ -136,7 +137,7 @@ Partial Class EmailFacturenFrm
         Me.txtAantalFacturen.Name = "txtAantalFacturen"
         Me.txtAantalFacturen.nIO = b040.IOValues.IOAlwaysDisable
         Me.txtAantalFacturen.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.txtAantalFacturen.Size = New System.Drawing.Size(64, 21)
+        Me.txtAantalFacturen.Size = New System.Drawing.Size(64, 28)
         Me.txtAantalFacturen.TabIndex = 4
         Me.txtAantalFacturen.TabStop = False
         Me.txtAantalFacturen.ValidatingType = GetType(Date)
@@ -159,19 +160,20 @@ Partial Class EmailFacturenFrm
         Me.EmailenFacturentGrdBase.ColumnHeadersHeight = 21
         Me.EmailenFacturentGrdBase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.EmailenFacturentGrdBase.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Klant, Me.Tr, Me.BTW, Me.Netto, Me.Column1, Me.InclColumn})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.Beige
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Beige
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.EmailenFacturentGrdBase.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Beige
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Beige
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EmailenFacturentGrdBase.DefaultCellStyle = DataGridViewCellStyle7
         Me.EmailenFacturentGrdBase.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.EmailenFacturentGrdBase.GridColor = System.Drawing.Color.LightGray
         Me.EmailenFacturentGrdBase.Location = New System.Drawing.Point(-1, 51)
         Me.EmailenFacturentGrdBase.Name = "EmailenFacturentGrdBase"
         Me.EmailenFacturentGrdBase.RowHeadersVisible = False
+        Me.EmailenFacturentGrdBase.RowHeadersWidth = 62
         Me.EmailenFacturentGrdBase.RowTemplate.Height = 20
         Me.EmailenFacturentGrdBase.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.EmailenFacturentGrdBase.Size = New System.Drawing.Size(677, 467)
@@ -184,9 +186,10 @@ Partial Class EmailFacturenFrm
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.Beige
         Me.Klant.DefaultCellStyle = DataGridViewCellStyle2
         Me.Klant.HeaderText = "Klant"
+        Me.Klant.MinimumWidth = 8
         Me.Klant.Name = "Klant"
         Me.Klant.ReadOnly = True
-        Me.Klant.Width = 58
+        Me.Klant.Width = 86
         '
         'Tr
         '
@@ -194,42 +197,53 @@ Partial Class EmailFacturenFrm
         DataGridViewCellStyle3.NullValue = Nothing
         Me.Tr.DefaultCellStyle = DataGridViewCellStyle3
         Me.Tr.HeaderText = "Naam"
+        Me.Tr.MinimumWidth = 8
         Me.Tr.Name = "Tr"
         Me.Tr.ReadOnly = True
         '
         'BTW
         '
-        Me.BTW.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.BTW.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
         DataGridViewCellStyle4.Format = "##0.00 %"
         DataGridViewCellStyle4.NullValue = Nothing
         Me.BTW.DefaultCellStyle = DataGridViewCellStyle4
         Me.BTW.HeaderText = "E-Mail"
+        Me.BTW.MinimumWidth = 8
         Me.BTW.Name = "BTW"
-        Me.BTW.ReadOnly = True
-        Me.BTW.Width = 62
+        Me.BTW.Width = 92
         '
         'Netto
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle5.Format = "N2"
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.NullValue = Nothing
+        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(5, 0, 0, 5)
         Me.Netto.DefaultCellStyle = DataGridViewCellStyle5
         Me.Netto.HeaderText = "Factuur Nr"
+        Me.Netto.MinimumWidth = 8
         Me.Netto.Name = "Netto"
         Me.Netto.ReadOnly = True
-        Me.Netto.Width = 88
+        Me.Netto.Width = 127
         '
         'Column1
         '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(0, 0, 0, 3)
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle6
         Me.Column1.HeaderText = "Bedrag"
+        Me.Column1.MinimumWidth = 8
         Me.Column1.Name = "Column1"
-        Me.Column1.Width = 68
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 99
         '
         'InclColumn
         '
         Me.InclColumn.HeaderText = "Incl."
+        Me.InclColumn.MinimumWidth = 8
         Me.InclColumn.Name = "InclColumn"
-        Me.InclColumn.Width = 55
+        Me.InclColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.InclColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.InclColumn.Width = 79
         '
         'EmailFacturenFrm
         '
@@ -260,5 +274,5 @@ Partial Class EmailFacturenFrm
     Friend WithEvents BTW As DataGridViewTextBoxColumn
     Friend WithEvents Netto As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents InclColumn As DataGridViewTextBoxColumn
+    Friend WithEvents InclColumn As DataGridViewCheckBoxColumn
 End Class
