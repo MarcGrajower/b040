@@ -110,9 +110,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="JsonProject">
-      <HintPath>JsonProject\bin\Debug\JsonProject.exe</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <HintPath>..\Visual Studio Tools for Office\PIA\Office11\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
@@ -982,6 +979,12 @@
     </None>
     <None Include="Resources\1306699260_42.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="JsonProject\JsonProject.csproj">
+      <Project>{d6e47081-1bb8-4614-a83c-402adf02a22e}</Project>
+      <Name>JsonProject</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -992,7 +995,7 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UseGlobalSettings="True" BuildVersion_StartDate="2000/1/1" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_StartDate="2000/1/1" BuildVersion_UseGlobalSettings="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

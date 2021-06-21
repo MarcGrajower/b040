@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonProject", "JsonProject\JsonProject.csproj", "{D6E47081-1BB8-4614-A83C-402ADF02A22E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B040.ExcelAddin", "B040.ExcelAddin\B040.ExcelAddin.csproj", "{0F344EEA-D56D-442D-94E6-821DD59FB230}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D6E47081-1BB8-4614-A83C-402ADF02A22E} = {D6E47081-1BB8-4614-A83C-402ADF02A22E}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,12 +76,12 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		BuildVersion_BuildVersioningStyle = None.None.Increment.DayStamp
-		BuildVersion_StartDate = 2010/10/23
-		BuildVersion_UpdateAssemblyVersion = False
-		BuildVersion_UpdateFileVersion = True
-		BuildVersion_AssemblyInfoFilename = My Project\AssemblyInfo.vb
 		SolutionGuid = {316DAD29-946A-455E-A984-28943CA67C30}
+		BuildVersion_AssemblyInfoFilename = My Project\AssemblyInfo.vb
+		BuildVersion_UpdateFileVersion = True
+		BuildVersion_UpdateAssemblyVersion = False
+		BuildVersion_StartDate = 2010/10/23
+		BuildVersion_BuildVersioningStyle = None.None.Increment.DayStamp
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = b040.vsmdi
