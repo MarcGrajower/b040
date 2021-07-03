@@ -4,7 +4,7 @@
     Dim _AantalFacturen = 0
     Private Sub EmailFacturenFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim i As Integer : For i = 1 To 40
-            EmailenFacturentGrdBase.Rows.Add()
+            g.Rows.Add()
         Next
     End Sub
 
@@ -32,7 +32,7 @@
     End Sub
     Private Sub ValidateFactuurNummers(e As System.ComponentModel.CancelEventArgs)
         If _TotFactuurNr = 0 Then
-            _TotFactuurNr = _VanFactuurnr
+            _TotFactuurNr = _VanFactuurNr
             _AantalFacturen = 1
             RefreshForm()
             Return
@@ -60,26 +60,26 @@
         Dim line = 0
         For Each row As DataRow In dt.Rows
             ' Dim line = Me.EmailenFacturentGrdBase.Rows.Add
-            If (line >= EmailenFacturentGrdBase.Rows.Count) Then
-                EmailenFacturentGrdBase.Rows.Add()
+            If (line >= g.Rows.Count) Then
+                g.Rows.Add()
             End If
-            EmailenFacturentGrdBase(0, line).Value = row("Klant")
-            EmailenFacturentGrdBase(1, line).Value = row("Kl_naam")
-            EmailenFacturentGrdBase(2, line).Value = row("Kl_EMail")
-            CType(EmailenFacturentGrdBase(2, line), DataGridViewCell).Style.BackColor = Color.White
-            EmailenFacturentGrdBase(3, line).Value = row("facth_Nummer").Trim()
-            EmailenFacturentGrdBase(4, line).Value = $"{row("facth_totBet"):n2}"
-            EmailenFacturentGrdBase(5, line).Value = True
-            CType(EmailenFacturentGrdBase(5, line), DataGridViewCell).Style.BackColor = Color.White
+            g(0, line).Value = row("Klant")
+            g(1, line).Value = row("Kl_naam")
+            g(2, line).Value = row("Kl_EMail")
+            CType(g(2, line), DataGridViewCell).Style.BackColor = Color.White
+            g(3, line).Value = row("facth_Nummer").Trim()
+            g(4, line).Value = $"{row("facth_totBet"):n2}"
+            g(5, line).Value = True
+            CType(g(5, line), DataGridViewCell).Style.BackColor = Color.White
             line += 1
         Next
-        For l = line To EmailenFacturentGrdBase.Rows.Count - 1
-            For Each f In EmailenFacturentGrdBase.Columns
-                EmailenFacturentGrdBase(f.Index, l).Value = Nothing
-                CType(EmailenFacturentGrdBase(f.Index, l), DataGridViewCell).Style.BackColor = EmailenFacturentGrdBase.DefaultCellStyle.BackColor
+        For l = line To g.Rows.Count - 1
+            For Each f In g.Columns
+                g(f.Index, l).Value = Nothing
+                CType(g(f.Index, l), DataGridViewCell).Style.BackColor = g.DefaultCellStyle.BackColor
             Next
         Next
-        EmailenFacturentGrdBase(0, 0).Selected = True
+        g(0, 0).Selected = True
 
         ' Me.EmailenFacturentGrdBase.DataSource = dt
 
@@ -93,17 +93,8 @@
         FactuurNrTotTxtBase.Text = _TotFactuurNr.ToString()
         txtAantalFacturen.Text = _AantalFacturen.ToString()
     End Sub
-    Public Shared Function GetInvoicesToEmail(fromNumber As Long, toNumber As Long) As DataTable
-        Dim sql As String = "select * from FactH,Klanten "
-        sql &= "Where FactH_Klant = Kl_ID "
-        sql &= "and FactH_Nummer >= ? "
-        sql &= "and FactH_Nummer <= ? "
-        sql &= "and Kl_EmailFacturen =  ?"
-        Dim cmd = New sqlClass
-        cmd.AddParameter(fromNumber, DbType.Int32)
-        cmd.AddParameter(toNumber, DbType.Int32)
-        cmd.AddParameter(True, DbType.Boolean)
-        Dim unused = cmd.Execute(sql)
-        Return cmd.dt
-    End Function
+
+    Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
+        Close()
+    End Sub
 End Class

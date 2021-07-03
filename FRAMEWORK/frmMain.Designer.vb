@@ -77,9 +77,9 @@ Partial Class frmMain
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.waitingMessage, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel5, Me.ToolStripProgressBar1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 388)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 378)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(819, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(819, 32)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -89,38 +89,38 @@ Partial Class frmMain
         Me.waitingMessage.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.waitingMessage.ForeColor = System.Drawing.Color.Maroon
         Me.waitingMessage.Name = "waitingMessage"
-        Me.waitingMessage.Size = New System.Drawing.Size(223, 25)
+        Me.waitingMessage.Size = New System.Drawing.Size(326, 25)
         Me.waitingMessage.Text = "Uw Excel blad wordt nu geproduceerd"
         Me.waitingMessage.Visible = False
         '
         'ToolStripStatusLabel2
         '
         Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(74, 17)
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(111, 25)
         Me.ToolStripStatusLabel2.Text = "Application :"
         '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(85, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(128, 25)
         Me.ToolStripStatusLabel1.Text = "Connected to :"
         '
         'ToolStripStatusLabel3
         '
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(101, 17)
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(153, 25)
         Me.ToolStripStatusLabel3.Text = "Regional Settings:"
         '
         'ToolStripStatusLabel4
         '
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(83, 17)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(125, 25)
         Me.ToolStripStatusLabel4.Text = "Default Printer"
         '
         'ToolStripStatusLabel5
         '
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(66, 17)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(98, 25)
         Me.ToolStripStatusLabel5.Text = "Bijz. Printer"
         '
         'ToolStripProgressBar1
@@ -131,42 +131,43 @@ Partial Class frmMain
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BestelLeverToolStripMenuItem, Me.LeverToolStripMenuItem, Me.ArtikeToolStripMenuItem, Me.KlantToolStripMenuItem, Me.StandaardsToolStripMenuItem, Me.FeestdagenToolStripMenuItem, Me.ProductiePlanToolStripMenuItem, Me.HelpTab})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(819, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(819, 33)
         Me.MenuStrip1.TabIndex = 6
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'BestelLeverToolStripMenuItem
         '
         Me.BestelLeverToolStripMenuItem.Name = "BestelLeverToolStripMenuItem"
-        Me.BestelLeverToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
+        Me.BestelLeverToolStripMenuItem.Size = New System.Drawing.Size(74, 29)
         Me.BestelLeverToolStripMenuItem.Text = "&Bestel"
         '
         'LeverToolStripMenuItem
         '
         Me.LeverToolStripMenuItem.Name = "LeverToolStripMenuItem"
-        Me.LeverToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
+        Me.LeverToolStripMenuItem.Size = New System.Drawing.Size(69, 29)
         Me.LeverToolStripMenuItem.Text = "&Lever"
         '
         'ArtikeToolStripMenuItem
         '
         Me.ArtikeToolStripMenuItem.Name = "ArtikeToolStripMenuItem"
-        Me.ArtikeToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
+        Me.ArtikeToolStripMenuItem.Size = New System.Drawing.Size(78, 29)
         Me.ArtikeToolStripMenuItem.Text = "&Artikel"
         '
         'KlantToolStripMenuItem
         '
         Me.KlantToolStripMenuItem.Name = "KlantToolStripMenuItem"
-        Me.KlantToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
+        Me.KlantToolStripMenuItem.Size = New System.Drawing.Size(67, 29)
         Me.KlantToolStripMenuItem.Text = "&Klant"
         '
         'StandaardsToolStripMenuItem
         '
         Me.StandaardsToolStripMenuItem.Name = "StandaardsToolStripMenuItem"
-        Me.StandaardsToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
+        Me.StandaardsToolStripMenuItem.Size = New System.Drawing.Size(116, 29)
         Me.StandaardsToolStripMenuItem.Text = "&Standaards"
         '
         'FeestdagenToolStripMenuItem
@@ -174,7 +175,7 @@ Partial Class frmMain
         Me.FeestdagenToolStripMenuItem.Name = "FeestdagenToolStripMenuItem"
         Me.FeestdagenToolStripMenuItem.ShortcutKeyDisplayString = ""
         Me.FeestdagenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
-        Me.FeestdagenToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
+        Me.FeestdagenToolStripMenuItem.Size = New System.Drawing.Size(119, 29)
         Me.FeestdagenToolStripMenuItem.Text = "Feest&dagen"
         '
         'ProductiePlanToolStripMenuItem
@@ -182,19 +183,19 @@ Partial Class frmMain
         Me.ProductiePlanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DagelijksToolStripMenuItem, Me.AanpassenToolStripMenuItem})
         Me.ProductiePlanToolStripMenuItem.Name = "ProductiePlanToolStripMenuItem"
         Me.ProductiePlanToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
-        Me.ProductiePlanToolStripMenuItem.Size = New System.Drawing.Size(96, 20)
+        Me.ProductiePlanToolStripMenuItem.Size = New System.Drawing.Size(141, 29)
         Me.ProductiePlanToolStripMenuItem.Text = "&Productie Plan"
         '
         'DagelijksToolStripMenuItem
         '
         Me.DagelijksToolStripMenuItem.Name = "DagelijksToolStripMenuItem"
-        Me.DagelijksToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
+        Me.DagelijksToolStripMenuItem.Size = New System.Drawing.Size(255, 34)
         Me.DagelijksToolStripMenuItem.Text = "Dagelijks Rapport"
         '
         'AanpassenToolStripMenuItem
         '
         Me.AanpassenToolStripMenuItem.Name = "AanpassenToolStripMenuItem"
-        Me.AanpassenToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
+        Me.AanpassenToolStripMenuItem.Size = New System.Drawing.Size(255, 34)
         Me.AanpassenToolStripMenuItem.Text = "Overzicht"
         '
         'HelpTab
@@ -202,162 +203,162 @@ Partial Class frmMain
         Me.HelpTab.AccessibleDescription = ""
         Me.HelpTab.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AutomatischBestellenToolStripMenuItem, Me.tsmiAfdrukkenVervoerEnAfrekening, Me.AfdrukkenOverzichtLijstMetNamenVanBestellingenParticulierenToolStripMenuItem, Me.AfdrkenBestelDocumentenParticulierenToolStripMenuItem, Me.FacturatieToolStripMenuItem, Me.ToolStripMenuItem3, Me.ToolStripSeparator2, Me.ToolStripMenuItem2, Me.ToolStripMenuItem1, Me.OverzichtBestellingenPartculierenStripMenuItem, Me.ToolStripSeparator1, Me.CompactDBToolStripMenuItem, Me.OntgrendelStationToolStripMenuItem, Me.IndexToolStripMenuItem, Me.BestellingenAnnulerenVoorÉénDagToolStripMenuItem, Me.ToolStripSeparator3, Me.SysteemProgrammasToolStripMenuItem, Me.JustTestingToolStripMenuItem})
         Me.HelpTab.Name = "HelpTab"
-        Me.HelpTab.Size = New System.Drawing.Size(119, 20)
+        Me.HelpTab.Size = New System.Drawing.Size(177, 29)
         Me.HelpTab.Text = "Hulp Programma's"
         '
         'AutomatischBestellenToolStripMenuItem
         '
         Me.AutomatischBestellenToolStripMenuItem.Name = "AutomatischBestellenToolStripMenuItem"
-        Me.AutomatischBestellenToolStripMenuItem.Size = New System.Drawing.Size(439, 22)
+        Me.AutomatischBestellenToolStripMenuItem.Size = New System.Drawing.Size(656, 34)
         Me.AutomatischBestellenToolStripMenuItem.Text = "Automatisch Bestellen van Standaarden voor Winkels en Particulieren"
         '
         'tsmiAfdrukkenVervoerEnAfrekening
         '
         Me.tsmiAfdrukkenVervoerEnAfrekening.Name = "tsmiAfdrukkenVervoerEnAfrekening"
-        Me.tsmiAfdrukkenVervoerEnAfrekening.Size = New System.Drawing.Size(439, 22)
+        Me.tsmiAfdrukkenVervoerEnAfrekening.Size = New System.Drawing.Size(656, 34)
         Me.tsmiAfdrukkenVervoerEnAfrekening.Text = "Afdrukken alle Vervoer en Leveringbonnen Winkels"
         '
         'AfdrukkenOverzichtLijstMetNamenVanBestellingenParticulierenToolStripMenuItem
         '
         Me.AfdrukkenOverzichtLijstMetNamenVanBestellingenParticulierenToolStripMenuItem.Name = "AfdrukkenOverzichtLijstMetNamenVanBestellingenParticulierenToolStripMenuItem"
-        Me.AfdrukkenOverzichtLijstMetNamenVanBestellingenParticulierenToolStripMenuItem.Size = New System.Drawing.Size(439, 22)
+        Me.AfdrukkenOverzichtLijstMetNamenVanBestellingenParticulierenToolStripMenuItem.Size = New System.Drawing.Size(656, 34)
         Me.AfdrukkenOverzichtLijstMetNamenVanBestellingenParticulierenToolStripMenuItem.Text = "Afdrukken Overzicht Lijst met Namen van Bestellingen Particulieren"
         '
         'AfdrkenBestelDocumentenParticulierenToolStripMenuItem
         '
         Me.AfdrkenBestelDocumentenParticulierenToolStripMenuItem.Name = "AfdrkenBestelDocumentenParticulierenToolStripMenuItem"
-        Me.AfdrkenBestelDocumentenParticulierenToolStripMenuItem.Size = New System.Drawing.Size(439, 22)
+        Me.AfdrkenBestelDocumentenParticulierenToolStripMenuItem.Size = New System.Drawing.Size(656, 34)
         Me.AfdrkenBestelDocumentenParticulierenToolStripMenuItem.Text = "Afdrukken Bestel Documenten Particulieren (op gewone printer)"
         '
         'FacturatieToolStripMenuItem
         '
         Me.FacturatieToolStripMenuItem.Name = "FacturatieToolStripMenuItem"
-        Me.FacturatieToolStripMenuItem.Size = New System.Drawing.Size(439, 22)
+        Me.FacturatieToolStripMenuItem.Size = New System.Drawing.Size(656, 34)
         Me.FacturatieToolStripMenuItem.Text = "&Facturatie"
         '
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(439, 22)
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(656, 34)
         Me.ToolStripMenuItem3.Text = "E-mailen Facturen"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(436, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(653, 6)
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(439, 22)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(656, 34)
         Me.ToolStripMenuItem2.Text = "Overrzicht Operaties per Klant"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(439, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(656, 34)
         Me.ToolStripMenuItem1.Text = "Overzicht Facturen per Klant"
         '
         'OverzichtBestellingenPartculierenStripMenuItem
         '
         Me.OverzichtBestellingenPartculierenStripMenuItem.Name = "OverzichtBestellingenPartculierenStripMenuItem"
-        Me.OverzichtBestellingenPartculierenStripMenuItem.Size = New System.Drawing.Size(439, 22)
+        Me.OverzichtBestellingenPartculierenStripMenuItem.Size = New System.Drawing.Size(656, 34)
         Me.OverzichtBestellingenPartculierenStripMenuItem.Text = "Overzicht Bestelde Producten voor Particulieren"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(436, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(653, 6)
         '
         'CompactDBToolStripMenuItem
         '
         Me.CompactDBToolStripMenuItem.Name = "CompactDBToolStripMenuItem"
-        Me.CompactDBToolStripMenuItem.Size = New System.Drawing.Size(439, 22)
+        Me.CompactDBToolStripMenuItem.Size = New System.Drawing.Size(656, 34)
         Me.CompactDBToolStripMenuItem.Text = "Database Comprimeren"
         '
         'OntgrendelStationToolStripMenuItem
         '
         Me.OntgrendelStationToolStripMenuItem.Name = "OntgrendelStationToolStripMenuItem"
-        Me.OntgrendelStationToolStripMenuItem.Size = New System.Drawing.Size(439, 22)
+        Me.OntgrendelStationToolStripMenuItem.Size = New System.Drawing.Size(656, 34)
         Me.OntgrendelStationToolStripMenuItem.Text = "Ontgrendel station"
         '
         'IndexToolStripMenuItem
         '
         Me.IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
-        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(439, 22)
+        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(656, 34)
         Me.IndexToolStripMenuItem.Text = "Index"
         Me.IndexToolStripMenuItem.Visible = False
         '
         'BestellingenAnnulerenVoorÉénDagToolStripMenuItem
         '
         Me.BestellingenAnnulerenVoorÉénDagToolStripMenuItem.Name = "BestellingenAnnulerenVoorÉénDagToolStripMenuItem"
-        Me.BestellingenAnnulerenVoorÉénDagToolStripMenuItem.Size = New System.Drawing.Size(439, 22)
+        Me.BestellingenAnnulerenVoorÉénDagToolStripMenuItem.Size = New System.Drawing.Size(656, 34)
         Me.BestellingenAnnulerenVoorÉénDagToolStripMenuItem.Text = "Bestellingen Annuleren voor één dag"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(436, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(653, 6)
         '
         'SysteemProgrammasToolStripMenuItem
         '
         Me.SysteemProgrammasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArrangeWindow, Me.TestFormToolStripMenuItem, Me.SendMailToolStripMenuItem, Me.TerminalErrorTestToolStripMenuItem, Me.TestExcelToolStripMenuItem, Me.TestRawPrintingToolStripMenuItem, Me.AanpassenStandaardOmschrijvingenToolStripMenuItem, Me.PirgePDcouemntsuntilLastFacutratieDateVerwijderenLastBestlFalseToolStripMenuItem})
         Me.SysteemProgrammasToolStripMenuItem.Name = "SysteemProgrammasToolStripMenuItem"
-        Me.SysteemProgrammasToolStripMenuItem.Size = New System.Drawing.Size(439, 22)
+        Me.SysteemProgrammasToolStripMenuItem.Size = New System.Drawing.Size(656, 34)
         Me.SysteemProgrammasToolStripMenuItem.Text = "Systeem Programma's"
         '
         'ArrangeWindow
         '
         Me.ArrangeWindow.Name = "ArrangeWindow"
-        Me.ArrangeWindow.Size = New System.Drawing.Size(471, 22)
+        Me.ArrangeWindow.Size = New System.Drawing.Size(706, 34)
         Me.ArrangeWindow.Text = "Schik Vensters"
         '
         'TestFormToolStripMenuItem
         '
         Me.TestFormToolStripMenuItem.Name = "TestFormToolStripMenuItem"
-        Me.TestFormToolStripMenuItem.Size = New System.Drawing.Size(471, 22)
+        Me.TestFormToolStripMenuItem.Size = New System.Drawing.Size(706, 34)
         Me.TestFormToolStripMenuItem.Text = "Test Form"
         '
         'SendMailToolStripMenuItem
         '
         Me.SendMailToolStripMenuItem.Name = "SendMailToolStripMenuItem"
-        Me.SendMailToolStripMenuItem.Size = New System.Drawing.Size(471, 22)
+        Me.SendMailToolStripMenuItem.Size = New System.Drawing.Size(706, 34)
         Me.SendMailToolStripMenuItem.Text = "send mail"
         '
         'TerminalErrorTestToolStripMenuItem
         '
         Me.TerminalErrorTestToolStripMenuItem.Name = "TerminalErrorTestToolStripMenuItem"
-        Me.TerminalErrorTestToolStripMenuItem.Size = New System.Drawing.Size(471, 22)
+        Me.TerminalErrorTestToolStripMenuItem.Size = New System.Drawing.Size(706, 34)
         Me.TerminalErrorTestToolStripMenuItem.Text = "Terminal Error Test"
         '
         'TestExcelToolStripMenuItem
         '
         Me.TestExcelToolStripMenuItem.Name = "TestExcelToolStripMenuItem"
-        Me.TestExcelToolStripMenuItem.Size = New System.Drawing.Size(471, 22)
+        Me.TestExcelToolStripMenuItem.Size = New System.Drawing.Size(706, 34)
         Me.TestExcelToolStripMenuItem.Text = "Test Excel"
         '
         'TestRawPrintingToolStripMenuItem
         '
         Me.TestRawPrintingToolStripMenuItem.Name = "TestRawPrintingToolStripMenuItem"
-        Me.TestRawPrintingToolStripMenuItem.Size = New System.Drawing.Size(471, 22)
+        Me.TestRawPrintingToolStripMenuItem.Size = New System.Drawing.Size(706, 34)
         Me.TestRawPrintingToolStripMenuItem.Text = "Test Raw Printing"
         '
         'AanpassenStandaardOmschrijvingenToolStripMenuItem
         '
         Me.AanpassenStandaardOmschrijvingenToolStripMenuItem.Name = "AanpassenStandaardOmschrijvingenToolStripMenuItem"
-        Me.AanpassenStandaardOmschrijvingenToolStripMenuItem.Size = New System.Drawing.Size(471, 22)
+        Me.AanpassenStandaardOmschrijvingenToolStripMenuItem.Size = New System.Drawing.Size(706, 34)
         Me.AanpassenStandaardOmschrijvingenToolStripMenuItem.Text = "Aanpassen Standaard Omschrijvingen"
         '
         'PirgePDcouemntsuntilLastFacutratieDateVerwijderenLastBestlFalseToolStripMenuItem
         '
         Me.PirgePDcouemntsuntilLastFacutratieDateVerwijderenLastBestlFalseToolStripMenuItem.Name = "PirgePDcouemntsuntilLastFacutratieDateVerwijderenLastBestlFalseToolStripMenuItem"
-        Me.PirgePDcouemntsuntilLastFacutratieDateVerwijderenLastBestlFalseToolStripMenuItem.Size = New System.Drawing.Size(471, 22)
+        Me.PirgePDcouemntsuntilLastFacutratieDateVerwijderenLastBestlFalseToolStripMenuItem.Size = New System.Drawing.Size(706, 34)
         Me.PirgePDcouemntsuntilLastFacutratieDateVerwijderenLastBestlFalseToolStripMenuItem.Text = "Purge PDocuments (until last facturatie date, verwijderen last bestel = false)"
         '
         'JustTestingToolStripMenuItem
         '
         Me.JustTestingToolStripMenuItem.Name = "JustTestingToolStripMenuItem"
-        Me.JustTestingToolStripMenuItem.Size = New System.Drawing.Size(439, 22)
+        Me.JustTestingToolStripMenuItem.Size = New System.Drawing.Size(656, 34)
         Me.JustTestingToolStripMenuItem.Text = "Just testing"
         '
         'LblMessage
@@ -367,7 +368,7 @@ Partial Class frmMain
         Me.LblMessage.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
         Me.LblMessage.Location = New System.Drawing.Point(3, 371)
         Me.LblMessage.Name = "LblMessage"
-        Me.LblMessage.Size = New System.Drawing.Size(0, 16)
+        Me.LblMessage.Size = New System.Drawing.Size(0, 23)
         Me.LblMessage.TabIndex = 9
         '
         'frmMain

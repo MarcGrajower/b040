@@ -226,6 +226,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="FRAMEWORK\baseClasses\applicationColors.vb" />
+    <Compile Include="Helpers.vb" />
     <Compile Include="KLantenSearch\KlantenSearch.Designer.vb">
       <DependentUpon>KlantenSearch.vb</DependentUpon>
     </Compile>
@@ -995,7 +996,7 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_StartDate="2000/1/1" BuildVersion_UseGlobalSettings="True" />
+      <UserProperties BuildVersion_UseGlobalSettings="True" BuildVersion_StartDate="2000/1/1" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

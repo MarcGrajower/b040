@@ -445,15 +445,12 @@ Public Class KlantenFrm
         End With
         Me.TypeFacturatie.typF_Omschrijving = Me.typeFacturatieControl.SelectedItem.ToString
         If Me.KL_emailfacturen.Checked = True Then
-            Dim emailPattern = "[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*@((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))"
-            Dim regex As New Regex(emailPattern)
-            If (regex.Matches(Me.KL_EMail.Text).Count() = 0) Then
+            If Helpers.IsValidEmailAddress(Me.KL_EMail.Text) Then
                 MsgBox("Facturen Emailen voor deze Klant is aangevinkt, maar zijn Email adres is niet geldig")
                 Me.KL_EMail.Focus()
                 Return False
             End If
         End If
-        Return True
     End Function
 #End Region
     Private Sub save()
