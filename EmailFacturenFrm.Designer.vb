@@ -19,13 +19,13 @@ Partial Class EmailFacturenFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlBase1 = New b040.pnlBase()
         Me.LblBase3 = New b040.lblBase()
         Me.FactuurNrTotTxtBase = New b040.txtBase()
@@ -152,25 +152,25 @@ Partial Class EmailFacturenFrm
         Me.g.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.g.BackgroundColor = System.Drawing.Color.White
         Me.g.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
-        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.g.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.g.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.g.ColumnHeadersHeight = 21
         Me.g.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.g.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Klant, Me.Tr, Me.BTW, Me.Netto, Me.Column1, Me.InclColumn})
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle21.BackColor = System.Drawing.Color.Beige
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
-        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Beige
-        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.g.DefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Beige
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Trebuchet MS", 8.25!)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Beige
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.g.DefaultCellStyle = DataGridViewCellStyle7
         Me.g.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.g.GridColor = System.Drawing.Color.LightGray
         Me.g.Location = New System.Drawing.Point(-1, 51)
@@ -186,8 +186,8 @@ Partial Class EmailFacturenFrm
         'Klant
         '
         Me.Klant.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.Beige
-        Me.Klant.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Beige
+        Me.Klant.DefaultCellStyle = DataGridViewCellStyle2
         Me.Klant.HeaderText = "Klant"
         Me.Klant.MinimumWidth = 8
         Me.Klant.Name = "Klant"
@@ -197,8 +197,8 @@ Partial Class EmailFacturenFrm
         'Tr
         '
         Me.Tr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle17.NullValue = Nothing
-        Me.Tr.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.Tr.DefaultCellStyle = DataGridViewCellStyle3
         Me.Tr.HeaderText = "Naam"
         Me.Tr.MinimumWidth = 8
         Me.Tr.Name = "Tr"
@@ -207,9 +207,9 @@ Partial Class EmailFacturenFrm
         'BTW
         '
         Me.BTW.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridViewCellStyle18.Format = "##0.00 %"
-        DataGridViewCellStyle18.NullValue = Nothing
-        Me.BTW.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle4.Format = "##0.00 %"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.BTW.DefaultCellStyle = DataGridViewCellStyle4
         Me.BTW.HeaderText = "E-Mail"
         Me.BTW.MinimumWidth = 8
         Me.BTW.Name = "BTW"
@@ -217,10 +217,10 @@ Partial Class EmailFacturenFrm
         '
         'Netto
         '
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle19.NullValue = Nothing
-        DataGridViewCellStyle19.Padding = New System.Windows.Forms.Padding(5, 0, 0, 5)
-        Me.Netto.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.NullValue = Nothing
+        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(5, 0, 0, 5)
+        Me.Netto.DefaultCellStyle = DataGridViewCellStyle5
         Me.Netto.HeaderText = "Factuur Nr"
         Me.Netto.MinimumWidth = 8
         Me.Netto.Name = "Netto"
@@ -230,9 +230,9 @@ Partial Class EmailFacturenFrm
         'Column1
         '
         Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle20.Padding = New System.Windows.Forms.Padding(0, 0, 0, 3)
-        Me.Column1.DefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(0, 0, 0, 3)
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle6
         Me.Column1.HeaderText = "Bedrag"
         Me.Column1.MinimumWidth = 8
         Me.Column1.Name = "Column1"
@@ -272,6 +272,7 @@ Partial Class EmailFacturenFrm
         '
         'CloseButton
         '
+        Me.CloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.CloseButton.Font = New System.Drawing.Font("Trebuchet MS", 9.0!)
         Me.CloseButton.Image = Global.b040.My.Resources.Resources.CLOSE
         Me.CloseButton.Location = New System.Drawing.Point(601, 524)

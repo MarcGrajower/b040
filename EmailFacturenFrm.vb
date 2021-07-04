@@ -10,6 +10,7 @@
 
 
     Private Sub FactuurNrVanTextBase_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles FactuurNrVanTextBase.Validating
+        If sender.Text = "" Then Return
         Dim input As String = sender.Text
         Dim result As Long
         If Int32.TryParse(input, result) = False Then
@@ -96,5 +97,100 @@
 
     Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
         Close()
+    End Sub
+
+    Private Sub g_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles g.CellContentClick
+        'If g.Rows.Count() = 0 Then Return
+        'If (New List(Of Integer) From {5}).Contains(e.ColumnIndex) = False Then Return
+        'Dim email As String
+        'Dim isEmailSet As Boolean
+
+        'email = g(2, e.RowIndex).Value
+        'isEmailSet = g(5, e.RowIndex).Value
+        ''Select Case e.ColumnIndex
+        ''    Case 2
+        ''        If g.EditingControl Is Nothing Then Return
+        ''        email = IIf(g.EditingControl Is Nothing, g(2, e.RowIndex).Value, g.EditingControl.Text)
+        ''        isEmailSet = g(5, e.RowIndex).Value
+        ''    Case 5
+        ''        email = g(2, e.RowIndex).Value
+        ''        isEmailSet = g.CurrentCell.FormattedValue
+        ''End Select
+        'If isEmailSet Then
+        '    If Helpers.IsValidEmailAddress(email) = False Then
+        '        MessageBox.Show(Helpers.ErrorMessage)
+        '        g.CancelEdit()
+        '        g.CurrentCell = g(e.ColumnIndex, e.RowIndex)
+        '    End If
+        'End If
+
+    End Sub
+
+    Private Sub g_CellLeave(sender As Object, e As DataGridViewCellEventArgs) Handles g.CellLeave
+    End Sub
+
+    Private Sub g_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles g.CellValueChanged
+
+    End Sub
+
+    Private Sub g_CellValidating(sender As Object, e As DataGridViewCellValidatingEventArgs) Handles g.CellValidating
+        'If g.Rows.Count() = 0 Then Return
+        'If (New List(Of Integer) From {2}).Contains(e.ColumnIndex) = False Then Return
+        'Dim email As String
+        'Dim isEmailSet As Boolean
+
+        'email = e.FormattedValue
+        'isEmailSet = g(5, e.RowIndex).Value
+        ''Select Case e.ColumnIndex
+        ''    Case 2
+        ''        If g.EditingControl Is Nothing Then Return
+        ''        email = IIf(g.EditingControl Is Nothing, g(2, e.RowIndex).Value, g.EditingControl.Text)
+        ''        isEmailSet = g(5, e.RowIndex).Value
+        ''    Case 5
+        ''        email = g(2, e.RowIndex).Value
+        ''        isEmailSet = g.CurrentCell.FormattedValue
+        ''End Select
+        'If isEmailSet Then
+        '    If Helpers.IsValidEmailAddress(email) = False Then
+        '        MessageBox.Show(Helpers.ErrorMessage)
+        '        g.CancelEdit()
+        '        e.Cancel = True
+        '    End If
+        'End If
+
+    End Sub
+
+    Private Sub g_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles g.CellEndEdit
+
+    End Sub
+
+    Private Sub g_Click(sender As Object, e As EventArgs) Handles g.Click
+
+    End Sub
+
+    Private Sub g_RowLeave(sender As Object, e As DataGridViewCellEventArgs) Handles g.RowLeave
+        'email = IIf(e.ColumnIndex = 2, g.EditingControl.Text, g(2, e.RowIndex).Value)
+        'isEmailSet = g(5, e.RowIndex).Value
+        'If isEmailSet Then
+        '    If Helpers.IsValidEmailAddress(email) = False Then
+        '        MessageBox.Show(Helpers.ErrorMessage)
+        '        g.CancelEdit()
+        '        g.Rows(e.RowIndex).Selected = True
+        '    End If
+        'End If
+    End Sub
+
+    Private Sub g_RowValidating(sender As Object, e As DataGridViewCellCancelEventArgs) Handles g.RowValidating
+        If g.IsCurrentRowDirty = False Then Return
+        email = g(2, e.RowIndex).Value
+        isEmailSet = g(5, e.RowIndex).Value
+        If isEmailSet Then
+            If Helpers.IsValidEmailAddress(email) = False Then
+                MessageBox.Show(Helpers.ErrorMessage)
+                g.CancelEdit()
+                e.Cancel = True
+            End If
+        End If
+
     End Sub
 End Class

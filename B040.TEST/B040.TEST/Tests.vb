@@ -5,8 +5,8 @@ Imports System.Windows.Forms
 Public Class Tests
 
     Public Shared Sub Test_GetInvoicesToEmail()
-        Dim dt As DataTable = EmailFacturenFrm.GetInvoicesToEmail(210286, 210339)
-        Console.WriteLine($"{dt.Rows.Count} items")
+        'Dim dt As DataTable = EmailFacturenFrm.GetInvoicesToEmail(210286, 210339)
+        'Console.WriteLine($"{dt.Rows.Count} items")
     End Sub
     Public Shared Sub Test_MaandelijkseFacturatieStatistieken()
         MaandelijkseFacturatiStatistieken.GetData(2021, 2)

@@ -445,12 +445,13 @@ Public Class KlantenFrm
         End With
         Me.TypeFacturatie.typF_Omschrijving = Me.typeFacturatieControl.SelectedItem.ToString
         If Me.KL_emailfacturen.Checked = True Then
-            If Helpers.IsValidEmailAddress(Me.KL_EMail.Text) Then
-                MsgBox("Facturen Emailen voor deze Klant is aangevinkt, maar zijn Email adres is niet geldig")
+            If Helpers.IsValidEmailAddress(Me.KL_EMail.Text) = False Then
+                MsgBox("Facturen Emailen voor is aangevinkt, maar E-mail adres is niet geldig")
                 Me.KL_EMail.Focus()
                 Return False
             End If
         End If
+        Return True
     End Function
 #End Region
     Private Sub save()
